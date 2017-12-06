@@ -1,4 +1,4 @@
-INSERT INTO dataset (data_format, key, title, created) VALUES (1, '189', '3i_aetalionidae,_melizoderidae,_myerslopiidae', now());
+INSERT INTO dataset (data_format, key, title, created) VALUES (1, '189', '3i_aetalionidae_melizoderidae_myerslopiidae', now());
 INSERT INTO dataset (data_format, key, title, created) VALUES (1, '83', '3i_cicadellinae', now());
 INSERT INTO dataset (data_format, key, title, created) VALUES (1, '156', '3i_cicadoidea', now());
 INSERT INTO dataset (data_format, key, title, created) VALUES (1, '166', '3i_curculio', now());
@@ -170,3 +170,4 @@ INSERT INTO dataset (data_format, key, title, created) VALUES (1, '167', 'zorapt
 INSERT INTO dataset (data_format, key, title, created) VALUES (1, '38', 'zygomycetes', now());
 
 UPDATE dataset SET data_access = 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/AC2017/' || title || '.zip' WHERE key < 200;
+ALTER SEQUENCE dataset_key_seq RESTART WITH 1000;
