@@ -1,16 +1,19 @@
 DROP TABLE IF EXISTS lifezones_per_name;
 
+
 CREATE TABLE lifezones_per_name (
   scientific_name_id INT NOT NULL,
   lifezones VARCHAR(255) NULL,
   PRIMARY KEY (scientific_name_id)
 );
 
+
 INSERT INTO lifezones_per_name(scientific_name_id,lifezones)
 (SELECT sn.record_id, GROUP_CONCAT(lz.lifezone SEPARATOR '@@@')
 FROM scientific_names sn
 LEFT JOIN lifezone lz ON (sn.name_code = lz.name_code)
 GROUP BY sn.record_id);
+
 
 /* 
  * AcceptedSpecies.txt
@@ -120,4 +123,43 @@ SELECT d.name_code				AS AcceptedTaxonID
 FROM distribution AS d;
 
 
+/*
+ * References.txt
+ */
+SELECT r.reference_code			AS ReferenceID
+,	r.author					AS Authors
+,	r.year						AS Year
+,	r.title						AS Title
+,	r.source					AS Details
+FROM `references` AS r;
+
+
+/*
+ * NameReferences.txt
+ */
+SELECT snr.name_code			AS ID
+,	snr.reference_type			AS ReferenceType
+,	snr.reference_code			AS ReferenceID
+FROM scientific_name_references AS snr;
+
+
+/*
+ * SourceDatabase.txt
+ */
+SELECT db.database_full_name	AS DatabaseFullName
+,	db.database_name			AS DatabaseName
+,	db.version					AS DatabaseVersion
+,	db.release_date				AS ReleaseDate
+,	db.authors_editors			AS AuthorsEditors
+,	db.taxonomic_coverage		AS TaxonomicCoverage
+,	NULL						AS GroupNameInEnglish /* ??? */
+,	db.abstract					AS Abstract
+,	db.organization				AS Organization
+,	db.web_site					AS HomeURL
+,	db.coverage					AS Coverage
+,	db.completeness				AS Completeness
+,	db.confidence				AS Confidence
+,	NULL						AS LogoFileName
+,	db.contact_person			AS ContactPerson
+FROM `databases` AS db;
 
