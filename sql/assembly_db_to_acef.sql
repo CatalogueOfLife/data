@@ -96,3 +96,18 @@ LEFT JOIN sp2000_statuses AS nomstatus ON (sn.sp2000_status_id = nomstatus.recor
 WHERE sn.is_accepted_name = 0;
 
 
+/*
+ * CommonNames.txt
+ */
+SELECT sn.name_code				AS AcceptedTaxonID
+, cn.common_name				AS CommonName
+, cn.transliteration			AS TransliteratedNames
+, cn.language					AS Language
+, cn.country					AS Country
+, cn.area						AS Area
+, cn.reference_code				AS ReferenceID
+FROM common_names AS cn
+LEFT JOIN scientific_names sn ON (cn.name_code = sn.name_code);
+
+
+
