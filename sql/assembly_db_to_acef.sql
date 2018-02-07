@@ -48,7 +48,7 @@ LEFT JOIN sp2000_statuses AS nomstatus ON (sn.sp2000_status_id = nomstatus.recor
 LEFT JOIN lifezones_per_name lz ON (sn.record_id = lz.scientific_name_id)
 LEFT JOIN specialists AS sp ON (sn.specialist_id = sp.record_id)
 WHERE (sn.infraspecies_marker IS NULL OR infraspecies_marker = '')
-AND sn.is_accepted_name != 0; /* both 1 and 5 appear to be accepted names */
+AND sn.is_accepted_name != 0; /* both 1 and 5 are accepted names; 5 likely data corruption */
 
 /* 
  * AcceptedInfraspecificTaxa.txt
@@ -60,7 +60,7 @@ SELECT sn.name_code				AS AcceptedTaxonID
 ,	sn.infraspecies_marker		AS InfraSpeciesMarker
 ,	sn.author					AS InfraSpeciesAuthorString
 ,	NULL						AS GSDNameStatus /* ??? */
-,	nomstatus.sp2000_status		AS GSDNameStatus
+,	nomstatus.sp2000_status		AS Sp2000NameStatus
 ,	sn.is_extinct				AS IsExtinct
 ,	sn.has_preholocene			AS HasPreHolocene
 ,	sn.has_modern				AS HasModern
