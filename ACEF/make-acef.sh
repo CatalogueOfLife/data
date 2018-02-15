@@ -22,6 +22,8 @@ else
 	echo $database_id > /tmp/acef/database_ids.txt
 fi
 
+dsql=${my_dir}/datasets-new.sql
+echo "" > ${dsql}
 while read -r line
 do
 	if [ "${line}" = "record_id" ]
@@ -39,5 +41,7 @@ do
     zip_file="/tmp/acef/${line}.tar.gz"
     tar czf ${zip_file} *.txt
     cd ${my_dir}
-    mv ${zip_file} ${my_dir}/zips
+    mv ${zip_file} ${my_dir}/assembly
+    echo "INSERT INTO dataset (data_format, key, title) VALUES (2, ${line}, '${line}');" >> ${dsql}
 done < /tmp/acef/database_ids.txt
+cat datasets-append.sql >> ${dsql}
