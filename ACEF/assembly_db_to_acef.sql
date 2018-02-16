@@ -44,12 +44,12 @@ AND sn.database_id=__DATABASE_ID__;
 /* 
  * AcceptedInfraspecificTaxa.txt
  */
-SELECT 'AcceptedTaxonID','parentID','InfraSpeciesEpithet','InfraSpeciesMarker','InfraSpeciesAuthorString',
+SELECT 'AcceptedTaxonID','ParentSpeciesID','InfraSpeciesEpithet','InfraSpeciesMarker','InfraSpeciesAuthorString',
  'GSDNameStatus','Sp2000NameStatus','IsExtinct','HasPreHolocene','HasModern','LifeZone','AdditionalData',
  'LTSSpecialist','LTSDate','InfraSpeciesURL','GSDTaxonGUID','GSDNameGUID'
 UNION
 SELECT sn.name_code				AS AcceptedTaxonID
-,	sn.infraspecies_parent_name_code AS parentID
+,	sn.infraspecies_parent_name_code AS ParentSpeciesID
 ,	sn.infraspecies				AS InfraSpeciesEpithet
 ,	sn.infraspecies_marker		AS InfraSpeciesMarker
 ,	sn.author					AS InfraSpeciesAuthorString
@@ -86,10 +86,10 @@ SELECT sn.name_code				AS ID
 ,	sn.genus					AS Genus
 ,	sn.subgenus					AS SubGenusName
 ,	sn.species					AS SpeciesEpithet
-,	sn.author					AS AuthorString
+,	IF(sn.infraspecies IS NULL, sn.author, NULL)	AS AuthorString
 ,	sn.infraspecies				AS InfraSpeciesEpithet
 ,	sn.infraspecies_marker		AS InfraSpeciesMarker
-,	NULL						AS InfraSpeciesAuthorString /* ??? */
+,	IF(sn.infraspecies IS NULL, NULL, sn.author)    AS InfraSpeciesAuthorString
 ,	NULL						AS GSDNameStatus /* ??? */
 ,	nomstatus.sp2000_status		AS Sp2000NameStatus
 ,	sn.GSDNameGUID				AS GSDNameGUID
@@ -135,13 +135,13 @@ WHERE d.database_id=__DATABASE_ID__;
 /*
  * References.txt
  */
-SELECT 'ReferenceID','Authors','Year','Title','Details'
+SELECT 'ReferenceID','Authors','Year','Title','Source'
 UNION
 SELECT r.reference_code			AS ReferenceID
 ,	r.author					AS Authors
 ,	r.year						AS Year
 ,	r.title						AS Title
-,	r.source					AS Details
+,	r.source					AS Source
 INTO OUTFILE '__OUTPUT_DIR__/References.txt'
 FROM `references` AS r
 WHERE r.database_id=__DATABASE_ID__;
@@ -164,12 +164,12 @@ WHERE snr.database_id=__DATABASE_ID__;
 /*
  * SourceDatabase.txt
  */
-SELECT 'DatabaseFullName','DatabaseName','DatabaseVersion','ReleaseDate','AuthorsEditors','TaxonomicCoverage',
+SELECT 'DatabaseFullName','DatabaseShortName','DatabaseVersion','ReleaseDate','AuthorsEditors','TaxonomicCoverage',
 'GroupNameInEnglish','Abstract','Organization','HomeURL','Coverage','Completeness','Confidence',
 'LogoFileName','ContactPerson'
 UNION
 SELECT db.database_full_name	AS DatabaseFullName
-,	db.database_name			AS DatabaseName
+,	db.database_name			AS DatabaseShortName
 ,	db.version					AS DatabaseVersion
 ,	db.release_date				AS ReleaseDate
 ,	db.authors_editors			AS AuthorsEditors
