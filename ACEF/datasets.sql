@@ -171,8 +171,8 @@ UPDATE dataset SET data_format=1, data_access = 'https://raw.githubusercontent.c
 ALTER SEQUENCE dataset_key_seq RESTART WITH 1000;
 
 -- removed, old sources which we mark as deleted
-INSERT INTO dataset (key, title, created, deleted) VALUES ('1',   'col_management_classification', now());
-INSERT INTO dataset (key, title, created, deleted) VALUES ('2',   'species_2000_common_names', now());
+INSERT INTO dataset (key, title, created, deleted) VALUES ('1',   'col_management_classification', now(), now());
+INSERT INTO dataset (key, title, created, deleted) VALUES ('2',   'species_2000_common_names', now(), now());
 INSERT INTO dataset (key, title, created, deleted) VALUES ('117', 'chenobase', now(), now());
 INSERT INTO dataset (key, title, created, deleted) VALUES ('159', 'fada_copepoda', now(), now());
 INSERT INTO dataset (key, title, created, deleted) VALUES ('135', 'fada_turbellaria', now(), now());
