@@ -42,6 +42,6 @@ do
     tar czf ${zip_file} *.txt
     cd ${my_dir}
     mv ${zip_file} ${my_dir}/assembly
-    echo "INSERT INTO dataset (key, title) VALUES (${line}, 'GSD ${line}');" >> ${dsql}
+    echo "INSERT INTO dataset (key, code, title) VALUES (${line}, null, 'GSD ${line}');" >> ${dsql}
 done < /tmp/acef/database_ids.txt
 cat datasets-append.sql >> ${dsql}
