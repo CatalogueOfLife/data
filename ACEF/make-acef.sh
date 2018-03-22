@@ -18,6 +18,8 @@ then
 	mysql --defaults-extra-file=my.cnf -e 'SELECT record_id FROM `databases`' > /tmp/acef/database_ids.txt
 	echo "$(date '+%Y-%m-%d %H:%M:%S') Creating temp table ..."
 	mysql --defaults-extra-file=my.cnf < once.sql
+	echo "Clearing directory ${my_dir}/assembly"
+	rm -rf "${my_dir}/assembly/*.*"
 else
 	echo $database_id > /tmp/acef/database_ids.txt
 fi

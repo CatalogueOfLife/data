@@ -1,7 +1,7 @@
 /*
  * This SQL script is a template for the SQL that is to be run
  * in order to generate the ACEF files (e.g. AcceptedSpecies.txt,
- * AcceptedInfraspecificTaxa.txt, etc.). It is mean to be run
+ * AcceptedInfraspecificTaxa.txt, etc.). It is meant to be run
  * by the make-acef.sh script, which uses sed to replace
  * __OUTPUT_DIR__ and __DATABASE_ID__ with proper values.
  */
@@ -14,7 +14,7 @@ SELECT
 'SpeciesEpithet', 'AuthorString', 'GSDNameStatus', 'Sp2000NameStatus', 'IsExtinct', 'HasPreHolocene',
 'HasModern', 'LifeZone', 'AdditionalData', 'LTSSpecialist', 'LTSDate','SpeciesURL', 'GSDTaxonGUID', 'GSDNameGUID'
 UNION
-SELECT IFNULL(sn.name_code,'')				AS AcceptedTaxonID
+SELECT sn.name_code							AS AcceptedTaxonID
 ,	IFNULL(fam.kingdom,'')					AS Kingdom
 ,	IFNULL(fam.phylum,'')					AS Phylum
 ,	IFNULL(fam.class,'')					AS Class
@@ -24,20 +24,21 @@ SELECT IFNULL(sn.name_code,'')				AS AcceptedTaxonID
 ,	IFNULL(sn.genus,'')						AS Genus
 ,	IFNULL(sn.subgenus,'')					AS SubGenusName
 ,	IFNULL(sn.species,'')					AS SpeciesEpithet
-,	IFNULL(sn.author,'')					AS AuthorString
+,	REPLACE(REPLACE(REPLACE(REPLACE(IFNULL(sn.author, ''), '\r\n', ' '), '\n', ' '), '\r', ' '), '\t', ' ') AS AuthorString
 ,	''										AS GSDNameStatus /* ??? */
 ,	IFNULL(nomstatus.sp2000_status,'')		AS Sp2000NameStatus
 ,	IFNULL(sn.is_extinct,'')				AS IsExtinct
 ,	IFNULL(sn.has_preholocene,'')			AS HasPreHolocene
 ,	IFNULL(sn.has_modern,'')				AS HasModern
 ,	IFNULL(lz.lifezones,'')					AS LifeZone
-,	IFNULL(sn.comment,'')					AS AdditionalData
+,	REPLACE(REPLACE(REPLACE(REPLACE(IFNULL(sn.comment, ''), '\r\n', ' '), '\n', ' '), '\r', ' '), '\t', ' ') AS AdditionalData
 ,	IFNULL(sp.specialist_name,'')			AS LTSSpecialist
 ,	IFNULL(sn.scrutiny_date,'')				AS LTSDate
 ,	IFNULL(sn.web_site,'')					AS SpeciesURL
 ,	IFNULL(sn.GSDTaxonGUID,'')				AS GSDTaxonGUID
 ,	IFNULL(sn.GSDNameGUID,'')				AS GSDNameGUID
 INTO OUTFILE '__OUTPUT_DIR__/AcceptedSpecies.txt'
+CHARACTER SET UTF8
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
@@ -59,7 +60,7 @@ SELECT 'AcceptedTaxonID','parentID','InfraSpeciesEpithet','InfraSpeciesMarker','
  'GSDNameStatus','Sp2000NameStatus','IsExtinct','HasPreHolocene','HasModern','LifeZone','AdditionalData',
  'LTSSpecialist','LTSDate','InfraSpeciesURL','GSDTaxonGUID','GSDNameGUID'
 UNION
-SELECT IFNULL(sn.name_code,'')				AS AcceptedTaxonID
+SELECT sn.name_code							AS AcceptedTaxonID
 ,	IFNULL(sn.infraspecies_parent_name_code,'') AS parentID
 ,	IFNULL(sn.infraspecies,'')				AS InfraSpeciesEpithet
 ,	IFNULL(sn.infraspecies_marker,'')		AS InfraSpeciesMarker
@@ -69,14 +70,15 @@ SELECT IFNULL(sn.name_code,'')				AS AcceptedTaxonID
 ,	IFNULL(sn.is_extinct,'')				AS IsExtinct
 ,	IFNULL(sn.has_preholocene,'')			AS HasPreHolocene
 ,	IFNULL(sn.has_modern,'')				AS HasModern
-,	IFNULL(lz.lifezones,'')					AS LifeZone
-,	IFNULL(sn.comment,'')					AS AdditionalData
+,	REPLACE(REPLACE(REPLACE(REPLACE(IFNULL(lz.lifezones, ''), '\r\n', ' '), '\n', ' '), '\r', ' '), '\t', ' ') AS LifeZone
+,	REPLACE(REPLACE(REPLACE(REPLACE(IFNULL(sn.comment, ''), '\r\n', ' '), '\n', ' '), '\r', ' '), '\t', ' ') AS AdditionalData
 ,	IFNULL(sp.specialist_name,'')			AS LTSSpecialist
 ,	IFNULL(sn.scrutiny_date,'')				AS LTSDate
 ,	IFNULL(sn.web_site,'')					AS InfraSpeciesURL
 ,	IFNULL(sn.GSDTaxonGUID,'')				AS GSDTaxonGUID
 ,	IFNULL(sn.GSDNameGUID,'')				AS GSDNameGUID
 INTO OUTFILE '__OUTPUT_DIR__/AcceptedInfraspecificTaxa.txt'
+CHARACTER SET UTF8
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
@@ -96,8 +98,8 @@ AND sn.database_id=__DATABASE_ID__;
 SELECT 'ID','AcceptedTaxonID','Genus','SubGenusName','SpeciesEpithet','AuthorString','InfraSpeciesEpithet',
 'InfraSpeciesMarker','InfraSpeciesAuthorString','GSDNameStatus','Sp2000NameStatus','GSDNameGUID'
 UNION
-SELECT IFNULL(sn.name_code,'')				AS ID
-,	IFNULL(sn.accepted_name_code,'')		AS AcceptedTaxonID
+SELECT sn.name_code							AS ID
+,	sn.accepted_name_code					AS AcceptedTaxonID
 ,	IFNULL(sn.genus,'')						AS Genus
 ,	IFNULL(sn.subgenus,'')					AS SubGenusName
 ,	IFNULL(sn.species,'')					AS SpeciesEpithet
@@ -109,6 +111,7 @@ SELECT IFNULL(sn.name_code,'')				AS ID
 ,	IFNULL(nomstatus.sp2000_status,'')		AS Sp2000NameStatus
 ,	IFNULL(sn.GSDNameGUID,'')				AS GSDNameGUID
 INTO OUTFILE '__OUTPUT_DIR__/Synonyms.txt'
+CHARACTER SET UTF8
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
@@ -124,14 +127,15 @@ AND sn.database_id=__DATABASE_ID__;
  */
 SELECT 'AcceptedTaxonID','CommonName','TransliteratedNames','Language','Country','Area','ReferenceID'
 UNION
-SELECT IFNULL(sn.name_code,'')				AS AcceptedTaxonID
-,	IFNULL(cn.common_name,'')				AS CommonName
+SELECT cn.name_code							AS AcceptedTaxonID
+,	REPLACE(REPLACE(REPLACE(REPLACE(cn.common_name, '\r\n', ' '), '\n', ' '), '\r', ' '), '\t', ' ') AS CommonName
 ,	IFNULL(cn.transliteration,'')			AS TransliteratedNames
 ,	IFNULL(cn.language,'')					AS Language
 ,	IFNULL(cn.country,'')					AS Country
-,	IFNULL(cn.area,'')						AS Area
+,	REPLACE(REPLACE(REPLACE(REPLACE(cn.area, '\r\n', ' '), '\n', ' '), '\r', ' '), '\t', ' ') AS Area
 ,	IFNULL(cn.reference_code,'')			AS ReferenceID
 INTO OUTFILE '__OUTPUT_DIR__/CommonNames.txt'
+CHARACTER SET UTF8
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
@@ -146,11 +150,12 @@ WHERE cn.database_id=__DATABASE_ID__;
  */
 SELECT 'AcceptedTaxonID','DistributionElement','StandardInUse','DistributionStatus'
 UNION
-SELECT IFNULL(d.name_code,'')				AS AcceptedTaxonID
-,	IFNULL(d.distribution,'')				AS DistributionElement
+SELECT d.name_code							AS AcceptedTaxonID
+,	REPLACE(REPLACE(REPLACE(REPLACE(IFNULL(distribution, ''), '\r\n', ' '), '\n', ' '), '\r', ' '), '\t', ' ') AS DistributionElement
 ,	IFNULL(d.StandardInUse,'')				AS StandardInUse
 ,	IFNULL(d.DistributionStatus,'')			AS DistributionStatus
 INTO OUTFILE '__OUTPUT_DIR__/Distribution.txt'
+CHARACTER SET UTF8
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
@@ -164,12 +169,13 @@ WHERE d.database_id=__DATABASE_ID__;
  */
 SELECT 'ReferenceID','Authors','Year','Title','Details'
 UNION
-SELECT IFNULL(r.reference_code,'')			AS ReferenceID
-,	IFNULL(r.author,'')						AS Authors
+SELECT r.reference_code						AS ReferenceID
+,	REPLACE(REPLACE(REPLACE(REPLACE(IFNULL(r.author, ''), '\r\n', ' '), '\n', ' '), '\r', ' '), '\t', ' ') AS Authors
 ,	IFNULL(r.year,'')						AS Year
-,	IFNULL(r.title,'')						AS Title
-,	IFNULL(r.source,'')						AS Details
+,	REPLACE(REPLACE(REPLACE(REPLACE(IFNULL(r.title, ''), '\r\n', ' '), '\n', ' '), '\r', ' '), '\t', ' ') AS Title
+,	REPLACE(REPLACE(REPLACE(REPLACE(IFNULL(r.source, ''), '\r\n', ' '), '\n', ' '), '\r', ' '), '\t', ' ') AS Details
 INTO OUTFILE '__OUTPUT_DIR__/References.txt'
+CHARACTER SET UTF8
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
@@ -184,10 +190,11 @@ WHERE r.database_id=__DATABASE_ID__;
  */
 SELECT 'ID','ReferenceType','ReferenceID'
 UNION
-SELECT IFNULL(snr.name_code,'')			AS ID
+SELECT snr.name_code						AS ID
 ,	IFNULL(snr.reference_type,'')			AS ReferenceType
 ,	IFNULL(snr.reference_code,'')			AS ReferenceID
 INTO OUTFILE '__OUTPUT_DIR__/NameReferences.txt'
+CHARACTER SET UTF8
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
@@ -203,22 +210,23 @@ SELECT 'DatabaseFullName','DatabaseName','DatabaseVersion','ReleaseDate','Author
 'GroupNameInEnglish','Abstract','Organization','HomeURL','Coverage','Completeness','Confidence',
 'LogoFileName','ContactPerson'
 UNION
-SELECT IFNULL(db.database_full_name,'')	AS DatabaseFullName
-,	IFNULL(db.database_name,'')			AS DatabaseName
+SELECT db.database_full_name				AS DatabaseFullName
+,	IFNULL(db.database_name,'')				AS DatabaseName
 ,	IFNULL(db.version,'')					AS DatabaseVersion
 ,	IFNULL(db.release_date,'')				AS ReleaseDate
 ,	IFNULL(db.authors_editors,'')			AS AuthorsEditors
-,	IFNULL(db.taxonomic_coverage,'')		AS TaxonomicCoverage
-,	''						AS GroupNameInEnglish /* ??? */
-,	IFNULL(db.abstract,'')					AS Abstract
+,	REPLACE(REPLACE(REPLACE(REPLACE(IFNULL(db.taxonomic_coverage, ''), '\r\n', ' '), '\n', ' '), '\r', ' '), '\t', ' ') AS TaxonomicCoverage
+,	''										AS GroupNameInEnglish /* ??? */
+,	REPLACE(REPLACE(REPLACE(REPLACE(IFNULL(db.abstract, ''), '\r\n', ' '), '\n', ' '), '\r', ' '), '\t', ' ') AS Abstract
 ,	IFNULL(db.organization,'')				AS Organization
 ,	IFNULL(db.web_site,'')					AS HomeURL
 ,	IFNULL(db.coverage,'')					AS Coverage
 ,	IFNULL(db.completeness,'')				AS Completeness
 ,	IFNULL(db.confidence,'')				AS Confidence
-,	''						AS LogoFileName
+,	''										AS LogoFileName
 ,	IFNULL(db.contact_person,'')			AS ContactPerson
 INTO OUTFILE '__OUTPUT_DIR__/SourceDatabase.txt'
+CHARACTER SET UTF8
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
