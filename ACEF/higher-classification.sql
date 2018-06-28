@@ -1,5 +1,5 @@
 SELECT t.taxon_id AS id
-, t.parent_id AS parentNameUsageID
+, REPLACE(t.parent_id , '0', '') AS parentNameUsageID
 , t.rank AS taxonRank
 , REPLACE(REPLACE(REPLACE(t.name, '\n', ' '), '\r', ' '), '  ', ' ') AS scientificName
 , t.total_species_estimation AS speciesEstimate
