@@ -6,6 +6,7 @@ SELECT t.taxon_id AS id
 , REPLACE(REPLACE(REPLACE(IFNULL(t.estimate_source,''), '\n', ' '), '\r', ' '), '  ', ' ') AS speciesEstimateReference
 FROM ac_latest._taxon_tree AS t
 WHERE (t.rank IN ('kingdom', 'phylum', 'order', 'class', 'superfamily', 'family'))
+/* Exlude rank 'not assigned' for binomial and trinomials - which in practice means: always */
 OR (t.rank = 'not assigned' AND INSTR(t.name, ' ') = 0)
 ORDER BY (
 	CASE t.rank
