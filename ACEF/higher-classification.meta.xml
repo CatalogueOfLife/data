@@ -13,6 +13,8 @@
         <field index='1' term='http://rs.tdwg.org/dwc/terms/parentNameUsageID'/>
         <field index='2' term='http://rs.tdwg.org/dwc/terms/taxonRank'/>
         <field index='3' term='http://rs.tdwg.org/dwc/terms/scientificName'/>
+        <field index='4' term='http://rs.col.plus/terms/speciesEstimate'/>
+        <field index='5' term='http://rs.col.plus/terms/speciesEstimateReference'/>
     </core>
 
 </archive>
