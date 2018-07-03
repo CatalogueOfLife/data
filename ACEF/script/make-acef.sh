@@ -1,6 +1,7 @@
 #!/bin/bash
 
 my_dir=$(pwd)
+acef_dir="$(dirname "$my_dir")" 
 
 rm -rf /tmp/acef
 mkdir /tmp/acef
@@ -18,8 +19,8 @@ then
 	mysql --defaults-extra-file=my.cnf -e 'SELECT record_id FROM `databases`' > /tmp/acef/database_ids.txt
 	echo "$(date '+%Y-%m-%d %H:%M:%S') Creating temp table ..."
 	mysql --defaults-extra-file=my.cnf < once.sql
-	echo "Clearing directory ${my_dir}/assembly"
-	rm -rf "${my_dir}/assembly/*.*"
+	echo "Clearing directory ${acef_dir}"
+	rm -rf "${acef_dir}/*.gz"
 else
 	echo $database_id > /tmp/acef/database_ids.txt
 fi
@@ -42,8 +43,7 @@ do
     cd "/tmp/acef/${line}"
     zip_file="/tmp/acef/${line}.tar.gz"
     tar czf ${zip_file} *.txt
-    cd ${my_dir}
-    mv ${zip_file} ${my_dir}/assembly
+    mv ${zip_file} ${acef_dir}
     echo "INSERT INTO dataset (key, code, title) VALUES (1000+${line}, null, 'GSD');" >> ${dsql}
 done < /tmp/acef/database_ids.txt
 cat datasets-append.sql >> ${dsql}
@@ -57,6 +57,6 @@ mysql --defaults-extra-file=my.cnf < ${my_dir}/higher-classification.sql > /tmp/
 cd /tmp/acef/higher-classification
 cp ${my_dir}/higher-classification.meta.xml ./meta.xml
 zip higher-classification.dwca.zip *
-mv higher-classification.dwca.zip ${my_dir}/assembly
+mv higher-classification.dwca.zip ${acef_dir}
 cd ${my_dir}
 
