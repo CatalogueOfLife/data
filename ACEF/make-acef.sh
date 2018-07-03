@@ -16,7 +16,7 @@ if [ "x${database_id}" = "x" ]
 then
 	echo "$(date '+%Y-%m-%d %H:%M:%S') Retrieving GSD IDs ..."
 	mysql --defaults-extra-file=my.cnf -e 'SELECT record_id FROM `databases`' > /tmp/acef/database_ids.txt
-	echo "$(date '+%Y-%m-%d %H:%M:%S') Creating temp table ..."
+	echo "$(date '+%Y-%m-%d %H:%M:%S') Executing preparatory SQL ..."
 	mysql --defaults-extra-file=my.cnf < once.sql
 	echo "Clearing directory ${my_dir}/assembly"
 	rm -rf "${my_dir}/assembly/*.*"

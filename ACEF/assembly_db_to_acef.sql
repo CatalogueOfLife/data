@@ -1,27 +1,20 @@
-/*
- * This SQL script is a template for the SQL that is to be run
- * in order to generate the ACEF files (e.g. AcceptedSpecies.txt,
- * AcceptedInfraspecificTaxa.txt, etc.). It is meant to be run
- * by the make-acef.sh script, which uses sed to replace
- * __OUTPUT_DIR__ and __DATABASE_ID__ with proper values.
- */
 
-DROP FUNCTION IF EXISTS N2E;
-CREATE FUNCTION N2E(s VARCHAR(512)) RETURNS VARCHAR(512) DETERMINISTIC
-	RETURN IFNULL(s,'');
+# This SQL script is a template for the SQL that is to be run
+# in order to generate the ACEF files (e.g. AcceptedSpecies.txt,
+# AcceptedInfraspecificTaxa.txt, etc.). It is meant to be run
+# by the make-acef.sh script, which uses sed to replace
+# __OUTPUT_DIR__ and __DATABASE_ID__ with proper values.
 
-DROP FUNCTION IF EXISTS CLEAN_STR;
-CREATE FUNCTION CLEAN_STR(s VARCHAR(512)) RETURNS VARCHAR(512) DETERMINISTIC
-  RETURN REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(N2E(s),'\r',' '),'\n',' '),'\t',' '),'  ',' '),'  ',' '),'  ',' ');
-
-# There is a special dataset just for common names, pointing to
-# species outside that dataset. It needs special treatment
-SET @COMMON_NAMES_DB = 7;
-
+# N.B. There is a special dataset (id = 7) just for common names,
+# pointing to species outside that dataset. It needs special
+# treatment. For now we'll assume the dataset id will always
+# be 7, so we don't do a lookup.
 
 /* 
  * AcceptedSpecies.txt
  */
+SELECT LOG_MSG('Creating AcceptedSpecies.txt ...') AS '';
+
 SELECT 
 'AcceptedTaxonID','Kingdom','Phylum', 'Class', 'Order', 'Superfamily', 'Family', 'Genus', 'SubGenusName', 
 'SpeciesEpithet', 'AuthorString', 'GSDNameStatus', 'Sp2000NameStatus', 'IsExtinct', 'HasPreHolocene',
@@ -63,12 +56,17 @@ LEFT JOIN lifezones_per_name lz ON (sn.record_id = lz.scientific_name_id)
 LEFT JOIN specialists AS sp ON (sn.specialist_id = sp.record_id)
 WHERE (sn.infraspecies_marker IS NULL OR infraspecies_marker = '')
 AND sn.is_accepted_name != 0 /* both 1 and 5 are accepted names; 5 likely data corruption */
-AND (sn.database_id=__DATABASE_ID__ OR (__DATABASE_ID__=@COMMON_NAMES_DB AND sn.name_code IN (SELECT name_code FROM common_names WHERE database_id = @COMMON_NAMES_DB));
+AND (
+	 (__DATABASE_ID__ = 7 AND sn.name_code IN (SELECT name_code FROM common_names WHERE database_id = 7))
+	 OR sn.database_id=__DATABASE_ID__
+);
 
 
 /* 
  * AcceptedInfraspecificTaxa.txt
  */
+SELECT LOG_MSG('Creating AcceptedInfraspecificTaxa.txt ...') AS '';
+
 SELECT 'AcceptedTaxonID','parentID','InfraSpeciesEpithet','InfraSpeciesMarker','InfraSpeciesAuthorString',
  'GSDNameStatus','Sp2000NameStatus','IsExtinct','HasPreHolocene','HasModern','LifeZone','AdditionalData',
  'LTSSpecialist','LTSDate','InfraSpeciesURL','GSDTaxonGUID','GSDNameGUID'
@@ -102,12 +100,17 @@ LEFT JOIN lifezones_per_name lz ON (sn.record_id = lz.scientific_name_id)
 LEFT JOIN specialists AS sp ON (sn.specialist_id = sp.record_id)
 WHERE (sn.infraspecies_marker IS NOT NULL AND infraspecies_marker != '')
 AND sn.is_accepted_name != 0
-AND (sn.database_id=__DATABASE_ID__ OR (__DATABASE_ID__=@COMMON_NAMES_DB AND sn.name_code IN (SELECT name_code FROM common_names WHERE database_id = @COMMON_NAMES_DB));
+AND (
+	 (__DATABASE_ID__ = 7 AND sn.name_code IN (SELECT name_code FROM common_names WHERE database_id = 7))
+	 OR sn.database_id=__DATABASE_ID__
+);
 
 
 /* 
  * Synonyms.txt
  */
+SELECT LOG_MSG('Creating Synonyms.txt ...') AS '';
+
 SELECT 'ID','AcceptedTaxonID','Genus','SubGenusName','SpeciesEpithet','AuthorString','InfraSpeciesEpithet',
 'InfraSpeciesMarker','InfraSpeciesAuthorString','GSDNameStatus','Sp2000NameStatus','GSDNameGUID'
 UNION
@@ -138,6 +141,8 @@ AND sn.database_id=__DATABASE_ID__;
 /*
  * CommonNames.txt
  */
+SELECT LOG_MSG('Creating CommonNames.txt ...') AS '';
+
 SELECT 'AcceptedTaxonID','CommonName','TransliteratedNames','Language','Country','Area','ReferenceID'
 UNION
 SELECT cn.name_code					AS AcceptedTaxonID
@@ -161,6 +166,8 @@ WHERE cn.database_id=__DATABASE_ID__;
 /*
  * Distribution.txt
  */
+SELECT LOG_MSG('Creating Distribution.txt ...') AS '';
+
 SELECT 'AcceptedTaxonID','DistributionElement','StandardInUse','DistributionStatus'
 UNION
 SELECT d.name_code					AS AcceptedTaxonID
@@ -180,6 +187,8 @@ WHERE d.database_id=__DATABASE_ID__;
 /*
  * References.txt
  */
+SELECT LOG_MSG('Creating References.txt ...') AS '';
+
 SELECT 'ReferenceID','Authors','Year','Title','Details'
 UNION
 SELECT r.reference_code				AS ReferenceID
@@ -194,13 +203,16 @@ TERMINATED BY ','
 ESCAPED BY '"' 
 LINES TERMINATED BY '\n'
 FROM `references` AS r
-WHERE r.database_id=__DATABASE_ID__;
+WHERE (__DATABASE_ID__ = 7 AND r.reference_code IN (SELECT reference_code FROM common_names WHERE database_id = 7))
+OR r.database_id=__DATABASE_ID__;
 
 
 
 /*
  * NameReferences.txt
  */
+SELECT LOG_MSG('Creating NameReferences.txt ...') AS '';
+
 SELECT 'ID','ReferenceType','ReferenceID'
 UNION
 SELECT snr.name_code				AS ID
@@ -213,12 +225,15 @@ TERMINATED BY ','
 ESCAPED BY '"' 
 LINES TERMINATED BY '\n'
 FROM scientific_name_references AS snr
-WHERE snr.database_id=__DATABASE_ID__;
+WHERE (__DATABASE_ID__ = 7 AND snr.reference_code IN (SELECT reference_code FROM common_names WHERE database_id = 7))
+OR snr.database_id=__DATABASE_ID__;
 
 
 /*
  * SourceDatabase.txt
  */
+SELECT LOG_MSG('Creating SourceDatabase.txt ...') AS '';
+
 SELECT 'DatabaseFullName','DatabaseName','DatabaseVersion','ReleaseDate','AuthorsEditors','TaxonomicCoverage',
 'GroupNameInEnglish','Abstract','Organization','HomeURL','Coverage','Completeness','Confidence',
 'LogoFileName','ContactPerson'
