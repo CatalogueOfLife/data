@@ -13,8 +13,6 @@
 /* 
  * AcceptedSpecies.txt
  */
-SELECT LOG_MSG('Creating AcceptedSpecies.txt ...') AS '';
-
 SELECT 
 'AcceptedTaxonID','Kingdom','Phylum', 'Class', 'Order', 'Superfamily', 'Family', 'Genus', 'SubGenusName', 
 'SpeciesEpithet', 'AuthorString', 'GSDNameStatus', 'Sp2000NameStatus', 'IsExtinct', 'HasPreHolocene',
@@ -44,7 +42,7 @@ SELECT sn.name_code					AS AcceptedTaxonID
 ,	N2E(sn.GSDTaxonGUID)			AS GSDTaxonGUID
 ,	N2E(sn.GSDNameGUID)				AS GSDNameGUID
 INTO OUTFILE '__OUTPUT_DIR__/AcceptedSpecies.txt'
-CHARACTER SET UTF8
+CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
@@ -65,8 +63,6 @@ AND (
 /* 
  * AcceptedInfraspecificTaxa.txt
  */
-SELECT LOG_MSG('Creating AcceptedInfraspecificTaxa.txt ...') AS '';
-
 SELECT 'AcceptedTaxonID','parentID','InfraSpeciesEpithet','InfraSpeciesMarker','InfraSpeciesAuthorString',
  'GSDNameStatus','Sp2000NameStatus','IsExtinct','HasPreHolocene','HasModern','LifeZone','AdditionalData',
  'LTSSpecialist','LTSDate','InfraSpeciesURL','GSDTaxonGUID','GSDNameGUID'
@@ -89,7 +85,7 @@ SELECT sn.name_code					AS AcceptedTaxonID
 ,	N2E(sn.GSDTaxonGUID)			AS GSDTaxonGUID
 ,	N2E(sn.GSDNameGUID)				AS GSDNameGUID
 INTO OUTFILE '__OUTPUT_DIR__/AcceptedInfraspecificTaxa.txt'
-CHARACTER SET UTF8
+CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
@@ -109,8 +105,6 @@ AND (
 /* 
  * Synonyms.txt
  */
-SELECT LOG_MSG('Creating Synonyms.txt ...') AS '';
-
 SELECT 'ID','AcceptedTaxonID','Genus','SubGenusName','SpeciesEpithet','AuthorString','InfraSpeciesEpithet',
 'InfraSpeciesMarker','InfraSpeciesAuthorString','GSDNameStatus','Sp2000NameStatus','GSDNameGUID'
 UNION
@@ -127,7 +121,7 @@ SELECT sn.name_code					AS ID
 ,	N2E(nomstatus.sp2000_status)	AS Sp2000NameStatus
 ,	N2E(sn.GSDNameGUID)				AS GSDNameGUID
 INTO OUTFILE '__OUTPUT_DIR__/Synonyms.txt'
-CHARACTER SET UTF8
+CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
@@ -141,8 +135,6 @@ AND sn.database_id=__DATABASE_ID__;
 /*
  * CommonNames.txt
  */
-SELECT LOG_MSG('Creating CommonNames.txt ...') AS '';
-
 SELECT 'AcceptedTaxonID','CommonName','TransliteratedNames','Language','Country','Area','ReferenceID'
 UNION
 SELECT cn.name_code					AS AcceptedTaxonID
@@ -153,7 +145,7 @@ SELECT cn.name_code					AS AcceptedTaxonID
 ,	CLEAN_STR(cn.area)				AS Area
 ,	N2E(cn.reference_code)			AS ReferenceID
 INTO OUTFILE '__OUTPUT_DIR__/CommonNames.txt'
-CHARACTER SET UTF8
+CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
@@ -166,8 +158,6 @@ WHERE cn.database_id=__DATABASE_ID__;
 /*
  * Distribution.txt
  */
-SELECT LOG_MSG('Creating Distribution.txt ...') AS '';
-
 SELECT 'AcceptedTaxonID','DistributionElement','StandardInUse','DistributionStatus'
 UNION
 SELECT d.name_code					AS AcceptedTaxonID
@@ -175,7 +165,7 @@ SELECT d.name_code					AS AcceptedTaxonID
 ,	N2E(d.StandardInUse)			AS StandardInUse
 ,	N2E(d.DistributionStatus)		AS DistributionStatus
 INTO OUTFILE '__OUTPUT_DIR__/Distribution.txt'
-CHARACTER SET UTF8
+CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
@@ -187,8 +177,6 @@ WHERE d.database_id=__DATABASE_ID__;
 /*
  * References.txt
  */
-SELECT LOG_MSG('Creating References.txt ...') AS '';
-
 SELECT 'ReferenceID','Authors','Year','Title','Details'
 UNION
 SELECT r.reference_code				AS ReferenceID
@@ -197,7 +185,7 @@ SELECT r.reference_code				AS ReferenceID
 ,	CLEAN_STR(r.title)				AS Title
 ,	CLEAN_STR(r.source)				AS Details
 INTO OUTFILE '__OUTPUT_DIR__/References.txt'
-CHARACTER SET UTF8
+CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
@@ -211,15 +199,13 @@ OR r.database_id=__DATABASE_ID__;
 /*
  * NameReferences.txt
  */
-SELECT LOG_MSG('Creating NameReferences.txt ...') AS '';
-
 SELECT 'ID','ReferenceType','ReferenceID'
 UNION
 SELECT snr.name_code				AS ID
 ,	N2E(snr.reference_type)			AS ReferenceType
 ,	N2E(snr.reference_code)			AS ReferenceID
 INTO OUTFILE '__OUTPUT_DIR__/NameReferences.txt'
-CHARACTER SET UTF8
+CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
@@ -232,8 +218,6 @@ OR snr.database_id=__DATABASE_ID__;
 /*
  * SourceDatabase.txt
  */
-SELECT LOG_MSG('Creating SourceDatabase.txt ...') AS '';
-
 SELECT 'DatabaseFullName','DatabaseName','DatabaseVersion','ReleaseDate','AuthorsEditors','TaxonomicCoverage',
 'GroupNameInEnglish','Abstract','Organization','HomeURL','Coverage','Completeness','Confidence',
 'LogoFileName','ContactPerson'
@@ -254,7 +238,7 @@ SELECT db.database_full_name		AS DatabaseFullName
 ,	''								AS LogoFileName
 ,	N2E(db.contact_person)			AS ContactPerson
 INTO OUTFILE '__OUTPUT_DIR__/SourceDatabase.txt'
-CHARACTER SET UTF8
+CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
