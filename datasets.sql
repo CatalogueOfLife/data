@@ -108,7 +108,6 @@ INSERT INTO dataset (key, code, title) VALUES (1037, 4, 'GSD');
 INSERT INTO dataset (key, code, title) VALUES (1038, 1, 'GSD');
 INSERT INTO dataset (key, code, title) VALUES (1039, 4, 'GSD');
 INSERT INTO dataset (key, code, title) VALUES (1040, 1, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1041, null, 'GSD');
 INSERT INTO dataset (key, code, title) VALUES (1042, 4, 'GSD');
 INSERT INTO dataset (key, code, title) VALUES (1044, 4, 'GSD');
 INSERT INTO dataset (key, code, title) VALUES (1045, 1, 'GSD');
@@ -169,6 +168,7 @@ INSERT INTO dataset (key, code, title) VALUES (1099, 4, 'GSD');
 UPDATE dataset SET data_format=1, 
 	trusted = true,
 	title = 'GSD ' || (key-1000),
+	import_frequency = 1,
 	data_access = 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/' || (key-1000) || '.tar.gz' 
 	WHERE key > 999 AND key < 2000;
 INSERT INTO dataset (key, title, data_format, data_access) VALUES ('1000', 'CoL Management Classification', 0, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/higher-classification.dwca.zip');
