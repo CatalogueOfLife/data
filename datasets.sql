@@ -1,187 +1,205 @@
-INSERT INTO dataset (key, code, title) VALUES (1010, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1100, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1101, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1103, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1104, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1105, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1106, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1107, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1108, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1109, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1011, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1110, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1112, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1113, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1115, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1118, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1119, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1012, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1120, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1121, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1122, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1123, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1124, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1125, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1126, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1127, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1128, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1129, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1130, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1131, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1132, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1133, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1134, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1138, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1139, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1014, 3, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1140, 1, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1141, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1142, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1143, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1144, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1146, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1148, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1149, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1015, 1, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1150, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1152, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1153, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1154, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1157, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1158, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1161, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1162, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1163, 1, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1164, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1166, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1167, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1168, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1169, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1017, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1170, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1171, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1172, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1173, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1174, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1175, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1176, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1177, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1178, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1179, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1018, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1180, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1181, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1182, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1183, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1184, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1185, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1186, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1187, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1188, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1189, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1019, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1190, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1191, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1192, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1193, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1194, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1195, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1196, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1197, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1198, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1020, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1021, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1022, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1023, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1024, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1025, 1, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1026, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1028, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1029, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1030, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1031, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1032, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1033, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1034, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1036, 1, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1037, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1038, 1, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1039, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1040, 1, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1042, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1044, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1045, 1, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1046, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1047, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1048, 1, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1049, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1005, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1050, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1500, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1501, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1051, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1052, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1053, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1054, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1055, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1057, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1058, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1059, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1006, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1061, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1062, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1063, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1065, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1066, 1, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1067, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1068, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1069, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1007, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1070, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1074, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1075, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1076, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1078, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1079, null, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1008, 4,  'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1080, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1081, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1082, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1085, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1086, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1087, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1088, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1089, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1009, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1090, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1091, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1092, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1093, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1094, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1095, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1096, 4, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1097, 1, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1098, 1, 'GSD');
-INSERT INTO dataset (key, code, title) VALUES (1099, 4, 'GSD');
+INSERT INTO dataset (key, trusted, title, import_frequency, data_format, data_access) 
+VALUES ('1000', true, 'CoL Management Classification', 1, 0, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/higher-classification.dwca.zip');
 
+INSERT INTO dataset (key, trusted, title, import_frequency, data_format, data_access) 
+SELECT x.id+1000, true, 'GSD ' || x.id, 1, 1, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/' || x.id || '.tar.gz'
+FROM (SELECT unnest(array[
+10,
+100,
+101,
+103,
+104,
+105,
+106,
+107,
+108,
+109,
+11,
+110,
+112,
+113,
+115,
+118,
+119,
+12,
+120,
+121,
+122,
+123,
+124,
+125,
+126,
+127,
+128,
+129,
+130,
+131,
+132,
+133,
+134,
+138,
+139,
+14,
+140,
+141,
+142,
+143,
+144,
+146,
+148,
+149,
+15,
+150,
+152,
+153,
+154,
+157,
+158,
+161,
+162,
+163,
+164,
+166,
+167,
+168,
+169,
+17,
+170,
+171,
+172,
+173,
+174,
+175,
+176,
+177,
+178,
+179,
+18,
+180,
+181,
+182,
+183,
+184,
+185,
+186,
+188,
+189,
+19,
+190,
+191,
+192,
+193,
+194,
+195,
+196,
+197,
+198,
+199,
+20,
+200,
+201,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33,
+34,
+36,
+37,
+38,
+39,
+40,
+42,
+44,
+45,
+46,
+47,
+48,
+49,
+5,
+50,
+500,
+501,
+502,
+51,
+52,
+53,
+54,
+55,
+57,
+58,
+59,
+6,
+61,
+62,
+63,
+65,
+66,
+67,
+68,
+69,
+7,
+70,
+73,
+74,
+75,
+76,
+78,
+79,
+8,
+80,
+81,
+82,
+85,
+86,
+87,
+88,
+89,
+9,
+90,
+91,
+92,
+93,
+94,
+95,
+96,
+97,
+98,
+99
+]) AS id) AS x;
 
-UPDATE dataset SET data_format=1, 
-	trusted = true,
-	title = 'GSD ' || (key-1000),
-	import_frequency = 1,
-	data_access = 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/' || (key-1000) || '.tar.gz' 
-	WHERE key > 999 AND key < 2000;
-INSERT INTO dataset (key, title, data_format, data_access) VALUES ('1000', 'CoL Management Classification', 0, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/higher-classification.dwca.zip');
+UPDATE dataset SET code=1 WHERE key IN (
+	1015,1025,1036,1038,1040,1045,1048,1066,1097,1098,1140,1163
+);
+UPDATE dataset SET code=3 WHERE key IN (
+	1014
+);
+UPDATE dataset SET code=4 WHERE key IN (
+	1005,1006,1008,1009,1010,1011,1018,1020,1021,1022,1023,1026,1029,1030,1031,1032,1034,1037,1039,1042,1044,
+	1046,1047,1049,1050,1051,1052,1054,1055,1057,1058,1059,1061,1062,1063,1065,1067,1068,1069,1070,1076,1078,
+	1080,1081,1082,1085,1086,1087,1088,1089,1090,1091,1092,1093,1094,1095,1096,1099,1100,1103,1104,1105,1106,
+	1107,1108,1109,1110,1112,1118,1119,1120,1122,1130,1133,1134
+);
+
 ALTER SEQUENCE dataset_key_seq RESTART WITH 2000;
 
 -- removed, old sources which we mark as deleted
-INSERT INTO dataset (key, title, created, deleted) VALUES ('1117', 'chenobase', now(), now());
-INSERT INTO dataset (key, title, created, deleted) VALUES ('1159', 'fada_copepoda', now(), now());
-INSERT INTO dataset (key, title, created, deleted) VALUES ('1135', 'fada_turbellaria', now(), now());
-INSERT INTO dataset (key, title, created, deleted) VALUES ('1165', 'faeu_turbellaria', now(), now());
-INSERT INTO dataset (key, title, created, deleted) VALUES ('1016',  'iopi-gpc', now(), now());
-INSERT INTO dataset (key, title, created, deleted) VALUES ('1043',  'lecypages', now(), now());
-INSERT INTO dataset (key, title, created, deleted) VALUES ('1056',  'lhd', now(), now());
-INSERT INTO dataset (key, title, created, deleted) VALUES ('1064',  'solanaceae_source', now(), now());
-INSERT INTO dataset (key, title, created, deleted) VALUES ('1060',  'worms_proseriata-kalyptorhynchia', now(), now());
-
+INSERT INTO dataset (key, title, created, deleted) VALUES 
+	('1016', 'IOPI-GPC', now(), now()),
+	('1041', 'Systematic Myriapod Database', now(), now()),
+	('1043', 'lecypages', now(), now()),
+	('1056', 'lhd', now(), now()),
+	('1060', 'worms_proseriata-kalyptorhynchia', now(), now()),
+	('1064', 'solanaceae_source', now(), now()),
+	('1117', 'chenobase', now(), now()),
+	('1135', 'fada_turbellaria', now(), now()),
+	('1159', 'fada_copepoda', now(), now()),
+	('1165', 'faeu_turbellaria', now(), now());
