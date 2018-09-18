@@ -1,8 +1,8 @@
-INSERT INTO dataset (key, trusted, title, import_frequency, data_format, data_access) 
-VALUES ('1000', true, 'CoL Management Classification', 1, 0, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/higher-classification.dwca.zip');
+INSERT INTO dataset (key, catalogue, title, import_frequency, data_format, data_access) 
+VALUES ('1000', 0, 'CoL Management Classification', 1, 0, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/higher-classification.dwca.zip');
 
-INSERT INTO dataset (key, trusted, title, import_frequency, data_format, data_access) 
-SELECT x.id+1000, true, 'GSD ' || x.id, 1, 1, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/' || x.id || '.tar.gz'
+INSERT INTO dataset (key, catalogue, title, import_frequency, data_format, data_access) 
+SELECT x.id+1000, 0, 'GSD ' || x.id, 1, 1, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/' || x.id || '.tar.gz'
 FROM (SELECT unnest(array[
 10,
 100,
