@@ -216,9 +216,6 @@ INSERT INTO dataset (key, title, created, deleted) VALUES
 ALTER SEQUENCE dataset_key_seq RESTART WITH 2000;
 
 
-INSERT INTO dataset (key, type, catalogue, title, import_frequency, data_format, data_access) 
-SELECT x.id+1000, 1, 0, 'GSD ' || x.id, 1, 1, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/' || x.id || '.tar.gz'
-FROM (SELECT unnest(array[
 
 
 INSERT INTO col_source (key, dataset_key) 
