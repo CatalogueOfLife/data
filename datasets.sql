@@ -1,8 +1,8 @@
-INSERT INTO dataset (key, catalogue, title, import_frequency, data_format, data_access) 
-VALUES ('1000', 0, 'CoL Management Classification', 1, 0, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/higher-classification.dwca.zip');
+INSERT INTO dataset (key, type, catalogue, title, import_frequency, data_format, data_access) 
+VALUES ('1000', 1, 0, 'CoL Management Classification', 1, 0, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/higher-classification.dwca.zip');
 
-INSERT INTO dataset (key, catalogue, title, import_frequency, data_format, data_access) 
-SELECT x.id+1000, 0, 'GSD ' || x.id, 1, 1, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/' || x.id || '.tar.gz'
+INSERT INTO dataset (key, type, catalogue, title, import_frequency, data_format, data_access) 
+SELECT x.id+1000, 1, 0, 'GSD ' || x.id, 1, 1, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/' || x.id || '.tar.gz'
 FROM (SELECT unnest(array[
 10,
 100,
@@ -176,6 +176,17 @@ FROM (SELECT unnest(array[
 99
 ]) AS id) AS x;
 
+
+-- regional ACEF dataset: NZIB, COL-CHINA, ITIS-regional
+UPDATE dataset SET type=2 WHERE key IN (
+	1121, 1075, 1017
+);
+
+-- other ACEF dataset: common names
+UPDATE dataset SET type=4 WHERE key IN (
+	1007
+);
+
 UPDATE dataset SET code=1 WHERE key IN (
 	1015,1025,1036,1038,1040,1045,1048,1066,1097,1098,1140,1163
 );
@@ -189,8 +200,6 @@ UPDATE dataset SET code=4 WHERE key IN (
 	1107,1108,1109,1110,1112,1118,1119,1120,1122,1130,1133,1134
 );
 
-ALTER SEQUENCE dataset_key_seq RESTART WITH 2000;
-
 -- removed, old sources which we mark as deleted
 INSERT INTO dataset (key, title, created, deleted) VALUES 
 	('1016', 'IOPI-GPC', now(), now()),
@@ -203,3 +212,17 @@ INSERT INTO dataset (key, title, created, deleted) VALUES
 	('1135', 'fada_turbellaria', now(), now()),
 	('1159', 'fada_copepoda', now(), now()),
 	('1165', 'faeu_turbellaria', now(), now());
+
+ALTER SEQUENCE dataset_key_seq RESTART WITH 2000;
+
+
+INSERT INTO dataset (key, type, catalogue, title, import_frequency, data_format, data_access) 
+SELECT x.id+1000, 1, 0, 'GSD ' || x.id, 1, 1, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/' || x.id || '.tar.gz'
+FROM (SELECT unnest(array[
+
+
+INSERT INTO col_source (key, dataset_key) 
+SELECT key, key FROM dataset 
+WHERE data_format=1 AND key < 2000;
+
+ALTER SEQUENCE col_source_key_seq RESTART WITH 2000;
