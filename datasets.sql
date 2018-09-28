@@ -218,8 +218,8 @@ ALTER SEQUENCE dataset_key_seq RESTART WITH 2000;
 
 
 
-INSERT INTO col_source (key, dataset_key) 
-SELECT key, key FROM dataset 
+INSERT INTO col_source (key, dataset_key, alias) 
+SELECT key, key, key::text FROM dataset 
 WHERE data_format=1 AND key < 2000;
 
 ALTER SEQUENCE col_source_key_seq RESTART WITH 2000;
