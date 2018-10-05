@@ -15,6 +15,7 @@
         <field index='3' term='http://rs.tdwg.org/dwc/terms/scientificName'/>
         <field index='4' term='http://rs.col.plus/terms/speciesEstimate'/>
         <field index='5' term='http://rs.col.plus/terms/speciesEstimateReference'/>
+        <field default='accepted' term='http://rs.tdwg.org/dwc/terms/taxonomicStatus'/>
     </core>
 
 </archive>
