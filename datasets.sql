@@ -1,8 +1,9 @@
-INSERT INTO dataset (key, type, catalogue, title, import_frequency, data_format, data_access) 
-VALUES ('1000', 1, 0, 'CoL Management Classification', 1, 0, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/higher-classification.dwca.zip');
+-- origin:  0=EXTERNAL, 1=UPLOADED, 2=MANAGED
+INSERT INTO dataset (key, origin, type, catalogue, title, import_frequency, data_format, data_access) 
+VALUES ('1000', 0, 1, 0, 'CoL Management Classification', 1, 0, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/higher-classification.dwca.zip');
 
-INSERT INTO dataset (key, type, catalogue, title, import_frequency, data_format, data_access) 
-SELECT x.id+1000, 1, 0, 'GSD ' || x.id, 1, 1, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/' || x.id || '.tar.gz'
+INSERT INTO dataset (key, origin, type, catalogue, title, import_frequency, data_format, data_access) 
+SELECT x.id+1000, 0, 1, 0, 'GSD ' || x.id, 1, 1, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/' || x.id || '.tar.gz'
 FROM (SELECT unnest(array[
 10,
 100,
@@ -201,17 +202,17 @@ UPDATE dataset SET code=4 WHERE key IN (
 );
 
 -- removed, old sources which we mark as deleted
-INSERT INTO dataset (key, title, created, deleted) VALUES 
-	('1016', 'IOPI-GPC', now(), now()),
-	('1041', 'Systematic Myriapod Database', now(), now()),
-	('1043', 'lecypages', now(), now()),
-	('1056', 'lhd', now(), now()),
-	('1060', 'worms_proseriata-kalyptorhynchia', now(), now()),
-	('1064', 'solanaceae_source', now(), now()),
-	('1117', 'chenobase', now(), now()),
-	('1135', 'fada_turbellaria', now(), now()),
-	('1159', 'fada_copepoda', now(), now()),
-	('1165', 'faeu_turbellaria', now(), now());
+INSERT INTO dataset (key, origin, title, created, deleted) VALUES 
+	('1016', 0, 'IOPI-GPC', now(), now()),
+	('1041', 0, 'Systematic Myriapod Database', now(), now()),
+	('1043', 0, 'lecypages', now(), now()),
+	('1056', 0, 'lhd', now(), now()),
+	('1060', 0, 'worms_proseriata-kalyptorhynchia', now(), now()),
+	('1064', 0, 'solanaceae_source', now(), now()),
+	('1117', 0, 'chenobase', now(), now()),
+	('1135', 0, 'fada_turbellaria', now(), now()),
+	('1159', 0, 'fada_copepoda', now(), now()),
+	('1165', 0, 'faeu_turbellaria', now(), now());
 
 ALTER SEQUENCE dataset_key_seq RESTART WITH 2000;
 
