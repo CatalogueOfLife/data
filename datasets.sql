@@ -1,8 +1,8 @@
 -- origin:  0=EXTERNAL, 1=UPLOADED, 2=MANAGED
-INSERT INTO dataset (key, origin, type, catalogue, title, import_frequency, data_format, data_access) 
+INSERT INTO dataset (key, origin, type, contributes_to, title, import_frequency, data_format, data_access) 
 VALUES ('1000', 0, 1, 0, 'CoL Management Classification', 1, 0, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/higher-classification.dwca.zip');
 
-INSERT INTO dataset (key, origin, type, catalogue, title, import_frequency, data_format, data_access) 
+INSERT INTO dataset (key, origin, type, contributes_to, title, import_frequency, data_format, data_access) 
 SELECT x.id+1000, 0, 1, 0, 'GSD ' || x.id, 1, 1, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/' || x.id || '.tar.gz'
 FROM (SELECT unnest(array[
 10,
@@ -99,8 +99,6 @@ FROM (SELECT unnest(array[
 20,
 200,
 201,
-202,
-203,
 21,
 22,
 23,
