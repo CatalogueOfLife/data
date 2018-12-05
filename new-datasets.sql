@@ -20,4 +20,5 @@ INSERT INTO dataset (key, origin, type, contributes_to, code, title, import_freq
 ('1202', 0, 1, 0,    4, 'WoRMS Amphipoda',  1, 0, 0, 1, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/202.tar.gz'),
 ('1203', 0, 1, 0,    4, 'ThripsWiki',       1, 0, 0, 1, 'https://github.com/Sp2000/data-thrips/archive/master.zip'),
 ('1600', 0, 1, null, 1, 'ColDP Example',    7, 0, 0, 3, 'https://github.com/Sp2000/coldp/archive/master.zip'),
-('1601', 0, 0, 1,    1, 'MycoBank',         7, 0, 0, 0, 'https://github.com/mdoering/mycobank/raw/master/mycobank.zip');
+('1601', 0, 0, 1,    1, 'MycoBank',         7, 0, 0, 0, 'https://github.com/mdoering/mycobank/raw/master/mycobank.zip'),
+('1602', 0, 3, 0,    4, 'Testing Fake Data',         7, 0, 0, 1, 'https://github.com/Sp2000/data-testing/archive/master.zip');
