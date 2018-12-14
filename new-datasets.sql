@@ -15,12 +15,12 @@
 INSERT INTO dataset (key, origin, type, contributes_to, code, title, import_frequency, created_by, modified_by, data_format, data_access) VALUES 
 ('1027', 0, 1, 0,    4, 'Scarabs',           1, 0, 0, 1, 'https://github.com/Sp2000/data-scarabs/archive/master.zip'),
 ('1055', 0, 1, 0,    4, 'Neuropterida',      1, 0, 0, 1, 'https://github.com/Sp2000/data-neuropterida/archive/master.zip'),
-('1140', 0, 0, 1,    1, 'WorldFerns',        1, 0, 0, 1, 'https://github.com/Sp2000/data-world-ferns/archive/master.zip'),
-('1141', 0, 0, 1,    1, 'WorldPlants',       1, 0, 0, 0, 'https://github.com/Sp2000/data-world-plants/archive/master.zip'),
+('1140', 0, 0, 0,    1, 'WorldFerns',        1, 0, 0, 1, 'https://github.com/Sp2000/data-world-ferns/archive/master.zip'),
+('1141', 0, 0, 0,    1, 'WorldPlants',       1, 0, 0, 0, 'https://github.com/Sp2000/data-world-plants/archive/master.zip'),
 ('1202', 0, 1, 0,    4, 'WoRMS Amphipoda',   1, 0, 0, 1, 'https://raw.githubusercontent.com/Sp2000/colplus-repo/master/ACEF/202.tar.gz'),
 ('1203', 0, 1, 0,    4, 'ThripsWiki',        1, 0, 0, 1, 'https://github.com/Sp2000/data-thrips/archive/master.zip'),
+('1204', 0, 1, 0,    4, 'StaphBase',         1, 0, 0, 3, 'https://github.com/Sp2000/data-staphbase/archive/master.zip'),
 ('1600', 0, 4, null, 1, 'ColDP Example',     7, 0, 0, 3, 'https://github.com/Sp2000/coldp/archive/master.zip'),
 ('1601', 0, 0, 1,    1, 'MycoBank',          7, 0, 0, 0, 'https://github.com/mdoering/mycobank/raw/master/mycobank.zip'),
 ('1602', 0, 4, null, 4, 'Testing Data ACEF', 7, 0, 0, 1, 'https://github.com/Sp2000/data-testing/archive/master.zip'),
-('1603', 0, 4, null, 4, 'Testing Data ColDP',7, 0, 0, 3, 'https://github.com/Sp2000/data-testing/archive/master.zip'),
-('1204', 0, 1, 0,    4, 'StaphBase',         1, 0, 0, 3, 'https://github.com/Sp2000/data-staphbase/archive/master.zip');
+('1603', 0, 4, null, 4, 'Testing Data ColDP',7, 0, 0, 3, 'https://github.com/Sp2000/data-testing/archive/master.zip');
