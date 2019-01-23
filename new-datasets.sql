@@ -23,4 +23,5 @@ INSERT INTO dataset (key, origin, type, contributes_to, code, title, import_freq
 ('1600', 0, 4, null, 1, 'ColDP Example',     7, 0, 0, 3, 'https://github.com/Sp2000/coldp/archive/master.zip'),
 ('1601', 0, 0, 1,    1, 'MycoBank',          7, 0, 0, 0, 'https://github.com/mdoering/mycobank/raw/master/mycobank.zip'),
 ('1602', 0, 4, null, 4, 'Testing Data ACEF', 7, 0, 0, 1, 'https://github.com/Sp2000/data-testing/archive/master.zip'),
-('1603', 0, 4, null, 4, 'Testing Data ColDP',7, 0, 0, 3, 'https://github.com/Sp2000/data-testing/archive/master.zip');
+('1603', 0, 4, null, 4, 'Testing Data ColDP',7, 0, 0, 3, 'https://github.com/Sp2000/data-testing/archive/master.zip'),
+('1604', 0, 1, 0,    4, 'StaphBase ACEF',    1, 0, 0, 1, 'https://github.com/Sp2000/data-staphbase/archive/master.zip');
