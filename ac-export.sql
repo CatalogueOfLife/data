@@ -241,13 +241,13 @@ WHERE n.rank >= 'species'::rank
 
 -- common_names 
 COPY (
-SELECT NULL AS record_id, v.taxon_id AS name_code, v.name AS common_name, v.latin AS transliteration, v.language, v.country, 
+  SELECT NULL AS record_id, v.taxon_id AS name_code, v.name AS common_name, v.latin AS transliteration, v.language, v.country, 
       NULL AS area, 
       NULL as reference_id, --TODO
       s.dataset_key AS database_id, 
       NULL AS is_infraspecies,
       NULL as reference_code --TODO
-    FROM vernacular_name_{{datasetKey}} v
+  FROM vernacular_name_{{datasetKey}} v
       JOIN taxon_{{datasetKey}} t ON t.id=v.taxon_id
       LEFT JOIN sector s ON t.sector_key=s.key
 ) TO '{{dir}}/common_names.csv' CSV HEADER;
@@ -255,16 +255,31 @@ SELECT NULL AS record_id, v.taxon_id AS name_code, v.name AS common_name, v.lati
 
 -- distribution
 COPY (
-SELECT NULL AS record_id, d.taxon_id AS name_code, d.area AS distribution, 
+  SELECT NULL AS record_id, d.taxon_id AS name_code, d.area AS distribution, 
     CASE WHEN d.gazetteer=0 THEN 'TDWG' WHEN d.gazetteer=1 THEN 'ISO' WHEN d.gazetteer=2 THEN 'FAO' ELSE 'TEXT' END AS StandardInUse,
     CASE WHEN d.status=0 THEN 'Native' WHEN d.status=1 THEN 'Domesticated' WHEN d.status=2 THEN 'Alien' WHEN d.status=3 THEN 'Uncertain' END AS DistributionStatus,
     s.dataset_key AS database_id
-    FROM distribution_{{datasetKey}} d
+  FROM distribution_{{datasetKey}} d
       JOIN taxon_{{datasetKey}} t ON t.id=d.taxon_id
       LEFT JOIN sector s ON t.sector_key=s.key
 ) TO '{{dir}}/distribution.csv' CSV HEADER;
 
+
 -- TODO references.csv
+COPY (
+  SELECT NULL AS record_id, 
+    csl->>'author' AS author, 
+    csl#>>'{issued,literal}' AS year, 
+    csl->>'title' AS title, 
+    csl->>'containerTitle' AS source, 
+    NULL AS database_id, --TODO
+    r.id AS reference_code
+  FROM reference_{{datasetKey}} r
+      JOIN taxon_{{datasetKey}} t ON t.id=d.taxon_id
+      LEFT JOIN sector s ON t.sector_key=s.key
+) TO '{{dir}}/references.csv' CSV HEADER;
+
+
 -- TODO scientific_name_references.csv
 
 
