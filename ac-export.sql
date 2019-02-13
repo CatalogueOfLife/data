@@ -67,7 +67,7 @@ COPY (
 -- unnest with empty or null arrays removes the entire row
 COPY (
     WITH lifezones_x AS (
-        SELECT tk.key, t.id, unnest(t.lifezones) AS lfz, s.dataset_key
+        SELECT NULL AS record_id, t.id, unnest(t.lifezones) AS lfz, s.dataset_key
         FROM taxon_{{datasetKey}} t
             JOIN __tax_keys tk ON t.id=tk.id
             LEFT JOIN sector s ON t.sector_key=s.key
@@ -242,7 +242,7 @@ COPY (
 SELECT NULL AS record_id, v.taxon_id, v.name, v.latin, v.language, v.country, null, 
       NULL as reference_id, --TODO
       s.dataset_key, NULL,
-      NULL as reference_code, --TODO
+      NULL as reference_code --TODO
     FROM vernacular_name_{{datasetKey}} v
       JOIN taxon_{{datasetKey}} t ON t.id=v.taxon_id
       LEFT JOIN sector s ON t.sector_key=s.key
