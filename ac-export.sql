@@ -52,14 +52,14 @@ INSERT INTO __syn_keys (nid, tid) SELECT name_id, taxon_id FROM synonym_{{datase
 CREATE UNIQUE INDEX __syn_keys_unique ON __syn_keys (nid, tid);
 
 -- specialists aka scrutinizer
-CREATE TABLE __scrutinizer (key serial, dataset_key int, name text unique);
+CREATE TABLE __scrutinizer (key serial, dataset_key int, name text, unique(dataset_key, name));
 INSERT INTO __scrutinizer (name, dataset_key)
     SELECT DISTINCT t.according_to, s.dataset_key
         FROM taxon_{{datasetKey}} t
             LEFT JOIN sector s ON t.sector_key=s.key
         WHERE t.according_to IS NOT NULL;
 COPY (
-    SELECT key, name, null AS specialist_code, dataset_key AS database_id FROM __scrutinizer
+    SELECT key AS record_id, name AS specialist_name, null AS specialist_code, dataset_key AS database_id FROM __scrutinizer
 ) TO '{{dir}}/specialists.csv' CSV HEADER;
 
 
@@ -73,7 +73,7 @@ COPY (
             LEFT JOIN sector s ON t.sector_key=s.key
     )
     SELECT NULL AS record_id, 
-        id, 
+        id AS  AS name_code, 
         CASE WHEN lfz=0 THEN 'brackish' WHEN lfz=1 THEN 'freshwater' WHEN lfz=2 THEN 'marine' WHEN lfz=3 THEN 'terrestrial' END AS lifezone, 
         dataset_key AS database_id
     FROM lifezones_x
@@ -194,7 +194,7 @@ FROM name_{{datasetKey}} n
     JOIN taxon_{{datasetKey}} t ON n.id=t.name_id
     JOIN __classification c ON t.id=c.id
     JOIN __classification cf ON c.family_id=cf.id
-    LEFT JOIN __scrutinizer sc ON t.according_to=sc.name
+    LEFT JOIN __scrutinizer sc ON t.according_to=sc.name AND c.dataset_key=sc.dataset_key
 WHERE n.rank >= 'species'::rank
 
 UNION
@@ -241,7 +241,7 @@ WHERE n.rank >= 'species'::rank
 
 -- common_names 
 COPY (
-SELECT NULL AS record_id, v.taxon_id, v.name, v.latin, v.language, v.country, 
+SELECT NULL AS record_id, v.taxon_id AS name_code, v.name AS common_name, v.latin AS transliteration, v.language, v.country, 
       NULL AS area, 
       NULL as reference_id, --TODO
       s.dataset_key AS database_id, 
@@ -255,7 +255,7 @@ SELECT NULL AS record_id, v.taxon_id, v.name, v.latin, v.language, v.country,
 
 -- distribution
 COPY (
-SELECT NULL AS record_id, d.taxon_id, d.area AS distribution, 
+SELECT NULL AS record_id, d.taxon_id AS name_code, d.area AS distribution, 
     CASE WHEN d.gazetteer=0 THEN 'TDWG' WHEN d.gazetteer=1 THEN 'ISO' WHEN d.gazetteer=2 THEN 'FAO' ELSE 'TEXT' END AS StandardInUse,
     CASE WHEN d.status=0 THEN 'Native' WHEN d.status=1 THEN 'Domesticated' WHEN d.status=2 THEN 'Alien' WHEN d.status=3 THEN 'Uncertain' END AS DistributionStatus,
     s.dataset_key AS database_id
