@@ -73,7 +73,7 @@ COPY (
             LEFT JOIN sector s ON t.sector_key=s.key
     )
     SELECT NULL AS record_id, 
-        id AS  AS name_code, 
+        id AS name_code, 
         CASE WHEN lfz=0 THEN 'brackish' WHEN lfz=1 THEN 'freshwater' WHEN lfz=2 THEN 'marine' WHEN lfz=3 THEN 'terrestrial' END AS lifezone, 
         dataset_key AS database_id
     FROM lifezones_x
