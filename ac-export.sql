@@ -59,7 +59,7 @@ INSERT INTO __scrutinizer (name, dataset_key)
             LEFT JOIN sector s ON t.sector_key=s.key
         WHERE t.according_to IS NOT NULL;
 COPY (
-    SELECT key, name, null, dataset_key  FROM __scrutinizer
+    SELECT key, name, null AS specialist_code, dataset_key AS database_id FROM __scrutinizer
 ) TO '{{dir}}/specialists.csv' CSV HEADER;
 
 
@@ -67,14 +67,16 @@ COPY (
 -- unnest with empty or null arrays removes the entire row
 COPY (
     WITH lifezones_x AS (
-        SELECT NULL AS record_id, t.id, unnest(t.lifezones) AS lfz, s.dataset_key
+        SELECT t.id, unnest(t.lifezones) AS lfz, s.dataset_key
         FROM taxon_{{datasetKey}} t
             JOIN __tax_keys tk ON t.id=tk.id
             LEFT JOIN sector s ON t.sector_key=s.key
     )
-    SELECT key, id,
-        CASE WHEN lfz=0 THEN 'brackish' WHEN lfz=1 THEN 'freshwater' WHEN lfz=2 THEN 'marine' WHEN lfz=3 THEN 'terrestrial' END AS lifezone, dataset_key
-        FROM lifezones_x
+    SELECT NULL AS record_id, 
+        id, 
+        CASE WHEN lfz=0 THEN 'brackish' WHEN lfz=1 THEN 'freshwater' WHEN lfz=2 THEN 'marine' WHEN lfz=3 THEN 'terrestrial' END AS lifezone, 
+        dataset_key AS database_id
+    FROM lifezones_x
 ) TO '{{dir}}/lifezone.csv' CSV HEADER;
 
 
@@ -153,9 +155,9 @@ CREATE INDEX ON __classification (id);
 
 -- families export
 COPY (
-SELECT key,
-    NULL AS hierarchy_code, -- TODO
-    kingdom, phylum, class, "order", family, superfamily, dataset_key, id, true
+SELECT key AS record_id,
+      NULL AS hierarchy_code, -- TODO
+      kingdom, phylum, class, "order", family, superfamily, dataset_key AS database_id, id, true
     FROM __classification
     WHERE rank='family'
 ) TO '{{dir}}/families.csv' CSV HEADER;
@@ -239,9 +241,11 @@ WHERE n.rank >= 'species'::rank
 
 -- common_names 
 COPY (
-SELECT NULL AS record_id, v.taxon_id, v.name, v.latin, v.language, v.country, null, 
+SELECT NULL AS record_id, v.taxon_id, v.name, v.latin, v.language, v.country, 
+      NULL AS area, 
       NULL as reference_id, --TODO
-      s.dataset_key, NULL,
+      s.dataset_key AS database_id, 
+      NULL AS is_infraspecies,
       NULL as reference_code --TODO
     FROM vernacular_name_{{datasetKey}} v
       JOIN taxon_{{datasetKey}} t ON t.id=v.taxon_id
@@ -254,7 +258,7 @@ COPY (
 SELECT NULL AS record_id, d.taxon_id, d.area AS distribution, 
     CASE WHEN d.gazetteer=0 THEN 'TDWG' WHEN d.gazetteer=1 THEN 'ISO' WHEN d.gazetteer=2 THEN 'FAO' ELSE 'TEXT' END AS StandardInUse,
     CASE WHEN d.status=0 THEN 'Native' WHEN d.status=1 THEN 'Domesticated' WHEN d.status=2 THEN 'Alien' WHEN d.status=3 THEN 'Uncertain' END AS DistributionStatus,
-    s.dataset_key
+    s.dataset_key AS database_id
     FROM distribution_{{datasetKey}} d
       JOIN taxon_{{datasetKey}} t ON t.id=d.taxon_id
       LEFT JOIN sector s ON t.sector_key=s.key
