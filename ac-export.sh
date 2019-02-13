@@ -20,7 +20,7 @@ while getopts ":d:h:k:" opt; do
   esac
 done
 
-echo "Export CoL $dataset_key from $host/$db to $export_dir\n\n"
+echo -e "Export CoL $dataset_key from $host/$db to $export_dir\n\n"
 rm -rf $export_dir
 mkdir $export_dir
 
