@@ -6,7 +6,7 @@ user=col
 dataset_key=3
 export_dir="$(pwd)/ac-export" 
 
-while getopts ":d:h:k:" opt; do
+while getopts ":d:h:k:o:u:" opt; do
   case $opt in
     d) db="$OPTARG"
     ;;
