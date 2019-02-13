@@ -20,5 +20,5 @@ Sql script to export an assembled CoL to a bunch of CSV files matching the old a
  	- `-d` database name, defaults to `colplus`
  	- `-k` dataset key, defaults to `3` the CoL draft
  	- `-o` ouput directory, defaults to `./ac-export`
+ 
  ```./ac-export.sh -d colplus -h db.col.plus```
-
