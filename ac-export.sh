@@ -23,17 +23,17 @@ while getopts ":d:h:k:o:u:" opt; do
   esac
 done
 
-echo -e "\n\n*****\n\nCreate & wipe export directory $export_dir\n"
+echo -e "\n\n*****\nCreate & wipe export directory $export_dir"
 rm -rf $export_dir
 mkdir $export_dir
 chmod 777 $export_dir
 
 # export csv files
-echo -e "\n\n*****\n\nExport CoL $dataset_key from $host/$db to CSV files in $export_dir\n"
+echo -e "\n\n*****\nExport CoL $dataset_key from $host/$db to CSV files in $export_dir\n\n"
 cat ac-export.sql | sed "s/{{datasetKey}}/${dataset_key}/g; s:{{dir}}:${export_dir}:g" | psql -h $host -U $user $db
 
 
 # compress
 zipfile="${export_dir}/ac-export.zip"
-echo -e "\n\n*****\n\nCompress CSV files into $zipfile\n"
-tar czf $zipfile $export_dir/*.csv
+echo -e "\n\n*****\nCompress CSV files into $zipfile"
+zip -j $zipfile $export_dir/*.csv
