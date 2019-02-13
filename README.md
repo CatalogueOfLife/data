@@ -18,6 +18,7 @@ Sql script to export an assembled CoL to a bunch of CSV files matching the old a
  - run the export bash script with optional parameters:
  	- `-h` postgres host, defaults to `localhost`
  	- `-d` database name, defaults to `colplus`
+ 	- `-o` postgres user, defaults to `col`
  	- `-k` dataset key, defaults to `3` the CoL draft
  	- `-o` ouput directory, defaults to `./ac-export`
  
