@@ -20,7 +20,7 @@ SELECT DISTINCT ON (d.key)
  NULL AS taxonomic_coverage,
  d.description AS abstract,
  d.version AS version,
- d.released AS release_date,
+ coalesce(d.released, now()) AS release_date,
  coalesce((i.taxa_by_rank_count -> 'SPECIES')::int, 0) AS SpeciesCount,
  NULL AS SpeciesEst,
  array_to_string(d.authors_and_editors, '; ')  AS authors_editors,
@@ -30,7 +30,7 @@ SELECT DISTINCT ON (d.key)
  NULL AS infraspecies_synonyms,
  i.vernacular_count AS common_names,
  i.name_count AS total_names,
- FALSE AS is_new,
+ 0 AS is_new,
  coverage AS coverage,
  completeness AS completeness,
  confidence AS confidence
@@ -38,7 +38,7 @@ FROM dataset d
     JOIN dataset_import i ON i.dataset_key=d.key
 WHERE d.key IN (SELECT distinct dataset_key FROM sector)
 ORDER BY d.key ASC, i.attempt DESC
-) TO '{{dir}}/databases.csv' CSV;
+) TO '{{dir}}/databases.csv' CSV HEADER;
 
 
 -- create taxon int keys using a reusable sequence
@@ -60,7 +60,7 @@ INSERT INTO __scrutinizer (name, dataset_key)
         WHERE t.according_to IS NOT NULL;
 COPY (
     SELECT key, name, null, dataset_key  FROM __scrutinizer
-) TO '{{dir}}/specialists.csv' CSV;
+) TO '{{dir}}/specialists.csv' CSV HEADER;
 
 
 -- lifezones
@@ -75,7 +75,7 @@ COPY (
     SELECT key, id,
         CASE WHEN lfz=0 THEN 'brackish' WHEN lfz=1 THEN 'freshwater' WHEN lfz=2 THEN 'marine' WHEN lfz=3 THEN 'terrestrial' END AS lifezone, dataset_key
         FROM lifezones_x
-) TO '{{dir}}/lifezone.csv' CSV;
+) TO '{{dir}}/lifezone.csv' CSV HEADER;
 
 
 -- create a flattened classification table for all taxa
@@ -158,7 +158,7 @@ SELECT key,
     kingdom, phylum, class, "order", family, superfamily, dataset_key, id, true
     FROM __classification
     WHERE rank='family'
-) TO '{{dir}}/families.csv' CSV;
+) TO '{{dir}}/families.csv' CSV HEADER;
 
 
 COPY (
@@ -172,7 +172,7 @@ SELECT
   c.species_id AS infraspecies_parent_name_code,
   n.infraspecific_epithet AS infraspecies,
   n.rank AS infraspecies_marker, -- TODO
-  NULL AS author, -- TODO
+  n.authorship AS author,
   t.id AS accepted_name_code,
   t.remarks AS comment,
   t.according_to_date AS scrutiny_date,
@@ -207,7 +207,7 @@ SELECT
   NULL AS infraspecies_parent_name_code,
   n.infraspecific_epithet AS infraspecies,
   n.rank AS infraspecies_marker, -- TODO
-  NULL AS author, -- TODO
+  n.authorship AS author,
   t.id AS accepted_name_code,
   n.remarks AS comment,
   t.according_to_date AS scrutiny_date,
@@ -234,11 +234,32 @@ FROM name_{{datasetKey}} n
     LEFT JOIN sector sec ON t.sector_key=sec.key
 WHERE n.rank >= 'species'::rank
 
-) TO '{{dir}}/scientific_names.csv' CSV;
+) TO '{{dir}}/scientific_names.csv' CSV HEADER;
 
 
--- TODO common_names.csv
--- TODO distribution.csv
+-- common_names 
+COPY (
+SELECT NULL AS record_id, v.taxon_id, v.name, v.latin, v.language, v.country, null, 
+      NULL as reference_id, --TODO
+      s.dataset_key, NULL,
+      NULL as reference_code, --TODO
+    FROM vernacular_name_{{datasetKey}} v
+      JOIN taxon_{{datasetKey}} t ON t.id=v.taxon_id
+      LEFT JOIN sector s ON t.sector_key=s.key
+) TO '{{dir}}/common_names.csv' CSV HEADER;
+
+
+-- distribution
+COPY (
+SELECT NULL AS record_id, d.taxon_id, d.area AS distribution, 
+    CASE WHEN d.gazetteer=0 THEN 'TDWG' WHEN d.gazetteer=1 THEN 'ISO' WHEN d.gazetteer=2 THEN 'FAO' ELSE 'TEXT' END AS StandardInUse,
+    CASE WHEN d.status=0 THEN 'Native' WHEN d.status=1 THEN 'Domesticated' WHEN d.status=2 THEN 'Alien' WHEN d.status=3 THEN 'Uncertain' END AS DistributionStatus,
+    s.dataset_key
+    FROM distribution_{{datasetKey}} d
+      JOIN taxon_{{datasetKey}} t ON t.id=d.taxon_id
+      LEFT JOIN sector s ON t.sector_key=s.key
+) TO '{{dir}}/distribution.csv' CSV HEADER;
+
 -- TODO references.csv
 -- TODO scientific_name_references.csv
 
