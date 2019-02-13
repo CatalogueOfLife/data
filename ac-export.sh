@@ -26,6 +26,7 @@ done
 echo -e "Export CoL $dataset_key from $host/$db to $export_dir\n\n"
 rm -rf $export_dir
 mkdir $export_dir
+chmod 766 $export_dir
 
 # export csv files
 cat ac-export.sql | sed "s/{{datasetKey}}/${dataset_key}/g; s:{{dir}}:${export_dir}:g" | psql -h $host -U $user $db
