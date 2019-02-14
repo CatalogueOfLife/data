@@ -38,7 +38,7 @@ FROM dataset d
     JOIN dataset_import i ON i.dataset_key=d.key
 WHERE d.key IN (SELECT distinct dataset_key FROM sector)
 ORDER BY d.key ASC, i.attempt DESC
-) TO '{{dir}}/databases.csv' CSV HEADER;
+) TO '{{dir}}/databases.csv' CSV HEADER NULL '\N';
 
 
 -- create taxon int keys using a reusable sequence
@@ -60,7 +60,7 @@ INSERT INTO __scrutinizer (name, dataset_key)
         WHERE t.according_to IS NOT NULL;
 COPY (
     SELECT key AS record_id, name AS specialist_name, null AS specialist_code, dataset_key AS database_id FROM __scrutinizer
-) TO '{{dir}}/specialists.csv' CSV HEADER;
+) TO '{{dir}}/specialists.csv' CSV HEADER NULL '\N';
 
 
 -- lifezones
@@ -77,7 +77,7 @@ COPY (
         CASE WHEN lfz=0 THEN 'brackish' WHEN lfz=1 THEN 'freshwater' WHEN lfz=2 THEN 'marine' WHEN lfz=3 THEN 'terrestrial' END AS lifezone, 
         dataset_key AS database_id
     FROM lifezones_x
-) TO '{{dir}}/lifezone.csv' CSV HEADER;
+) TO '{{dir}}/lifezone.csv' CSV HEADER NULL '\N';
 
 
 -- create a flattened classification table for all taxa
@@ -160,7 +160,7 @@ SELECT key AS record_id,
       kingdom, phylum, class, "order", family, superfamily, dataset_key AS database_id, id, 1 AS is_accepted_name
     FROM __classification
     WHERE rank='family'
-) TO '{{dir}}/families.csv' CSV HEADER;
+) TO '{{dir}}/families.csv' CSV HEADER NULL '\N';
 
 
 COPY (
@@ -236,7 +236,7 @@ FROM name_{{datasetKey}} n
     LEFT JOIN sector sec ON t.sector_key=sec.key
 WHERE n.rank >= 'species'::rank
 
-) TO '{{dir}}/scientific_names.csv' CSV HEADER;
+) TO '{{dir}}/scientific_names.csv' CSV HEADER NULL '\N';
 
 
 -- common_names 
@@ -250,7 +250,7 @@ COPY (
   FROM vernacular_name_{{datasetKey}} v
       JOIN taxon_{{datasetKey}} t ON t.id=v.taxon_id
       LEFT JOIN sector s ON t.sector_key=s.key
-) TO '{{dir}}/common_names.csv' CSV HEADER;
+) TO '{{dir}}/common_names.csv' CSV HEADER NULL '\N';
 
 
 -- distribution
@@ -262,7 +262,7 @@ COPY (
   FROM distribution_{{datasetKey}} d
       JOIN taxon_{{datasetKey}} t ON t.id=d.taxon_id
       LEFT JOIN sector s ON t.sector_key=s.key
-) TO '{{dir}}/distribution.csv' CSV HEADER;
+) TO '{{dir}}/distribution.csv' CSV HEADER NULL '\N';
 
 
 -- TODO references.csv
@@ -277,7 +277,7 @@ COPY (
   FROM reference_{{datasetKey}} r
       JOIN taxon_{{datasetKey}} t ON t.id=d.taxon_id
       LEFT JOIN sector s ON r.sector_key=s.key
-) TO '{{dir}}/references.csv' CSV HEADER;
+) TO '{{dir}}/references.csv' CSV HEADER NULL '\N';
 
 
 -- TODO scientific_name_references.csv
