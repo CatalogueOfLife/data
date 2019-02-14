@@ -20,7 +20,7 @@ SELECT DISTINCT ON (d.key)
  NULL AS taxonomic_coverage,
  d.description AS abstract,
  d.version AS version,
- coalesce(d.released, now()) AS release_date,
+ coalesce(d.released, CURRENT_DATE) AS release_date,
  coalesce((i.taxa_by_rank_count -> 'SPECIES')::int, 0) AS SpeciesCount,
  NULL AS SpeciesEst,
  array_to_string(d.authors_and_editors, '; ')  AS authors_editors,
@@ -157,7 +157,7 @@ CREATE INDEX ON __classification (id);
 COPY (
 SELECT key AS record_id,
       NULL AS hierarchy_code, -- TODO
-      kingdom, phylum, class, "order", family, superfamily, dataset_key AS database_id, id, true
+      kingdom, phylum, class, "order", family, superfamily, dataset_key AS database_id, id, 1 AS is_accepted_name
     FROM __classification
     WHERE rank='family'
 ) TO '{{dir}}/families.csv' CSV HEADER;
@@ -184,12 +184,12 @@ SELECT
   cf.key AS family_id,
   NULL AS specialist_code,
   c.family_id AS family_code,
-  TRUE AS is_accepted_name,
+  1 AS is_accepted_name,
   NULL AS GSDTaxonGUID,
   NULL AS GSDNameGUID,
-  NOT t.recent AS is_extinct,
-  t.fossil AS has_preholocene,
-  t.recent AS has_modern
+  (NOT t.recent)::int AS is_extinct,
+  t.fossil::int AS has_preholocene,
+  t.recent::int AS has_modern
 FROM name_{{datasetKey}} n
     JOIN taxon_{{datasetKey}} t ON n.id=t.name_id
     JOIN __classification c ON t.id=c.id
@@ -223,7 +223,7 @@ SELECT
   NULL AS family_id,
   NULL AS specialist_code,
   NULL AS family_code,
-  FALSE AS is_accepted_name,
+  0 AS is_accepted_name,
   NULL AS GSDTaxonGUID,
   NULL AS GSDNameGUID,
   NULL AS is_extinct,
@@ -272,11 +272,11 @@ COPY (
     csl#>>'{issued,literal}' AS year, 
     csl->>'title' AS title, 
     csl->>'containerTitle' AS source, 
-    NULL AS database_id, --TODO
+    s.dataset_key AS database_id, 
     r.id AS reference_code
   FROM reference_{{datasetKey}} r
       JOIN taxon_{{datasetKey}} t ON t.id=d.taxon_id
-      LEFT JOIN sector s ON t.sector_key=s.key
+      LEFT JOIN sector s ON r.sector_key=s.key
 ) TO '{{dir}}/references.csv' CSV HEADER;
 
 
