@@ -298,6 +298,7 @@ COPY (
   FROM reference_{{datasetKey}} r
     JOIN __ref_keys rk ON rk.id=r.id
     LEFT JOIN sector s ON r.sector_key=s.key
+    
 ) TO '{{dir}}/references.csv' CSV HEADER NULL '\N';
 
 
@@ -328,18 +329,6 @@ COPY (
     JOIN __ref_keys rk ON rk.id=r.id
     LEFT JOIN sector s ON r.sector_key=s.key
 
-  UNION
-
-  SELECT DISTINCT NULL AS record_id, 
-    v.taxon_id AS name_code,
-    'ComNameRef' AS reference_type, -- NomRef, TaxAccRef, ComNameRef
-    rk.key AS reference_id,
-    r.id AS reference_code,
-    s.dataset_key AS database_id
-  FROM vernacular_name_{{datasetKey}} v
-    JOIN reference_{{datasetKey}} r ON r.id=v.reference_id
-    JOIN __ref_keys rk ON rk.id=r.id
-    LEFT JOIN sector s ON r.sector_key=s.key
 ) TO '{{dir}}/scientific_name_references.csv' CSV HEADER NULL '\N';
 
 
