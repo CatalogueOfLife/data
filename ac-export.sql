@@ -156,8 +156,16 @@ CREATE INDEX ON __classification (id);
 -- families export
 COPY (
 SELECT key AS record_id,
-      NULL AS hierarchy_code, -- TODO
-      kingdom, phylum, class, "order", family, superfamily, dataset_key AS database_id, id, 1 AS is_accepted_name
+      NULL AS hierarchy_code,
+      kingdom, 
+      phylum, 
+      class, 
+      "order", 
+      family, 
+      superfamily, 
+      dataset_key AS database_id, 
+      id AS family_code, 
+      1 AS is_accepted_name
     FROM __classification
     WHERE rank='family'
 ) TO '{{dir}}/families.csv' CSV HEADER NULL '\N';
@@ -241,21 +249,30 @@ WHERE n.rank >= 'species'::rank
 
 -- common_names 
 COPY (
-  SELECT NULL AS record_id, v.taxon_id AS name_code, v.name AS common_name, v.latin AS transliteration, v.language, v.country, 
-      NULL AS area, 
-      NULL as reference_id, --TODO
-      s.dataset_key AS database_id, 
-      NULL AS is_infraspecies,
-      NULL as reference_code --TODO
+  SELECT NULL AS record_id, 
+    v.taxon_id AS name_code, 
+    v.name AS common_name, 
+    v.latin AS transliteration, 
+    v.language, 
+    v.country, 
+    NULL AS area, 
+    rk.key as reference_id,
+    s.dataset_key AS database_id, 
+    NULL AS is_infraspecies,
+    r.id as reference_code 
   FROM vernacular_name_{{datasetKey}} v
-      JOIN taxon_{{datasetKey}} t ON t.id=v.taxon_id
-      LEFT JOIN sector s ON t.sector_key=s.key
+    JOIN taxon_{{datasetKey}} t ON t.id=v.taxon_id
+    LEFT JOIN reference_{{datasetKey}} r ON r.id=v.reference_id
+    LEFT JOIN __ref_keys rk ON rk.id=r.id
+    LEFT JOIN sector s ON t.sector_key=s.key
 ) TO '{{dir}}/common_names.csv' CSV HEADER NULL '\N';
 
 
 -- distribution
 COPY (
-  SELECT NULL AS record_id, d.taxon_id AS name_code, d.area AS distribution, 
+  SELECT NULL AS record_id, 
+    d.taxon_id AS name_code, 
+    d.area AS distribution, 
     CASE WHEN d.gazetteer=0 THEN 'TDWG' WHEN d.gazetteer=1 THEN 'ISO' WHEN d.gazetteer=2 THEN 'FAO' ELSE 'TEXT' END AS StandardInUse,
     CASE WHEN d.status=0 THEN 'Native' WHEN d.status=1 THEN 'Domesticated' WHEN d.status=2 THEN 'Alien' WHEN d.status=3 THEN 'Uncertain' END AS DistributionStatus,
     s.dataset_key AS database_id
