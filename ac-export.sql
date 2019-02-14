@@ -265,9 +265,13 @@ COPY (
 ) TO '{{dir}}/distribution.csv' CSV HEADER NULL '\N';
 
 
+-- create reference int keys
+CREATE TABLE __ref_keys (key serial, id text UNIQUE);
+INSERT INTO __ref_keys (id) SELECT id FROM reference_{{datasetKey}};
+
 -- TODO references.csv
 COPY (
-  SELECT NULL AS record_id, 
+  SELECT rk.key AS record_id, 
     csl->>'author' AS author, 
     csl#>>'{issued,literal}' AS year, 
     csl->>'title' AS title, 
@@ -275,16 +279,56 @@ COPY (
     s.dataset_key AS database_id, 
     r.id AS reference_code
   FROM reference_{{datasetKey}} r
-      LEFT JOIN sector s ON -2345678=s.key
---TODO      LEFT JOIN sector s ON r.sector_key=s.key
+    JOIN __ref_keys rk ON rk.id=r.id
+    LEFT JOIN sector s ON r.sector_key=s.key
 ) TO '{{dir}}/references.csv' CSV HEADER NULL '\N';
 
 
--- TODO scientific_name_references.csv
+-- scientific_name_references.csv
+COPY (
+  SELECT NULL AS record_id, 
+    t.id AS name_code,
+    'NomRef' AS reference_type, -- NomRef, TaxAccRef, ComNameRef
+    rk.key AS reference_id,
+    r.id AS reference_code,
+    s.dataset_key AS database_id
+  FROM name_{{datasetKey}} n
+    JOIN taxon_{{datasetKey}} t ON t.name_id=n.id
+    JOIN reference_{{datasetKey}} r ON r.id=n.published_in_id
+    JOIN __ref_keys rk ON rk.id=r.id
+    LEFT JOIN sector s ON r.sector_key=s.key
+
+  UNION
+
+  SELECT NULL AS record_id, 
+    tr.taxon_id AS name_code,
+    'TaxAccRef' AS reference_type, -- NomRef, TaxAccRef, ComNameRef
+    rk.key AS reference_id,
+    r.id AS reference_code,
+    s.dataset_key AS database_id
+  FROM taxon_reference_{{datasetKey}} tr
+    JOIN reference_{{datasetKey}} r ON r.id=tr.reference_id
+    JOIN __ref_keys rk ON rk.id=r.id
+    LEFT JOIN sector s ON r.sector_key=s.key
+
+  UNION
+
+  SELECT DISTINCT NULL AS record_id, 
+    v.taxon_id AS name_code,
+    'ComNameRef' AS reference_type, -- NomRef, TaxAccRef, ComNameRef
+    rk.key AS reference_id,
+    r.id AS reference_code,
+    s.dataset_key AS database_id
+  FROM vernacular_name_{{datasetKey}} v
+    JOIN reference_{{datasetKey}} r ON r.id=v.reference_id
+    JOIN __ref_keys rk ON rk.id=r.id
+    LEFT JOIN sector s ON r.sector_key=s.key
+) TO '{{dir}}/scientific_name_references.csv' CSV HEADER NULL '\N';
 
 
 -- cleanup
 DROP TABLE __scrutinizer;
+DROP TABLE __ref_keys;
 DROP TABLE __tax_keys;
 DROP TABLE __syn_keys;
 DROP TABLE __classification;
