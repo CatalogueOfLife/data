@@ -275,7 +275,8 @@ COPY (
     s.dataset_key AS database_id, 
     r.id AS reference_code
   FROM reference_{{datasetKey}} r
-      LEFT JOIN sector s ON r.sector_key=s.key
+      LEFT JOIN sector s ON -2345678=s.key
+--TODO      LEFT JOIN sector s ON r.sector_key=s.key
 ) TO '{{dir}}/references.csv' CSV HEADER NULL '\N';
 
 
