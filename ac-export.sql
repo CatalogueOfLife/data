@@ -275,7 +275,6 @@ COPY (
     s.dataset_key AS database_id, 
     r.id AS reference_code
   FROM reference_{{datasetKey}} r
-      JOIN taxon_{{datasetKey}} t ON t.id=d.taxon_id
       LEFT JOIN sector s ON r.sector_key=s.key
 ) TO '{{dir}}/references.csv' CSV HEADER NULL '\N';
 
