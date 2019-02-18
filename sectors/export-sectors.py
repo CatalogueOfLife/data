@@ -24,7 +24,7 @@ def processTaxon(parent):
 	id = row[2]
 	did = row[0]
 	if did and did not in EXCLUDE_IDS:
-		print "DB found: " + did
+		print("DB found: " + did)
 	else:
 		# recursivelly go deeper
 		children = dbc.execute(query + id).fetchall();
