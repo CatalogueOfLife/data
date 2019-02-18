@@ -20,14 +20,14 @@ query = "SELECT source_database_id AS database_id, TT.rank, taxon_id AS id, TT.p
 
 
 def processTaxon(parent):
-	print id
+	print("Process " + id)
 	id = row[2]
 	did = row[0]
 	if did and did not in EXCLUDE_IDS:
-		print "DB found: "+did
+		print "DB found: " + did
 	else:
 		# recursivelly go deeper
-		children = dbc.execute(query+id).fetchall();
+		children = dbc.execute(query + id).fetchall();
 		#for c in children:
 			#processTaxon(c)
 
