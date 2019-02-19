@@ -37,15 +37,17 @@ def updateCounts():
 
 
 def processTaxon(p, out):
-    print("Process %s %s: species=%s, datasets=%s" % (p[3], p[4], p[6], p[7]))
+    print("  process %s %s: species=%s, datasets=%s" % (p[3], p[4], p[6], p[7]))
     if (p[7]):
         id = p[0]
         did = p[2]
         cnt = p[6]    
         dids = set(p[7]).difference(EXCLUDE_IDS)
         if len(dids) == 1:
+            did = dids.pop()
             print("Sector %s %s found with %s species for dataset %s" % (p[3], p[4], cnt, did))
-            out.writerow(p)
+            # datasetID, rank, name, authorship
+            out.write("(%s, '%s', '%s', '%s'),\n" % (did+1000,p[3],p[4],p[5]))
         elif len(dids) > 1:
             # recursivelly go deeper
             dbc.execute(CHILDREN + ("='%s'" % id))
@@ -64,8 +66,7 @@ def walkRoot(out):
 
 if __name__ == "__main__":
     #updateCounts();
-    with open('sectors.csv', 'w', newline='') as csvfile:
-        out = csv.writer(csvfile, delimiter='\t', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    with open('sectors.sql', 'w', newline='') as out:
         walkRoot(out)
     dbc.close()
 
