@@ -23,3 +23,27 @@ Sql script to export an assembled CoL to a bunch of CSV files matching the old a
  	- `-o` ouput directory, defaults to `./ac-export`
  
  ```./ac-export.sh -d colplus -h db.col.plus```
+
+
+
+# Sector exports
+
+Straight from Assembly_Globals families and scientific_names tables as the hierarchy codes are not trustworthy.
+Exlude synonyms and infraspecifics for deriving sectors.
+
+Select source that has >80% of all included taxa
+Exclude IRMNG & regional dbs which are special
+
+Export columns for all taxa:
+- id text (name_code)
+- database_id int
+- parent_id text (name_code)
+- rank text
+- name text
+- authorship text
+
+
+
+
+
+
