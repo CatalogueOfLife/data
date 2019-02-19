@@ -30,7 +30,7 @@ CHILDREN = "SELECT id, parent_id, dataset_id, rank, name, authorship, species, d
 
 def updateCounts():
     print("Count species")
-    #dbc.execute(UPDATE_SPECIES_COUNTS)
+    dbc.execute(UPDATE_SPECIES_COUNTS)
     for rank in ["subgenus", "genus", "family", "superfamily", "order", "class", "phylum", "kingdom"]:
         print("Count %s" % rank)
         dbc.execute(UPDATE_COUNTS % (rank, rank))
@@ -41,15 +41,19 @@ def processTaxon(p, out):
     if (p[7]):
         id = p[0]
         did = p[2]
+        rank = p[3]
+        name = p[4]
+        author = p[5]
         cnt = p[6]    
         dids = set(p[7]).difference(EXCLUDE_IDS)
         if len(dids) == 1:
             did = dids.pop()
-            print("Sector %s %s found with %s species for dataset %s" % (p[3], p[4], cnt, did))
-            # datasetID, rank, name, authorship
-            out.write("(%s, '%s', '%s', '%s'),\n" % (did+1000,p[3],p[4],p[5]))
-        elif len(dids) > 1:
-            # recursivelly go deeper
+            if (name != "Not assigned"):
+                print("Sector %s %s found with %s species for dataset %s" % (rank, name, cnt, did))
+                # datasetID, rank, name
+                out.write("(%s, '%s', '%s'),\n" % (did+1000,rank, name))
+        elif len(dids) > 1 and rank != 'genus':
+            # recursively go deeper
             dbc.execute(CHILDREN + ("='%s'" % id))
             children = dbc.fetchall();
             for c in children:
@@ -65,7 +69,7 @@ def walkRoot(out):
 
 
 if __name__ == "__main__":
-    #updateCounts();
+    updateCounts();
     with open('sectors.sql', 'w', newline='') as out:
         walkRoot(out)
     dbc.close()

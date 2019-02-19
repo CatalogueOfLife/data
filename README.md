@@ -29,21 +29,17 @@ Sql script to export an assembled CoL to a bunch of CSV files matching the old a
 # Sector exports
 
 Straight from Assembly_Globals families and scientific_names tables as the hierarchy codes are not trustworthy.
-Exlude synonyms and infraspecifics for deriving sectors.
+Exluded are synonyms and infraspecifics for deriving sectors.
 
-Select source that has >80% of all included taxa
+Select source that has >90% of all included taxa
 Exclude IRMNG & regional dbs which are special
 
-Export columns for all taxa:
-- id text (name_code)
-- database_id int
-- parent_id text (name_code)
-- rank text
-- name text
-- authorship text
 
+```
+psql -U postgres colplus < proc-sectors.sql 
+python3 export-sectors.py
+```
 
-
-
-
+Then copy the data into the backend sql file:
+https://github.com/Sp2000/colplus-backend/blob/master/colplus-dao/src/main/resources/org/col/db/sectors.sql
 
