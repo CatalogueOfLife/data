@@ -41,6 +41,27 @@ ORDER BY d.key ASC, i.attempt DESC
 ) TO '{{dir}}/databases.csv' CSV HEADER NULL '\N';
 
 
+-- create reference int keys
+CREATE TABLE __ref_keys (key serial, id text UNIQUE);
+INSERT INTO __ref_keys (id) SELECT id FROM reference_{{datasetKey}};
+
+-- TODO references.csv
+COPY (
+  SELECT rk.key AS record_id, 
+    csl->>'author' AS author, 
+    csl#>>'{issued,literal}' AS year, 
+    csl->>'title' AS title, 
+    csl->>'containerTitle' AS source, 
+    s.dataset_key AS database_id, 
+    r.id AS reference_code
+  FROM reference_{{datasetKey}} r
+    JOIN __ref_keys rk ON rk.id=r.id
+    LEFT JOIN sector s ON r.sector_key=s.key
+    
+) TO '{{dir}}/references.csv' CSV HEADER NULL '\N';
+
+
+
 -- create taxon int keys using a reusable sequence
 CREATE SEQUENCE __record_id_seq START 1000;
 CREATE TABLE __tax_keys (key int PRIMARY KEY DEFAULT nextval('__record_id_seq'), id text UNIQUE);
@@ -280,26 +301,6 @@ COPY (
       JOIN taxon_{{datasetKey}} t ON t.id=d.taxon_id
       LEFT JOIN sector s ON t.sector_key=s.key
 ) TO '{{dir}}/distribution.csv' CSV HEADER NULL '\N';
-
-
--- create reference int keys
-CREATE TABLE __ref_keys (key serial, id text UNIQUE);
-INSERT INTO __ref_keys (id) SELECT id FROM reference_{{datasetKey}};
-
--- TODO references.csv
-COPY (
-  SELECT rk.key AS record_id, 
-    csl->>'author' AS author, 
-    csl#>>'{issued,literal}' AS year, 
-    csl->>'title' AS title, 
-    csl->>'containerTitle' AS source, 
-    s.dataset_key AS database_id, 
-    r.id AS reference_code
-  FROM reference_{{datasetKey}} r
-    JOIN __ref_keys rk ON rk.id=r.id
-    LEFT JOIN sector s ON r.sector_key=s.key
-    
-) TO '{{dir}}/references.csv' CSV HEADER NULL '\N';
 
 
 -- scientific_name_references.csv

@@ -2,7 +2,7 @@
 
 host=localhost
 db=colplus
-user=col
+user=postgres
 dataset_key=3
 export_dir="$(pwd)/ac-export" 
 
