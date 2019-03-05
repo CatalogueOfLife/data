@@ -36,7 +36,7 @@ Exclude IRMNG & regional dbs which are special
 
 
 ```
-psql -U postgres colplus < proc-sectors.sql 
+psql -U postgres cpsectors < proc-sectors.sql 
 python3 export-sectors.py
 ```
 
