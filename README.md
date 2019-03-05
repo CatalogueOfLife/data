@@ -17,6 +17,9 @@ The 4 regional databases IRMNG, ITIS regional, China) are excluded as sector sou
 
 
 ```
+# export assembly global into parent-child tsv file
+mysql -u root Assembly_global < assembly-parent_child-export.sql
+mysql-dump -u root Assembly_global.parent_child > assembly-global-parent_child.tvs
 psql -U postgres cpsectors < proc-sectors.sql 
 python3 export-sectors.py
 ```
