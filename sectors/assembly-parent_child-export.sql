@@ -32,7 +32,7 @@ UPDATE Assembly_Global.scientific_names SET infraspecies_parent_name_code=NULL W
 UPDATE Assembly_Global.scientific_names SET author=NULL WHERE author='';
 UPDATE Assembly_Global.scientific_names SET family_code=NULL WHERE family_code='';
 
-DROP TABLE IF EXISTS Assembly_Global_Sectors.sectors;
+DROP TABLE IF EXISTS Assembly_Global_Sectors.parent_child;
 CREATE TABLE Assembly_Global_Sectors.sectors (
   id VARCHAR(200), INDEX(ID(200)),
   database_id VARCHAR(4), INDEX(database_id),
