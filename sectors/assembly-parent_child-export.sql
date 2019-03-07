@@ -1,4 +1,7 @@
 DELETE FROM Assembly_Global.families WHERE record_id = 20541; -- eliminate duplicate family_code
+UPDATE Assembly_Global.scientific_names SET genus='Simulium' WHERE genus=CONVERT('SImulium', BINARY) AND database_id=101; -- fix typo
+UPDATE Assembly_Global.scientific_names SET genus='Epichloe' WHERE genus=CONVERT('Epichloë', BINARY) AND database_id=28; -- remove diacritic in genus
+DELETE FROM Assembly_Global.scientific_names WHERE name_code IN ('Scr-17308', 'Crb-1000571', 'Crb-372451', 'Crb-372452'); -- remove 'v' genus in Crb and blank record in Scr
 
 UPDATE Assembly_Global.families SET kingdom=trim(kingdom);
 UPDATE Assembly_Global.families SET phylum=trim(phylum);
@@ -29,10 +32,8 @@ UPDATE Assembly_Global.scientific_names SET infraspecies_parent_name_code=NULL W
 UPDATE Assembly_Global.scientific_names SET author=NULL WHERE author='';
 UPDATE Assembly_Global.scientific_names SET family_code=NULL WHERE family_code='';
 
-assembly_higher_ranks.tsv
-
 DROP TABLE IF EXISTS Assembly_Global_Sectors.parent_child;
-CREATE TABLE Assembly_Global_Sectors.parent_child (
+CREATE TABLE Assembly_Global_Sectors.sectors (
   id VARCHAR(200), INDEX(ID(200)),
   database_id VARCHAR(4), INDEX(database_id),
   parent_id VARCHAR(200), INDEX(parent_id(200)),
