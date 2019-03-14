@@ -26,21 +26,34 @@ UPDATE _names n SET species=c.species, datasets=c.dids
 CHILDREN = "SELECT id, dataset_id AS did, rank, name, authorship, species AS cnt, datasets AS dids" \
            " FROM _names WHERE rank != 'species' AND parent_id "
 
-Source = collections.namedtuple('Source', 'did rank name cnt', defaults=(None, '', '', 0))
+Source = collections.namedtuple('Source', 'id did rank name cnt', defaults=(None, None, '', '', 0))
+
+sectorKey = 0
 
 
+def writeSector(did, t, p, parentDatasetIds, sKey):
+    global sectorKey
+    if (did not in parentDatasetIds and did not in MANAGED_IDS):
+        sectorKey += 1
+        print("Sector %s %s %s found with %s species for dataset %s" % (sectorKey, t.rank, t.name, t.cnt, did))
+        # sectorKey, datasetID, rank, name, targetRank, targetName, targetID
+        prank = p.rank if p else ''
+        pname = p.name if p else ''
+        pid   = p.id   if p else ''
+        # MODE: 0=ATTACH, 1=MERGE
+        sout.write("%s,%s,%s,%s,%s,%s,%s,%s\n" % (sectorKey, did+1000, 0 if p else 1, t.rank, t.name, prank, pname, pid))
+        return sectorKey
+    return sKey
 
 
+def writeTaxon(p, t, sKey):
+    nout.write("%s,%s,%s,%s,%s\n" % (t.id, t.id, t.rank, t.name, t.name))
+    tout.write("%s,%s,%s,%s\n" % (t.id, t.id, p.id if p else '', sKey or ''))
 
-def writeSector(did, t, p, parentDatasetIds):
-    if (t.name != "Not assigned" and did not in parentDatasetIds and did not in MANAGED_IDS):
-        print("Sector %s %s found with %s species for dataset %s" % (t.rank, t.name, t.cnt, did))
-        # datasetID, rank, name, parentRank, parentName
-        if p:
-            out.write("(%s, '%s', '%s', '%s', '%s'),\n" % (did+1000, t.rank, t.name, p.rank, p.name))
-        else:
-            out.write("(%s, '%s', '%s', NULL, NULL),\n" % (did+1000, t.rank, t.name))
-
+def writeCsvHeader():
+    sout.write("key,dataset_key,mode,subject_rank,subject_name,target_rank,target_name,target_id\n")
+    nout.write("id,homotypic_name_id,rank,scientific_name,uninomial\n")
+    tout.write("id,name_id,parent_id,sector_key\n")
 
 def updateCounts():
     print("Count species")
@@ -50,28 +63,35 @@ def updateCounts():
         cur.execute(UPDATE_COUNTS % (rank, rank))
 
 
-def processTaxon(p, t, out, parentDatasetIds):
-    if (t.dids):
-        dids = set(t.dids).difference(REGIONAL_IDS)
-        print("  process %s %s: species=%s, datasets=%s" % (t.rank, t.name, t.cnt, dids))
-        if len(dids) == 1:
-            writeSector(dids.pop(), t, p, parentDatasetIds)
-        elif len(dids) > 1 and t.rank != 'genus':
-            cur.execute(CHILDREN + ("='%s'" % t.id))
-            children = cur.fetchall()
-            if children:
-                maj = findMajorSource(t.cnt, children)
+def processTaxon(p, t, parentDatasetIds, sKey):
+    print("  process %s %s: sector=%s, species=%s, datasets=%s" % (t.rank, t.name, sKey, t.cnt, t.dids))
+    # load children only for ranks above genera
+    children=[]
+    if t.rank != 'genus':
+        cur.execute(CHILDREN + ("='%s'" % t.id))
+        children = cur.fetchall()
+    # skip not assigned taxa, but dive into their children keeping the current parent
+    if (" assigned" in t.name.lower() or 'unassigned' in t.name.lower()):
+        print("  skip")
+        t = p
+    else:        
+        writeTaxon(p, t, sKey)
+        if (t.dids):
+            dids = set(t.dids).difference(REGIONAL_IDS)
+            if len(dids) == 1:
+                did = dids.pop()
+                sKey = writeSector(did, t, p, parentDatasetIds, sKey)
+                parentDatasetIds = parentDatasetIds+(did,)
+            elif len(dids) > 1 and t.rank in ('order','family','superfamily') and children:
                 # allow a threshold match on (super)family level
-                if maj and t.rank in ('order','family','superfamily'):
+                maj = findMajorSource(t.cnt, children)
+                if maj:
                     print("  major sector %s %s found with %s out of %s species for dataset %s" % (t.rank, t.name, maj.cnt, t.cnt, maj.did))
-                    writeSector(maj.did, t, p, parentDatasetIds)
-                    # recursively go deeper, but remember we have reported a sector already
-                    for c in children:
-                        processTaxon(t, c, out, parentDatasetIds+(maj.did,))
-                else:
-                    # recursively go deeper
-                    for c in children:
-                        processTaxon(t, c, out, parentDatasetIds)
+                    sKey = writeSector(maj.did, t, p, parentDatasetIds, sKey)
+                    parentDatasetIds = parentDatasetIds+(maj.did,)
+    # recursively go deeper
+    for c in children:
+        processTaxon(t, c, parentDatasetIds, sKey)
 
 
 def findMajorSource(total, children):
@@ -89,19 +109,22 @@ def findMajorSource(total, children):
     return None
 
 
-def walkRoot(out):
+def walkRoot():
     cur.execute(CHILDREN + "IS NULL")
     roots = cur.fetchall()
     for r in roots:
         print("\n\n*** KINGDOM ***")
-        processTaxon(None, r, out, tuple([]))
+        processTaxon(None, r, tuple([]), None)
 
 
 
 
 if __name__ == "__main__":
-    updateCounts();
-    with open('sectors.sql', 'w', newline='') as out:
-        walkRoot(out)
+    #updateCounts();
+    with open('sector.csv', 'w', newline='') as sout:
+        with open('name.csv', 'w', newline='') as nout:
+            with open('taxon.csv', 'w', newline='') as tout:
+                writeCsvHeader()
+                walkRoot()
     cur.close()
 
