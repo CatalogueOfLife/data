@@ -3,8 +3,8 @@ import sys, os, csv, collections
 import psycopg2, psycopg2.extras
 
 REGIONAL_IDS ={17,121,500,501} # ITIS regional, CoL China, CoL Management, IRMNG
-MANAGED_IDS  ={141,204,163} # we manage sectors for these datasets manually
-THRESHOLD=0.85
+MANAGED_IDS  ={141,204,163}    # we manage sectors for these datasets manually
+THRESHOLD=0.75
 
 
 
@@ -120,7 +120,7 @@ def walkRoot():
 
 
 if __name__ == "__main__":
-    #updateCounts();
+    updateCounts();
     with open('sector.csv', 'w', newline='') as sout:
         with open('name.csv', 'w', newline='') as nout:
             with open('taxon.csv', 'w', newline='') as tout:

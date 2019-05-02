@@ -15,7 +15,7 @@ CREATE TABLE _names (
 	authorship text
 );
 
-COPY _names FROM '/Users/markus/code/col+/colplus-repo/sectors/assembly-global-parent_child.tvs' CSV DELIMITER E'\t' HEADER NULL '';
+COPY _names FROM '/tmp/parent_child.tsv' NULL 'NULL';
 
 CREATE INDEX ON _names (parent_id);
 CREATE INDEX ON _names (rank);
