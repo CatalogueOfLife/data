@@ -75,7 +75,6 @@ def processTaxon(p, t, parentDatasetIds, sKey):
         print("  skip")
         t = p
     else:        
-        writeTaxon(p, t, sKey)
         if (t.dids):
             dids = set(t.dids).difference(REGIONAL_IDS)
             if len(dids) == 1:
@@ -89,6 +88,7 @@ def processTaxon(p, t, parentDatasetIds, sKey):
                     print("  major sector %s %s found with %s out of %s species for dataset %s" % (t.rank, t.name, maj.cnt, t.cnt, maj.did))
                     sKey = writeSector(maj.did, t, p, parentDatasetIds, sKey)
                     parentDatasetIds = parentDatasetIds+(maj.did,)
+        writeTaxon(p, t, sKey)
     # recursively go deeper
     for c in children:
         processTaxon(t, c, parentDatasetIds, sKey)
