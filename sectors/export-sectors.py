@@ -12,19 +12,19 @@ con = psycopg2.connect(host='localhost', dbname='cpsectors', user='postgres')
 con.autocommit = True
 cur = con.cursor(cursor_factory = psycopg2.extras.NamedTupleCursor)
 
-UPDATE_SPECIES_COUNTS = """UPDATE _names SET species=1, datasets=array[dataset_id] WHERE rank='species'"""
+UPDATE_SPECIES_COUNTS = """UPDATE names SET species=1, datasets=array[dataset_id] WHERE rank='species'"""
 UPDATE_COUNTS = """WITH childs AS (
     SELECT n.id AS cid, sum(c.species) AS species, uniq(sort(array_cat_agg(distinct c.datasets))) AS dids
-    FROM _names n JOIN _names c ON c.parent_id=n.id
+    FROM names n JOIN names c ON c.parent_id=n.id
     WHERE n.rank='%s'
     GROUP BY n.id
 )
-UPDATE _names n SET species=c.species, datasets=c.dids
+UPDATE names n SET species=c.species, datasets=c.dids
     FROM childs c
     WHERE c.cid=n.id AND n.rank='%s';
 """
 CHILDREN = "SELECT id, dataset_id AS did, rank, name, authorship, species AS cnt, datasets AS dids" \
-           " FROM _names WHERE rank != 'species' AND parent_id "
+           " FROM names WHERE rank != 'species' AND parent_id "
 
 Source = collections.namedtuple('Source', 'id did rank name cnt', defaults=(None, None, '', '', 0))
 
