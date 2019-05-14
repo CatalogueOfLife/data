@@ -25,8 +25,6 @@ else
 	echo $database_id > /tmp/acef/database_ids.txt
 fi
 
-dsql=${my_dir}/datasets_generated.sql
-echo "" > ${dsql}
 while read -r line
 do
 	if [ "${line}" = "record_id" ]
@@ -40,11 +38,11 @@ do
     sed "s/__OUTPUT_DIR__/\/tmp\/acef\/${line}/g" assembly_db_to_acef.sql > /tmp/acef/temp.sql
     sed -i "s/__DATABASE_ID__/${line}/g" /tmp/acef/temp.sql 
     mysql --defaults-extra-file=my.cnf < /tmp/acef/temp.sql
+    cp "${my_dir}/../logos/${line}.png" "/tmp/acef/${line}/logo.png"
     cd "/tmp/acef/${line}"
     zip_file="/tmp/acef/${line}.tar.gz"
     tar czf ${zip_file} *.txt
     mv ${zip_file} ${acef_dir}
     cd ${my_dir}
-    echo "INSERT INTO dataset (key, code, title) VALUES (1000+${line}, null, 'GSD');" >> ${dsql}
 done < /tmp/acef/database_ids.txt
 
