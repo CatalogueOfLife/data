@@ -1,11 +1,23 @@
 # CoL data repository
 Repository for CoL ACEF datasets, sectors and decisions exported from the Global Assembly database. 
 
+## Requirements
+ - MySql server with a `assembly_global` database
+ - Postgres 11 server with an empty `colh` database
+ - python 3
+
 ## ACEF
 The ACEF datasets (The CoL Annual Checklist Exchange Format) are all current [CoL datasources](http://www.catalogueoflife.org/col/info/databases) exported directly from the CoL assembly database.
 They are therefore already edited and do use modified, prefixed identifiers.
 
-# Sector exports
+```
+# run export scripts
+cd ACEF/script
+./make-acef.sh
+```
+
+
+## Sector exports
 Straight from Assembly_Globals families and scientific_names tables as the hierarchy codes are not trustworthy.
 Exluded are synonyms and infraspecifics for deriving sectors.
 
@@ -15,11 +27,6 @@ might have included genera from other GSDs (which in turn becomes sectors).
 
 The 4 regional databases IRMNG, ITIS regional, China) are excluded as sector sources as they are too patchy, 
 but the classification down to genus level remains in the exported hierarchy.
-
-## requirements
- - MySql server with a `assembly_global` database
- - Postgres 11 server with an empty `colh` database
- - python 3
 
 ```
 # export assembly global from mysql into parent-child tsv file
