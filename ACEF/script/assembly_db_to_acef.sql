@@ -228,7 +228,7 @@ SELECT db.database_full_name		AS DatabaseFullName
 ,	N2E(db.release_date)			AS ReleaseDate
 ,	N2E(db.authors_editors)			AS AuthorsEditors
 ,	CLEAN_STR(db.taxonomic_coverage)	AS TaxonomicCoverage
-,	''								AS GroupNameInEnglish /* ??? */
+,	CLEAN_STR(db.taxa)								AS GroupNameInEnglish
 ,	CLEAN_STR(db.abstract)			AS Abstract
 ,	N2E(db.organization)			AS Organization
 ,	N2E(db.web_site)				AS HomeURL
