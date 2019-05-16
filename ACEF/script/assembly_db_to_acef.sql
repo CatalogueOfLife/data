@@ -181,8 +181,7 @@ TERMINATED BY ','
 ESCAPED BY '"' 
 LINES TERMINATED BY '\n'
 FROM `references` AS r
-WHERE (__DATABASE_ID__ = 7 AND r.reference_code IN (SELECT reference_code FROM common_names WHERE database_id = 7))
-OR r.database_id=__DATABASE_ID__;
+WHERE r.database_id=__DATABASE_ID__;
 
 
 
