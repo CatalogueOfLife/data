@@ -40,6 +40,7 @@ do
     mysql --defaults-extra-file=my.cnf < /tmp/acef/temp.sql
     cp "${my_dir}/../logos/${line}.png" "/tmp/acef/${line}/logo.png"
     cd "/tmp/acef/${line}"
+    echo -e '0a\n"ID","ReferenceType","ReferenceID"\n.\nw' | ed -s NameReferences.txt
     zip_file="/tmp/acef/${line}.tar.gz"
     tar czf ${zip_file} *.txt
     mv ${zip_file} ${acef_dir}

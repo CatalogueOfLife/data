@@ -189,8 +189,8 @@ OR r.database_id=__DATABASE_ID__;
 /*
  * NameReferences.txt
  */
-SELECT 'ID','ReferenceType','ReferenceID'
-UNION
+/*SELECT 'ID','ReferenceType','ReferenceID'
+UNION */
 SELECT snr.name_code				AS ID
 ,	N2E(snr.reference_type)			AS ReferenceType
 ,	N2E(snr.reference_code)			AS ReferenceID
