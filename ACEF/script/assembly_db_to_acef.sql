@@ -5,10 +5,6 @@
 # by the make-acef.sh script, which uses sed to replace
 # __OUTPUT_DIR__ and __DATABASE_ID__ with proper values.
 
-# N.B. There is a special dataset (id = 7) just for common names,
-# pointing to species outside that dataset. It needs special
-# treatment. For now we'll assume the dataset id will always
-# be 7, so we don't do a lookup.
 
 /* 
  * AcceptedSpecies.txt
@@ -54,10 +50,7 @@ LEFT JOIN lifezones_per_name lz ON (sn.record_id = lz.scientific_name_id)
 LEFT JOIN specialists AS sp ON (sn.specialist_code = sp.specialist_code)
 WHERE (sn.infraspecies_marker IS NULL OR infraspecies_marker = '')
 AND sn.is_accepted_name != 0 /* both 1 and 5 are accepted names; 5 likely data corruption */
-AND (
-	 (__DATABASE_ID__ = 7 AND sn.name_code IN (SELECT name_code FROM common_names WHERE database_id = 7))
-	 OR sn.database_id=__DATABASE_ID__
-);
+AND sn.database_id=__DATABASE_ID__;
 
 
 /* 
@@ -96,10 +89,7 @@ LEFT JOIN lifezones_per_name lz ON (sn.record_id = lz.scientific_name_id)
 LEFT JOIN specialists AS sp ON (sn.specialist_code = sp.specialist_code)
 WHERE (sn.infraspecies_marker IS NOT NULL AND infraspecies_marker != '')
 AND sn.is_accepted_name != 0
-AND (
-	 (__DATABASE_ID__ = 7 AND sn.name_code IN (SELECT name_code FROM common_names WHERE database_id = 7))
-	 OR sn.database_id=__DATABASE_ID__
-);
+AND sn.database_id=__DATABASE_ID__;
 
 
 /* 
@@ -211,8 +201,7 @@ TERMINATED BY ','
 ESCAPED BY '"' 
 LINES TERMINATED BY '\n'
 FROM scientific_name_references AS snr
-WHERE (__DATABASE_ID__ = 7 AND snr.reference_code IN (SELECT reference_code FROM common_names WHERE database_id = 7))
-OR snr.database_id=__DATABASE_ID__;
+WHERE snr.database_id=__DATABASE_ID__;
 
 
 /*

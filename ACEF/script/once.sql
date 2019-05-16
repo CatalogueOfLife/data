@@ -1,3 +1,8 @@
+-- Eliminate ACEF#7, which only has 18 common names
+DELETE FROM `databases` WHERE record_id=7;
+DELETE FROM `common_names` WHERE database_id=7;
+
+
 DROP FUNCTION IF EXISTS N2E;
 CREATE FUNCTION N2E(s TEXT) RETURNS TEXT DETERMINISTIC
 	RETURN IFNULL(s,'');
