@@ -87,8 +87,7 @@ FROM scientific_names AS sn
 LEFT JOIN sp2000_statuses AS nomstatus ON (sn.sp2000_status_id = nomstatus.record_id)
 LEFT JOIN lifezones_per_name lz ON (sn.record_id = lz.scientific_name_id)
 LEFT JOIN specialists AS sp ON (sn.specialist_code = sp.specialist_code)
-WHERE (sn.infraspecies_marker IS NOT NULL AND infraspecies_marker != '')
-AND sn.is_accepted_name != 0
+WHERE sn.is_accepted_name != 0
 AND sn.database_id=__DATABASE_ID__;
 
 
