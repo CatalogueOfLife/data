@@ -48,7 +48,7 @@ LEFT JOIN families AS fam ON (sn.family_code = fam.family_code)
 LEFT JOIN sp2000_statuses AS nomstatus ON (sn.sp2000_status_id = nomstatus.record_id)
 LEFT JOIN lifezones_per_name lz ON (sn.record_id = lz.scientific_name_id)
 LEFT JOIN specialists AS sp ON (sn.specialist_code = sp.specialist_code)
-WHERE (sn.infraspecies_marker IS NULL OR infraspecies_marker = '')
+WHERE (sn.infraspecies IS NULL OR infraspecies = '')
 AND sn.is_accepted_name != 0 /* both 1 and 5 are accepted names; 5 likely data corruption */
 AND sn.database_id=__DATABASE_ID__;
 
@@ -87,7 +87,8 @@ FROM scientific_names AS sn
 LEFT JOIN sp2000_statuses AS nomstatus ON (sn.sp2000_status_id = nomstatus.record_id)
 LEFT JOIN lifezones_per_name lz ON (sn.record_id = lz.scientific_name_id)
 LEFT JOIN specialists AS sp ON (sn.specialist_code = sp.specialist_code)
-WHERE sn.is_accepted_name != 0
+WHERE (sn.infraspecies IS NOT NULL OR sn.infraspecies !='')
+AND sn.is_accepted_name != 0
 AND sn.database_id=__DATABASE_ID__;
 
 
