@@ -8,7 +8,7 @@ THRESHOLD=0.75
 
 
 
-con = psycopg2.connect(host='localhost', dbname='cpsectors', user='postgres')
+con = psycopg2.connect(host='localhost', dbname='colh', user='postgres')
 con.autocommit = True
 cur = con.cursor(cursor_factory = psycopg2.extras.NamedTupleCursor)
 
@@ -26,7 +26,7 @@ UPDATE names n SET species=c.species, datasets=c.dids
 CHILDREN = "SELECT id, dataset_id AS did, rank, name, authorship, species AS cnt, datasets AS dids" \
            " FROM names WHERE rank != 'species' AND parent_id "
 
-Source = collections.namedtuple('Source', 'id did rank name cnt', defaults=(None, None, '', '', 0))
+Source = collections.namedtuple('Source', 'id did rank name cnt')
 
 sectorKey = 0
 
@@ -105,7 +105,7 @@ def findMajorSource(total, children):
     print("  calc major: %s" % cnts)
     for did in cnts:
         if cnts[did] >= total*THRESHOLD:
-            return Source(did=did, cnt=cnts[did])
+            return Source(id=None, did=did, rank='', name='', cnt=cnts[did])
     return None
 
 
