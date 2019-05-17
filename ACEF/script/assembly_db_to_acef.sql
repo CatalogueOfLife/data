@@ -102,11 +102,11 @@ SELECT sn.name_code					AS ID
 ,	N2E(sn.genus)					AS Genus
 ,	N2E(sn.subgenus)				AS SubGenusName
 ,	N2E(sn.species)					AS SpeciesEpithet
-,	N2E(sn.author)					AS AuthorString
+,	IF((sn.infraspecies IS NULL), N2E(sn.author), '')	AS AuthorString
 ,	N2E(sn.infraspecies)			AS InfraSpeciesEpithet
 ,	N2E(sn.infraspecies_marker)		AS InfraSpeciesMarker
-,	''								AS InfraSpeciesAuthorString /* ??? */
-,	''								AS GSDNameStatus /* ??? */
+,	IF((sn.infraspecies IS NULL), '', N2E(sn.author))	AS InfraSpeciesAuthorString
+,	''								AS GSDNameStatus /* GSDNameStatus is provided by the GSDs */
 ,	N2E(nomstatus.sp2000_status)	AS Sp2000NameStatus
 ,	N2E(sn.GSDNameGUID)				AS GSDNameGUID
 INTO OUTFILE '__OUTPUT_DIR__/Synonyms.txt'
