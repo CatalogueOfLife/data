@@ -2,7 +2,7 @@
 import sys, os, csv, collections
 import psycopg2, psycopg2.extras
 
-REGIONAL_IDS ={17,121,500,501} # ITIS regional, CoL China, CoL Management, IRMNG
+REGIONAL_IDS ={17,75,121,500,501} # ITIS regional, NZOR, CoL China, CoL Management, IRMNG
 MANAGED_IDS  ={141,204,163}    # we manage sectors for these datasets manually
 THRESHOLD=0.75
 
