@@ -2,6 +2,7 @@
 
 my_dir=$(pwd)
 acef_dir=$(cd ../ && pwd)
+ids_file="$my_dir/database_ids.txt"
 
 rm -rf /tmp/acef
 mkdir /tmp/acef
@@ -16,13 +17,13 @@ database_id="${1}"
 if [ "x${database_id}" = "x" ]
 then
 	echo "$(date '+%Y-%m-%d %H:%M:%S') Retrieving GSD IDs"
-	mysql --defaults-extra-file=my.cnf -e 'SELECT record_id FROM `databases`' > /tmp/acef/database_ids.txt
+	mysql --defaults-extra-file=my.cnf -e 'SELECT record_id FROM `databases`' > $ids_file
 	echo "$(date '+%Y-%m-%d %H:%M:%S') Executing one-off SQL"
 	mysql --defaults-extra-file=my.cnf < once.sql
 	echo "$(date '+%Y-%m-%d %H:%M:%S') Clearing directory ${acef_dir}"
 	rm -rf "${acef_dir}/*.gz"
 else
-	echo $database_id > /tmp/acef/database_ids.txt
+	echo $database_id > $ids_file
 fi
 
 while read -r line
@@ -45,5 +46,5 @@ do
     tar czf ${zip_file} *.txt
     mv ${zip_file} ${acef_dir}
     cd ${my_dir}
-done < /tmp/acef/database_ids.txt
+done < $ids_file
 
