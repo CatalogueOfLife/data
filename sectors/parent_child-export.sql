@@ -108,7 +108,7 @@ FROM (
 
 
 -- write to CSV
-SELECT id, lower(database_id), lower(parent_id), `rank`, replace(name,'\n',' '), replace(authorship,'\n',' ')
+SELECT lower(id), database_id, lower(parent_id), `rank`, replace(name,'\n',' '), replace(authorship,'\n',' ')
 FROM parent_child
 INTO OUTFILE '/tmp/parent_child.tsv'
 CHARACTER SET UTF8MB4
