@@ -35,7 +35,7 @@ def writeSector(did, t, p, parentDatasetIds, sKey):
     global sectorKey
     if (did not in parentDatasetIds and did not in MANAGED_IDS):
         sectorKey += 1
-        print("Sector %s %s %s found with %s species for dataset %s" % (sectorKey, t.rank, t.name, t.cnt, did))
+        print("  Sector %s %s %s found with %s species for dataset %s" % (sectorKey, t.rank, t.name, t.cnt, did))
         # sectorKey, datasetID, rank, name, targetRank, targetName, targetID
         prank = p.rank if p else ''
         pname = p.name if p else ''
@@ -64,7 +64,7 @@ def updateCounts():
 
 
 def processTaxon(p, t, parentDatasetIds, sKey):
-    print("  process %s %s: sector=%s, species=%s, datasets=%s" % (t.rank, t.name, sKey, t.cnt, t.dids))
+    print("process %s %s: sector=%s, species=%s, datasets=%s" % (t.rank, t.name, sKey, t.cnt, t.dids))
     # load children only for ranks above genera
     children=[]
     if t.rank != 'genus':
