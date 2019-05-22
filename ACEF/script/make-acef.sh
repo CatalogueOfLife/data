@@ -36,9 +36,9 @@ do
     echo "$(date '+%Y-%m-%d %H:%M:%S') Processing database: ${line}"
 	mkdir /tmp/acef/${line}
 	chmod -R 777 /tmp/acef/${line}
-    sed "s/__OUTPUT_DIR__/\/tmp\/acef\/${line}/g" assembly_db_to_acef.sql > /tmp/acef/temp.sql
-    sed -i "s/__DATABASE_ID__/${line}/g" /tmp/acef/temp.sql 
-    mysql --defaults-extra-file=my.cnf < /tmp/acef/temp.sql
+    sed "s/__OUTPUT_DIR__/\/tmp\/acef\/${line}/g" assembly_db_to_acef.sql > /tmp/acef/temp${line}.sql
+    sed -i "s/__DATABASE_ID__/${line}/g" /tmp/acef/temp${line}.sql
+    mysql ag < /tmp/acef/temp${line}.sql
     cp "${my_dir}/../logos/${line}.png" "/tmp/acef/${line}/logo.png"
     cd "/tmp/acef/${line}"
     echo -e '0a\n"ID","ReferenceType","ReferenceID"\n.\nw' | ed -s NameReferences.txt
