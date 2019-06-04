@@ -36,23 +36,24 @@ def writeSector(did, t, p, parentDatasetIds, sKey):
     if (did not in parentDatasetIds and did not in MANAGED_IDS):
         sectorKey += 1
         print("  Sector %s %s %s found with %s species for dataset %s" % (sectorKey, t.rank, t.name, t.cnt, did))
-        # sectorKey, datasetID, rank, name, targetRank, targetName, targetID
-        prank = p.rank if p else ''
-        pname = p.name if p else ''
-        pid   = p.id   if p else ''
         # MODE: 0=ATTACH, 1=MERGE
-        sout.write("%s,%s,%s,%s,%s,%s,%s,%s\n" % (sectorKey, did+1000, 0 if p else 1, t.rank, t.name, prank, pname, pid))
+        mode = 0
+        if !p:
+            p = t
+            mode = 1
+        # sectorKey, datasetID, rank, name, targetRank, targetName, targetID
+        sout.write("%s,%s,%s,%s,%s,%s,%s,%s\n" % (sectorKey, did+1000, mode, t.rank, t.name, p.rank, p.name, p.id))
         return sectorKey
     return sKey
 
 
 def writeTaxon(p, t, sKey):
-    nout.write("%s,%s,%s,%s,%s\n" % (t.id, t.id, t.rank, t.name, t.name))
+    nout.write("%s,%s,%s,%s,%s,%s\n" % (t.id, t.id, t.rank, t.name, t.name, sKey or ''))
     tout.write("%s,%s,%s,%s\n" % (t.id, t.id, p.id if p else '', sKey or ''))
 
 def writeCsvHeader():
     sout.write("key,dataset_key,mode,subject_rank,subject_name,target_rank,target_name,target_id\n")
-    nout.write("id,homotypic_name_id,rank,scientific_name,uninomial\n")
+    nout.write("id,homotypic_name_id,rank,scientific_name,uninomial,sector_key\n")
     tout.write("id,name_id,parent_id,sector_key\n")
 
 def updateCounts():
