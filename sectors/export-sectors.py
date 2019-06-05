@@ -23,7 +23,7 @@ UPDATE names n SET species=c.species, datasets=c.dids
     FROM childs c
     WHERE c.cid=n.id AND n.rank='%s';
 """
-CHILDREN = "SELECT id, dataset_id AS did, rank, name, authorship, species AS cnt, datasets AS dids" \
+CHILDREN = "SELECT id, dataset_id AS did, rank, name, species AS cnt, datasets AS dids" \
            " FROM names WHERE rank != 'species' AND parent_id "
 
 Source = collections.namedtuple('Source', 'id did rank name cnt')
@@ -38,7 +38,7 @@ def writeSector(did, t, p, parentDatasetIds, sKey):
         print("  Sector %s %s %s found with %s species for dataset %s" % (sectorKey, t.rank, t.name, t.cnt, did))
         # MODE: 0=ATTACH, 1=MERGE
         mode = 0
-        if !p:
+        if not p:
             p = t
             mode = 1
         # sectorKey, datasetID, rank, name, targetRank, targetName, targetID

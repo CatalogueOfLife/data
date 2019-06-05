@@ -2,7 +2,7 @@
 Repository for CoL ACEF datasets, sectors and decisions exported from the Global Assembly database. 
 
 ## Requirements
- - MySql server with a `assembly_global` database
+ - MySql server with a `assembly_global` and a `bs_tree_estimates` database
  - Postgres 11 server with an empty `colh` database
  - python 3
 
@@ -31,10 +31,14 @@ but the classification down to genus level remains in the exported hierarchy.
 ```
 # export assembly global from mysql into parent-child tsv file
 rm /tmp/parent_child.tsv
+rm /tmp/estimates.tsv
 mysql -u root -p assembly_global < parent_child-export.sql
+mysql -u root -p bs_tree_estimates < estimates-export.sql
 
 # import into postgres and process the parent child hierarchy
+# this already generates 2 csv files `/tmp/reference.csv` and `/tmp/estimate.csv` to use in the backend code
 psql -U postgres colh < proc-sectors.sql 
+# this generates various csv files in the current dir:
 python3 export-sectors.py
 ```
 
