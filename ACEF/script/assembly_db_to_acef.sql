@@ -1,13 +1,13 @@
 
 # This SQL script is a template for the SQL that is to be run
-# in order to generate the ACEF files (e.g. AcceptedSpecies.txt,
-# AcceptedInfraspecificTaxa.txt, etc.). It is meant to be run
+# in order to generate the ACEF files (e.g. AcceptedSpecies.tsv,
+# AcceptedInfraspecificTaxa.tsv, etc.). It is meant to be run
 # by the make-acef.sh script, which uses sed to replace
 # __OUTPUT_DIR__ and __DATABASE_ID__ with proper values.
 
 
 /* 
- * AcceptedSpecies.txt
+ * AcceptedSpecies.tsv
  */
 SELECT 
 'AcceptedTaxonID','Kingdom','Phylum', 'Class', 'Order', 'Superfamily', 'Family', 'Genus', 'SubGenusName', 
@@ -37,11 +37,11 @@ SELECT sn.name_code					AS AcceptedTaxonID
 ,	N2E(sn.web_site)				AS SpeciesURL
 ,	N2E(sn.GSDTaxonGUID)			AS GSDTaxonGUID
 ,	N2E(sn.GSDNameGUID)				AS GSDNameGUID
-INTO OUTFILE '__OUTPUT_DIR__/AcceptedSpecies.txt'
+INTO OUTFILE '__OUTPUT_DIR__/AcceptedSpecies.tsv'
 CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
-TERMINATED BY ',' 
-ESCAPED BY '"' 
+TERMINATED BY '\t' 
+ESCAPED BY '\\' 
 LINES TERMINATED BY '\n'
 FROM scientific_names AS sn
 LEFT JOIN families AS fam ON (sn.family_code = fam.family_code)
@@ -54,7 +54,7 @@ AND sn.database_id=__DATABASE_ID__;
 
 
 /* 
- * AcceptedInfraspecificTaxa.txt
+ * AcceptedInfraspecificTaxa.tsv
  */
 SELECT 'AcceptedTaxonID','parentID','InfraSpeciesEpithet','InfraSpeciesMarker','InfraSpeciesAuthorString',
  'GSDNameStatus','Sp2000NameStatus','IsExtinct','HasPreHolocene','HasModern','LifeZone','AdditionalData',
@@ -65,7 +65,7 @@ SELECT sn.name_code					AS AcceptedTaxonID
 ,	N2E(sn.infraspecies)			AS InfraSpeciesEpithet
 ,	N2E(sn.infraspecies_marker)		AS InfraSpeciesMarker
 ,	N2E(sn.author)					AS InfraSpeciesAuthorString
-,	''								AS GSDNameStatus /* ??? */
+,	''								AS GSDNameStatus /* GSDNameStatus is provided by the GSDs */
 ,	N2E(nomstatus.sp2000_status)	AS Sp2000NameStatus
 ,	N2E(sn.is_extinct)				AS IsExtinct
 ,	N2E(sn.has_preholocene)			AS HasPreHolocene
@@ -77,11 +77,11 @@ SELECT sn.name_code					AS AcceptedTaxonID
 ,	N2E(sn.web_site)				AS InfraSpeciesURL
 ,	N2E(sn.GSDTaxonGUID)			AS GSDTaxonGUID
 ,	N2E(sn.GSDNameGUID)				AS GSDNameGUID
-INTO OUTFILE '__OUTPUT_DIR__/AcceptedInfraspecificTaxa.txt'
+INTO OUTFILE '__OUTPUT_DIR__/AcceptedInfraspecificTaxa.tsv'
 CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
-TERMINATED BY ',' 
-ESCAPED BY '"' 
+TERMINATED BY '\t' 
+ESCAPED BY '\\' 
 LINES TERMINATED BY '\n'
 FROM scientific_names AS sn
 LEFT JOIN sp2000_statuses AS nomstatus ON (sn.sp2000_status_id = nomstatus.record_id)
@@ -93,7 +93,7 @@ AND sn.database_id=__DATABASE_ID__;
 
 
 /* 
- * Synonyms.txt
+ * Synonyms.tsv
  */
 SELECT 'ID','AcceptedTaxonID','Genus','SubGenusName','SpeciesEpithet','AuthorString','InfraSpeciesEpithet',
 'InfraSpeciesMarker','InfraSpeciesAuthorString','GSDNameStatus','Sp2000NameStatus','GSDNameGUID'
@@ -110,11 +110,11 @@ SELECT sn.name_code					AS ID
 ,	''								AS GSDNameStatus /* GSDNameStatus is provided by the GSDs */
 ,	N2E(nomstatus.sp2000_status)	AS Sp2000NameStatus
 ,	N2E(sn.GSDNameGUID)				AS GSDNameGUID
-INTO OUTFILE '__OUTPUT_DIR__/Synonyms.txt'
+INTO OUTFILE '__OUTPUT_DIR__/Synonyms.tsv'
 CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
-TERMINATED BY ',' 
-ESCAPED BY '"' 
+TERMINATED BY '\t' 
+ESCAPED BY '\\' 
 LINES TERMINATED BY '\n'
 FROM scientific_names AS sn
 LEFT JOIN sp2000_statuses AS nomstatus ON (sn.sp2000_status_id = nomstatus.record_id)
@@ -123,7 +123,7 @@ AND sn.database_id=__DATABASE_ID__;
 
 
 /*
- * CommonNames.txt
+ * CommonNames.tsv
  */
 SELECT 'AcceptedTaxonID','CommonName','TransliteratedNames','Language','Country','Area','ReferenceID'
 UNION
@@ -134,19 +134,19 @@ SELECT cn.name_code					AS AcceptedTaxonID
 ,	N2E(cn.country)					AS Country
 ,	CLEAN_STR(cn.area)				AS Area
 ,	N2E(cn.reference_code)			AS ReferenceID
-INTO OUTFILE '__OUTPUT_DIR__/CommonNames.txt'
+INTO OUTFILE '__OUTPUT_DIR__/CommonNames.tsv'
 CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
-TERMINATED BY ',' 
-ESCAPED BY '"' 
+TERMINATED BY '\t' 
+ESCAPED BY '\\' 
 LINES TERMINATED BY '\n'
 FROM common_names AS cn
-LEFT JOIN scientific_names sn ON (cn.name_code = sn.name_code)
+LEFT JOIN scientific_names sn ON (cn.name_code = sn.name_code AND sn.database_id = cn.database_id)
 WHERE cn.database_id=__DATABASE_ID__;
 
 
 /*
- * Distribution.txt
+ * Distribution.tsv
  */
 SELECT 'AcceptedTaxonID','DistributionElement','StandardInUse','DistributionStatus'
 UNION
@@ -154,18 +154,18 @@ SELECT d.name_code					AS AcceptedTaxonID
 ,	CLEAN_STR(d.distribution)		AS DistributionElement
 ,	N2E(d.StandardInUse)			AS StandardInUse
 ,	N2E(d.DistributionStatus)		AS DistributionStatus
-INTO OUTFILE '__OUTPUT_DIR__/Distribution.txt'
+INTO OUTFILE '__OUTPUT_DIR__/Distribution.tsv'
 CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
-TERMINATED BY ',' 
-ESCAPED BY '"' 
+TERMINATED BY '\t' 
+ESCAPED BY '\\' 
 LINES TERMINATED BY '\n'
 FROM distribution AS d
 WHERE d.database_id=__DATABASE_ID__;
 
 
 /*
- * References.txt
+ * References.tsv
  */
 SELECT 'ReferenceID','Authors','Year','Title','Details'
 UNION
@@ -174,11 +174,11 @@ SELECT r.reference_code				AS ReferenceID
 ,	CLEAN_STR(r.year)				AS Year
 ,	CLEAN_STR(r.title)				AS Title
 ,	CLEAN_STR(r.source)				AS Details
-INTO OUTFILE '__OUTPUT_DIR__/References.txt'
+INTO OUTFILE '__OUTPUT_DIR__/References.tsv'
 CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
-TERMINATED BY ',' 
-ESCAPED BY '"' 
+TERMINATED BY '\t' 
+ESCAPED BY '\\' 
 LINES TERMINATED BY '\n'
 FROM `references` AS r
 WHERE r.database_id=__DATABASE_ID__;
@@ -186,25 +186,25 @@ WHERE r.database_id=__DATABASE_ID__;
 
 
 /*
- * NameReferences.txt
+ * NameReferences.tsv
  */
 /*SELECT 'ID','ReferenceType','ReferenceID'
 UNION */
 SELECT snr.name_code				AS ID
 ,	N2E(snr.reference_type)			AS ReferenceType
 ,	N2E(snr.reference_code)			AS ReferenceID
-INTO OUTFILE '__OUTPUT_DIR__/NameReferences.txt'
+INTO OUTFILE '__OUTPUT_DIR__/NameReferences.tsv'
 CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
-TERMINATED BY ',' 
-ESCAPED BY '"' 
+TERMINATED BY '\t' 
+ESCAPED BY '\\' 
 LINES TERMINATED BY '\n'
 FROM scientific_name_references AS snr
 WHERE snr.database_id=__DATABASE_ID__;
 
 
 /*
- * SourceDatabase.txt
+ * SourceDatabase.tsv
  */
 SELECT 'DatabaseFullName','DatabaseName','DatabaseVersion','ReleaseDate','AuthorsEditors','TaxonomicCoverage',
 'GroupNameInEnglish','Abstract','Organization','HomeURL','Coverage','Completeness','Confidence',
@@ -225,11 +225,11 @@ SELECT db.database_full_name		AS DatabaseFullName
 ,	N2E(db.confidence)				AS Confidence
 ,	''								AS LogoFileName
 ,	N2E(db.contact_person)			AS ContactPerson
-INTO OUTFILE '__OUTPUT_DIR__/SourceDatabase.txt'
+INTO OUTFILE '__OUTPUT_DIR__/SourceDatabase.tsv'
 CHARACTER SET UTF8MB4
 FIELDS ENCLOSED BY '"' 
-TERMINATED BY ',' 
-ESCAPED BY '"' 
+TERMINATED BY '\t' 
+ESCAPED BY '\\' 
 LINES TERMINATED BY '\n'
 FROM `databases` AS db
 WHERE db.record_id=__DATABASE_ID__;
