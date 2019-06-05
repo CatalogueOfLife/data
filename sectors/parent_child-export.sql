@@ -1,12 +1,11 @@
 
 DROP TABLE IF EXISTS parent_child;
 CREATE TABLE parent_child (
-  id VARCHAR(200), INDEX(ID(200)),
-  database_id VARCHAR(4), INDEX(database_id),
-  parent_id VARCHAR(200), INDEX(parent_id(200)),
-  `rank` varchar(20), INDEX(`rank`),
-  name varchar(100), INDEX(name(100)),
-  authorship varchar(200), INDEX(authorship(200))
+  id VARCHAR(200),
+  database_id VARCHAR(4),
+  parent_id VARCHAR(200),
+  `rank` varchar(20),
+  name varchar(100)
 )
 SELECT *
 FROM (
@@ -108,7 +107,7 @@ FROM (
 
 
 -- write to CSV
-SELECT lower(id), database_id, lower(parent_id), `rank`, replace(name,'\n',' '), replace(authorship,'\n',' ')
+SELECT lower(id), database_id, lower(parent_id), `rank`, replace(name,'\n',' ')
 FROM parent_child
 INTO OUTFILE '/tmp/parent_child.tsv'
 CHARACTER SET UTF8MB4
