@@ -28,7 +28,7 @@ CHILDREN = "SELECT id, dataset_id AS did, rank, name, species AS cnt, datasets A
 
 Source = collections.namedtuple('Source', 'id did rank name cnt')
 
-BIOTA  = Source(id=0, did=None, rank='domain', name='Biota', cnt=None)
+BIOTA  = Source(id=0, did=None, rank='unranked', name='Biota', cnt=None)
 
 sectorKey = 0
 
