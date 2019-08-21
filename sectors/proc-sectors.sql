@@ -89,8 +89,23 @@ ALTER TABLE refs ADD COLUMN key SERIAL PRIMARY KEY;
 COPY (SELECT 'id','citation' UNION ALL 
 	  SELECT key::text, source FROM refs) TO '/tmp/reference.csv' WITH CSV;
 -- export estimate decision
-COPY (SELECT 'subject_kingdom','subject_rank','subject_name','subject_id','estimate','reference_id','created','modified' UNION ALL 
-	SELECT e.kingdom,lower(e.rank),e.name,n.id::text,e.estimate::text,r.key::text,e.created::text,e.modified::text
+COPY (SELECT 'subject_code','subject_rank','subject_name','subject_id','estimate','reference_id','created','modified' UNION ALL 
+  -- 0 BACTERIAL
+  -- 1 BOTANICAL
+  -- 3 VIRUS
+  -- 4 ZOOLOGICAL
+	SELECT CASE e.kingdom 
+		WHEN 'Animalia' THEN 4
+		WHEN 'Plantae' THEN 1
+		WHEN 'Fungi' THEN 1
+		WHEN 'Bacteria' THEN 0
+		WHEN 'Archaea' THEN 0
+		WHEN 'Viruses' THEN 3
+		WHEN 'Chromista' THEN NULL
+		WHEN 'Protozoa' THEN NULL
+		ELSE NULL
+		END,
+		lower(e.rank),e.name,n.id::text,e.estimate::text,r.key::text,e.created::text,e.modified::text
 	  FROM estimates e 
 	  	LEFT JOIN names n ON e.rank=n.rank AND e.name=n.name AND e.kingdom=n.kingdom
 	  	LEFT JOIN refs r ON r.source=e.source

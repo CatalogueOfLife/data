@@ -3,7 +3,7 @@ import sys, os, csv, collections
 import psycopg2, psycopg2.extras
 
 REGIONAL_IDS ={17,75,121,500,501} # ITIS regional, NZOR, CoL China, CoL Management, IRMNG
-MANAGED_IDS  ={141,204,163}    # we manage sectors for these datasets manually
+MANAGED_IDS  ={}                  # we manage sectors for these datasets manually
 THRESHOLD=0.75
 
 
@@ -28,6 +28,8 @@ CHILDREN = "SELECT id, dataset_id AS did, rank, name, species AS cnt, datasets A
 
 Source = collections.namedtuple('Source', 'id did rank name cnt')
 
+BIOTA  = Source(id=0, did=None, rank='domain', name='Biota', cnt=None)
+
 sectorKey = 0
 
 
@@ -36,13 +38,10 @@ def writeSector(did, t, p, parentDatasetIds, sKey):
     if (did not in parentDatasetIds and did not in MANAGED_IDS):
         sectorKey += 1
         print("  Sector %s %s %s found with %s species for dataset %s" % (sectorKey, t.rank, t.name, t.cnt, did))
-        # MODE: 0=ATTACH, 1=MERGE
-        mode = 0
         if not p:
-            p = t
-            mode = 1
+            p = BIOTA
         # sectorKey, datasetID, rank, name, targetRank, targetName, targetID
-        sout.write("%s,%s,%s,%s,%s,%s,%s,%s\n" % (sectorKey, did+1000, mode, t.rank, t.name, p.rank, p.name, p.id))
+        sout.write("%s,%s,%s,%s,%s,%s,%s\n" % (sectorKey, did+1000, t.rank, t.name, p.rank, p.name, p.id))
         return sectorKey
     return sKey
 
@@ -52,7 +51,7 @@ def writeTaxon(p, t, sKey):
     tout.write("%s,%s,%s,%s\n" % (t.id, t.id, p.id if p else '', sKey or ''))
 
 def writeCsvHeader():
-    sout.write("key,dataset_key,mode,subject_rank,subject_name,target_rank,target_name,target_id\n")
+    sout.write("key,dataset_key,subject_rank,subject_name,target_rank,target_name,target_id\n")
     nout.write("id,homotypic_name_id,rank,scientific_name,uninomial,sector_key\n")
     tout.write("id,name_id,parent_id,sector_key\n")
 
@@ -111,6 +110,7 @@ def findMajorSource(total, children):
 
 
 def walkRoot():
+    writeTaxon(None, BIOTA, None)
     cur.execute(CHILDREN + "IS NULL")
     roots = cur.fetchall()
     for r in roots:
@@ -121,7 +121,7 @@ def walkRoot():
 
 
 if __name__ == "__main__":
-    updateCounts();
+    #updateCounts();
     with open('sector.csv', 'w', newline='') as sout:
         with open('name.csv', 'w', newline='') as nout:
             with open('taxon.csv', 'w', newline='') as tout:
