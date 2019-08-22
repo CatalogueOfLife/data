@@ -41,9 +41,9 @@ do
     mysql ag < /tmp/acef/temp${line}.sql
     cp "${my_dir}/../logos/${line}.png" "/tmp/acef/${line}/logo.png"
     cd "/tmp/acef/${line}"
-    echo -e '0a\n"ID","ReferenceType","ReferenceID"\n.\nw' | ed -s NameReferences.txt
+    echo -e '0a\n"ID"\t"ReferenceType"\t"ReferenceID"\n.\nw' | ed -s NameReferences.tsv
     zip_file="/tmp/acef/${line}.tar.gz"
-    tar czf ${zip_file} *.txt
+    tar czf ${zip_file} *.tsv
     mv ${zip_file} ${acef_dir}
     cd ${my_dir}
 done < $ids_file

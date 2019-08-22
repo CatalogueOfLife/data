@@ -23,7 +23,7 @@ CREATE TABLE lifezones_per_name (
 INSERT INTO lifezones_per_name(scientific_name_id,lifezones)
 (SELECT sn.record_id, GROUP_CONCAT(lz.lifezone SEPARATOR '@@@')
 FROM scientific_names sn
-LEFT JOIN lifezone lz ON (sn.name_code = lz.name_code)
+LEFT JOIN lifezone lz ON (sn.name_code = lz.name_code AND sn.database_id = lz.database_id)
 GROUP BY sn.record_id);
 
 ALTER TABLE lifezones_per_name ADD PRIMARY KEY(scientific_name_id);
