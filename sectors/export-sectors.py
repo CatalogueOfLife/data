@@ -47,8 +47,10 @@ def writeSector(did, t, p, parentDatasetIds, sKey):
 
 
 def writeTaxon(p, t, sKey):
+    if not p:
+        p = BIOTA
     nout.write("%s,%s,%s,%s,%s,%s\n" % (t.id, t.id, t.rank, t.name, t.name, sKey or ''))
-    tout.write("%s,%s,%s,%s\n" % (t.id, t.id, p.id if p else '', sKey or ''))
+    tout.write("%s,%s,%s,%s\n" % (t.id, t.id, p.id, sKey or ''))
 
 def writeCsvHeader():
     sout.write("key,dataset_key,subject_rank,subject_name,target_rank,target_name,target_id\n")
