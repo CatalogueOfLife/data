@@ -206,12 +206,12 @@ WHERE snr.database_id=__DATABASE_ID__;
 /*
  * SourceDatabase.tsv
  */
-SELECT 'DatabaseFullName','DatabaseName','DatabaseVersion','ReleaseDate','AuthorsEditors','TaxonomicCoverage',
+SELECT 'DatabaseFullName','DatabaseShortName','DatabaseVersion','ReleaseDate','AuthorsEditors','TaxonomicCoverage',
 'GroupNameInEnglish','Abstract','Organization','HomeURL','Coverage','Completeness','Confidence',
 'LogoFileName','ContactPerson'
 UNION
 SELECT db.database_full_name		AS DatabaseFullName
-,	N2E(db.database_name)			AS DatabaseName
+,	N2E(db.database_name)			AS DatabaseShortName
 ,	N2E(db.version)					AS DatabaseVersion
 ,	N2E(db.release_date)			AS ReleaseDate
 ,	N2E(db.authors_editors)			AS AuthorsEditors
