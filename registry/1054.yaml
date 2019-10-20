@@ -53,7 +53,7 @@ files:
       - acef:GSDTaxonGUID
       - acef:GSDNameGUID
   - name: Synonyms.csv
-    url: https://www.hemiptera-databases.org/4d4life/psyllist/Synonyms.csv
+    url: http://www.hemiptera-databases.org/4d4life/psyllist/Synonyms.csv
     encoding: UTF-8
     delimiter: ","
     quotation: "\""
@@ -71,7 +71,7 @@ files:
       - acef:Sp2000NameStatus
       - acef:GSDNameGUID
   - name: NameReferencesLinks.csv
-    url: https://www.hemiptera-databases.org/4d4life/psyllist/NameReferencesLinks.csv
+    url: http://www.hemiptera-databases.org/4d4life/psyllist/NameReferencesLinks.csv
     encoding: UTF-8
     delimiter: ","
     quotation: "\""
@@ -80,7 +80,7 @@ files:
       - acef:ReferenceType
       - acef:ReferenceID
   - name: NameReferencesLinks.csv
-    url: https://www.hemiptera-databases.org/4d4life/psyllist/SourceDatabase.csv
+    url: http://www.hemiptera-databases.org/4d4life/psyllist/SourceDatabase.csv
     encoding: UTF-8
     delimiter: ","
     quotation: "\""
@@ -101,7 +101,7 @@ files:
       - acef:LogoFileName
       - acef:ContactPerson
   - name: Distribution.csv
-    url: https://www.hemiptera-databases.org/4d4life/psyllist/Distribution.csv
+    url: http://www.hemiptera-databases.org/4d4life/psyllist/Distribution.csv
     encoding: UTF-8
     delimiter: ","
     quotation: "\""
@@ -111,7 +111,7 @@ files:
       - acef:StandardInUse
       - acef:DistributionStatus
   - name: CommonNames.csv
-    url: https://www.hemiptera-databases.org/4d4life/psyllist/CommonNames.csv
+    url: http://www.hemiptera-databases.org/4d4life/psyllist/CommonNames.csv
     encoding: UTF-8
     delimiter: ","
     quotation: "\""
