@@ -79,7 +79,7 @@ files:
       - acef:ID
       - acef:ReferenceType
       - acef:ReferenceID
-  - name: NameReferencesLinks.csv
+  - name: SourceDatabase.csv
     url: http://www.hemiptera-databases.org/4d4life/strepsiptera/SourceDatabase.csv
     encoding: UTF-8
     delimiter: ","
