@@ -1,7 +1,7 @@
 format: ACEF
 files:
   - name: AcceptedSpecies.csv
-    url: https://www.hemiptera-databases.org/4d4life/psyllist/AcceptedSpecies.csv
+    url: http://www.hemiptera-databases.org/4d4life/psyllist/AcceptedSpecies.csv
     encoding: UTF-8
     delimiter: ","
     quotation: "\""
@@ -30,7 +30,7 @@ files:
       - acef:GSDTaxonGUID
       - acef:GSDNameGUID
   - name: AcceptedInfraSpecificTaxa.csv
-    url: https://www.hemiptera-databases.org/4d4life/psyllist/AcceptedInfraSpecificTaxa.csv
+    url: http://www.hemiptera-databases.org/4d4life/psyllist/AcceptedInfraSpecificTaxa.csv
     encoding: UTF-8
     delimiter: ","
     quotation: "\""
