@@ -33,6 +33,8 @@ ALTER TABLE names ADD COLUMN kingdom TEXT;
 CREATE INDEX ON names (parent_id);
 CREATE INDEX ON names (rank);
 
+-- remove col management classific dataset_id
+UPDATE names set dataset_id = NULL WHERE dataset_id = 500;
 
 -- update names kingdom for only the names that match estimate names
 CREATE OR REPLACE FUNCTION kingdom(v_id UUID) RETURNS TEXT AS $$
@@ -60,16 +62,21 @@ BEGIN
     RAISE NOTICE 'Update major dataset for rank %', r;
     
     WITH childs AS (
-    	SELECT nid, did, cnt, RANK() OVER (PARTITION BY nid ORDER BY cnt DESC) AS rn
-   		FROM (
-		    SELECT n.id AS nid, coalesce(c.major_dataset,c.dataset_id) AS did, count(*) AS cnt
-		    FROM names n JOIN names c ON c.parent_id=n.id
-		    WHERE n.rank=r
-		    GROUP BY n.id, coalesce(c.major_dataset,c.dataset_id)
-		) AS childsAll LIMIT 1
-	)
-	UPDATE names n SET major_dataset=coalesce(c.did,n.dataset_id)
-    	FROM childs c
-    	WHERE c.nid=n.id AND n.rank=r;
+	    SELECT n.id AS nid, coalesce(c.major_dataset, c.dataset_id) AS did, count(*) AS cnt
+	    FROM names n JOIN names c ON c.parent_id=n.id
+	    WHERE n.rank=r
+	    GROUP BY n.id, coalesce(c.major_dataset,c.dataset_id)
+	), childAll AS (
+	    SELECT nid, sum(cnt) AS cnt
+	    FROM childs 
+	    GROUP BY nid
+	), child AS (
+	    SELECT DISTINCT ON (nid) nid, did, cnt
+	    FROM childs 
+	    ORDER BY nid, cnt, did DESC
+    )
+	UPDATE names n SET major_dataset = CASE WHEN ca.cnt / c.cnt < 3 THEN coalesce(c.did, n.dataset_id) ELSE n.dataset_id END
+    	FROM childAll ca, child c
+    	WHERE ca.nid=n.id AND c.nid=n.id AND n.rank=r;
   END LOOP;  
 END $$;
