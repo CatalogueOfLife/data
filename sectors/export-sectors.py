@@ -2,8 +2,8 @@
 import sys, os, csv, collections
 import psycopg2, psycopg2.extras
 
-REGIONAL_IDS ={17,75,121,500,501} # ITIS regional, NZOR, CoL China, CoL Management, IRMNG
-MANAGED_IDS  ={}                  # we manage sectors for these datasets manually
+#17,75,121,500,501 ITIS regional, NZOR, CoL China, CoL Management, IRMNG
+IGNORE_IDS  ={500} # ITIS regional, NZOR, CoL China, CoL Management, IRMNG
 THRESHOLD=0.75
 
 
@@ -35,7 +35,7 @@ sectorKey = 0
 
 def writeSector(did, t, p, parentDatasetIds, sKey):
     global sectorKey
-    if (did not in parentDatasetIds and did not in MANAGED_IDS):
+    if (did not in parentDatasetIds and did not in IGNORE_IDS):
         sectorKey += 1
         print("  Sector %s %s %s found with %s species for dataset %s" % (sectorKey, t.rank, t.name, t.cnt, did))
         if not p:
@@ -78,7 +78,7 @@ def processTaxon(p, t, parentDatasetIds, sKey):
         t = p
     else:        
         if (t.dids):
-            dids = set(t.dids).difference(REGIONAL_IDS)
+            dids = set(t.dids).difference(IGNORE_IDS)
             if len(dids) == 1:
                 did = dids.pop()
                 sKey = writeSector(did, t, p, parentDatasetIds, sKey)
@@ -100,7 +100,7 @@ def findMajorSource(total, children):
     cnts={}
     for c in children:
         if c.dids:
-            dids = set(c.dids).difference(REGIONAL_IDS)
+            dids = set(c.dids).difference(IGNORE_IDS)
             if len(dids) == 1:
                 did = dids.pop()
                 cnts[did] = cnts.get(did, 0) + c.cnt
@@ -123,7 +123,7 @@ def walkRoot():
 
 
 if __name__ == "__main__":
-    #updateCounts();
+    updateCounts();
     with open('sector.csv', 'w', newline='') as sout:
         with open('name.csv', 'w', newline='') as nout:
             with open('taxon.csv', 'w', newline='') as tout:

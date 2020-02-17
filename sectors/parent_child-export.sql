@@ -71,7 +71,7 @@ FROM (
 
        -- family
        SELECT CONCAT_WS("_", kingdom, phylum, class, `order`, superfamily, family) AS id,
-              NULL                                                                 AS database_id,
+              max(database_id)                                                     AS database_id,
               CONCAT_WS("_", kingdom, phylum, class, `order`, superfamily)         AS parent_id,
               "family"                                                             AS `rank`,
               family                                                               AS name
@@ -81,26 +81,44 @@ FROM (
 
        UNION 
 
-       -- genus
+       -- genus from species table, no database_id as this refers to the species!
        SELECT CONCAT_WS("_", kingdom, phylum, class, `order`, superfamily, family, genus) AS id,
               NULL                                                                        AS database_id,
               CONCAT_WS("_", kingdom, phylum, class, `order`, superfamily, family)        AS parent_id,
               "genus"                                                                     AS `rank`,
               genus                                                                       AS name
        FROM scientific_names SN INNER JOIN families FAM ON SN.family_code = FAM.family_code
-       WHERE genus IS NOT NULL AND sp2000_status_id IN (1,4)
+       WHERE genus IS NOT NULL 
+              AND (species IS NOT NULL AND species != '')
+              AND (infraspecies IS NULL OR infraspecies = '') 
+              AND sp2000_status_id IN (1,4)
        GROUP BY kingdom, phylum, class, `order`, superfamily, family, genus
 
        UNION 
 
+       -- empty genera in species table, e.g. IRMNG, with database_id
+       SELECT SN.record_id                    AS id,
+              SN.database_id                  AS database_id,
+              CONCAT_WS("_", kingdom, phylum, class, `order`, superfamily, family) AS parent_id,
+              "genus"                         AS `rank`,
+              CONCAT_WS(" ", genus, species)  AS name
+       FROM scientific_names SN INNER JOIN families FAM ON SN.family_code = FAM.family_code
+       WHERE genus IS NOT NULL 
+              AND (species IS NULL OR species = '')
+              AND (infraspecies IS NULL OR infraspecies = '') 
+              AND sp2000_status_id IN (1,4)
+
+       UNION 
+
        -- species
-       SELECT SN.record_id                       AS id,
+       SELECT SN.record_id                    AS id,
               SN.database_id                  AS database_id,
               CONCAT_WS("_", kingdom, phylum, class, `order`, superfamily, family, genus) AS parent_id,
               "species"                       AS `rank`,
               CONCAT_WS(" ", genus, species)  AS name
        FROM scientific_names SN INNER JOIN families FAM ON SN.family_code = FAM.family_code
-       WHERE species IS NOT NULL AND species != '' 
+       WHERE genus IS NOT NULL 
+              AND (species IS NOT NULL AND species != '')
               AND (infraspecies IS NULL OR infraspecies = '') 
               AND sp2000_status_id IN (1,4)
      ) U ORDER BY parent_id;
