@@ -79,27 +79,6 @@ files:
       - acef:ID
       - acef:ReferenceType
       - acef:ReferenceID
-  - name: SourceDatabase.csv
-    url: http://www.hemiptera-databases.org/4d4life/flow/SourceDatabase.csv
-    encoding: UTF-8
-    delimiter: ","
-    quotation: "\""
-    header:
-      - acef:DatabaseFullName
-      - acef:DatabaseShortName
-      - acef:DatabaseVersion
-      - acef:ReleaseDate
-      - acef:AuthorsEditors
-      - acef:TaxonomicCoverage
-      - acef:GroupNameInEnglish
-      - acef:Abstract
-      - acef:Organisation
-      - acef:HomeURL
-      - acef:Coverage
-      - acef:Completeness
-      - acef:Confidence
-      - acef:LogoFileName
-      - acef:ContactPerson
   - name: Distribution.csv
     url: http://www.hemiptera-databases.org/4d4life/flow/Distribution.csv
     encoding: UTF-8
