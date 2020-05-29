@@ -19,8 +19,8 @@ files:
       - acef:AuthorString
       - acef:GSDNameStatus
       - acef:Sp2000NameStatus
+      - ignore:IsExtinct
       - acef:IsExtinct
-      - acef:HasPreHolocene
       - acef:HasModern
       - acef:LifeZone
       - acef:AdditionalData
@@ -42,8 +42,8 @@ files:
       - acef:InfraSpeciesMarker
       - acef:GSDNameStatus
       - acef:Sp2000NameStatus
+      - ignore:IsExtinct
       - acef:IsExtinct
-      - acef:HasPreHolocene
       - acef:HasModern
       - acef:LifeZone
       - acef:AdditionalData
