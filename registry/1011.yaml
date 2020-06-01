@@ -123,3 +123,14 @@ files:
       - acef:Confidence
       - acef:LogoFileName
       - acef:ContactPerson
+  - name: References.csv
+    url: http://www.hemiptera-databases.org/4d4life/flow/References.csv
+    encoding: UTF-8
+    delimiter: ","
+    quotation: "\""
+    header:
+      - acef:ReferenceID
+      - acef:Authors
+      - acef:Year
+      - acef:Title
+      - acef:Details
