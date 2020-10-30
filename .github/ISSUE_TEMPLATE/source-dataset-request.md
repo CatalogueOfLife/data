@@ -15,7 +15,7 @@ How can the CoL get access to the dataset online or in print?
 Who is the point of contact to discuss access and use of the data?
 Is the data available already in some accessible format, e.g. CSV files, excel spreadsheets, database dumps or even a Darwin Core or [ColDP archive](https://github.com/CatalogueOfLife/coldp/blob/master/README.md)?
 
-**Taxonomic group & CoL sector **
+**Taxonomic group & CoL sector**
 What is the taxonomic group being treated and where does it fit/attach to the CoL hierarchy?
 Does it replace an existing sector?
 
