@@ -2,7 +2,7 @@
 name: Source dataset request
 about: Suggest a new source dataset for the Catalogue of Life
 title: ''
-labels: ''
+labels: 'source dataset request'
 assignees: ''
 
 ---
