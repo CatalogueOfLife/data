@@ -1,7 +1,7 @@
 # dataset metadata with project variables to be applied to each release
-alias: XCOL{date,yy.M}
+alias: "XCOL{date,yy.M}"
 title: Catalogue of Life Extended Checklist 
-version: {date,yyyy-MM-dd}
+version: "{date,yyyy-MM-dd}"
 description: |
   The Catalogue of Life Extended Checklist is an programmatically extended version of the regular COL Checklist COL{date,yy.M}.
   It merges in additional names and other information from several often non global resources 
