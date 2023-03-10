@@ -10,9 +10,9 @@ description: |
 
 # GBIF publisher keys to follow and create sectors for if missing
 sourcePublisher: 
-  - bb922300-7ddb-11de-a300-90ac77aa923f # Plazi
+#  - bb922300-7ddb-11de-a300-90ac77aa923f # Plazi
   - bb922300-7ddb-11de-a300-90ac77aa923f # ZooKeys
-  - 750a8724-fa66-4c27-b645-bd58ac5ee010 # Biodiversity Data Journal
+#  - 750a8724-fa66-4c27-b645-bd58ac5ee010 # Biodiversity Data Journal
 
 # specific list of CLB dataset keys to exclude as sectors being created for aboves source publisher keys
 sourceDatasetExclusion: 
