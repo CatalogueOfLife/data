@@ -1,3 +1,24 @@
+# dataset metadata with project variables to be applied to each release
+alias: XCOL{date,yy.M}
+title: Catalogue of Life Extended Checklist 
+version: {date,yyyy-MM-dd}
+description: |
+  The Catalogue of Life Extended Checklist is an programmatically extended version of the regular COL Checklist COL{date,yy.M}.
+  It merges in additional names and other information from several often non global resources 
+  with the aim to increase the coverage of names, include very recently published names and fill gaps in the regular COL checklist.
+  For this taxonomic treatments present in Plazis Treatmentbank and various Pensoft journals that publish to ChecklistBank are included.
+
+# GBIF publisher keys to follow and create sectors for if missing
+sourcePublisher: 
+  - bb922300-7ddb-11de-a300-90ac77aa923f # Plazi
+  - bb922300-7ddb-11de-a300-90ac77aa923f # ZooKeys
+  - 750a8724-fa66-4c27-b645-bd58ac5ee010 # Biodiversity Data Journal
+
+# specific list of CLB dataset keys to exclude as sectors being created for aboves source publisher keys
+sourceDatasetExclusion: 
+  - 56c83fd9-533b-4b77-a67a-cf521816866e # Catalogue of Tenebrionidae (Coleoptera) of North America
+
+# activate the homotypic grouping?
 groupBasionyms: true
 
 
