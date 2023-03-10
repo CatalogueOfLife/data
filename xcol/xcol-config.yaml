@@ -16,7 +16,7 @@ sourcePublisher:
 
 # specific list of CLB dataset keys to exclude as sectors being created for aboves source publisher keys
 sourceDatasetExclusion: 
-  - 56c83fd9-533b-4b77-a67a-cf521816866e # Catalogue of Tenebrionidae (Coleoptera) of North America
+  - 2048 # Catalogue of Tenebrionidae (Coleoptera) of North America
 
 # activate the homotypic grouping?
 groupBasionyms: true
