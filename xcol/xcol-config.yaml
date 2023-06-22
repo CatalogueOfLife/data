@@ -1,3 +1,6 @@
+# parts of this extended COL checklist configuration was copied from the backbone configs:
+# https://github.com/gbif/gbif-configuration/blob/master/cli/nub/config/clb-nub.yaml
+
 # dataset metadata with project variables to be applied to each release
 alias: "XCOL{date,yy.M}"
 title: Catalogue of Life Extended Checklist 
@@ -10,17 +13,35 @@ description: |
 
 # GBIF publisher keys to follow and create sectors for if missing
 sourcePublisher: 
-#  - bb922300-7ddb-11de-a300-90ac77aa923f # Plazi
-  - bb922300-7ddb-11de-a300-90ac77aa923f # ZooKeys
+#  - 7ce8aef0-9e92-11dc-8738-b8a03c50a862 # Plazi
+#  - bb922300-7ddb-11de-a300-90ac77aa923f # ZooKeys
 #  - 750a8724-fa66-4c27-b645-bd58ac5ee010 # Biodiversity Data Journal
 
 # specific list of CLB dataset keys to exclude as sectors being created for aboves source publisher keys
 sourceDatasetExclusion: 
-  - 2048 # Catalogue of Tenebrionidae (Coleoptera) of North America
 
 # activate the homotypic grouping?
 groupBasionyms: true
 
+blockedNames:
+  - Diptera larva
+  - Flowering plant
+  - Gen # https://github.com/gbif/checklistbank/issues/230
+  - Gen sp
+  - Gen spec
+  - Grey lichens
+  - Incertae  # https://github.com/gbif/portal-feedback/issues/1845
+  - Lichens
+  - Lower plants (Lichens)
+  - Scientific # https://github.com/gbif/portal-feedback/issues/2726
+  - Scientific name
+  - Status unresolved
+  - Strawberry witches phytoplasma
+  - Unaccepted  
+  - Unknown
+  - Hirundo D'Orbigny & Lafresnaye, 1838 # https://github.com/gbif/portal-feedback/issues/3250
+  - Sedum rupestre Hacq. ex Nyman, 1879 # https://github.com/gbif/checklistbank/issues/233
+  - Tricholaema leucomelan namaqua  # https://github.com/gbif/checklistbank/issues/46
 
 # epithets keyed by family
 basionymExclusions:
