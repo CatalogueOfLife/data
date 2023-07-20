@@ -20,6 +20,16 @@ sourcePublisher:
 # specific list of CLB dataset keys to exclude as sectors being created for aboves source publisher keys
 sourceDatasetExclusion: 
 
+# taxon to use for incertae sedis names during merges
+incertaeSedis:
+  name: incertae sedis
+  rank: unranked
+  status: PROVISIONALLY_ACCEPTED
+  classification: 
+    - 
+      name: Biota
+      rank: unranked
+
 # activate the homotypic grouping?
 groupBasionyms: true
 
