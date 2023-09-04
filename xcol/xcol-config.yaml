@@ -31,7 +31,7 @@ incertaeSedis:
       rank: unranked
 
 # activate the homotypic grouping?
-groupBasionyms: true
+groupBasionyms: false
 
 blockedNames:
   - Diptera larva
