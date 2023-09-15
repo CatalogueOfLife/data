@@ -30,8 +30,9 @@ incertaeSedis:
       name: Biota
       rank: unranked
 
+removeEmptyGenera: false
 # activate the homotypic grouping?
-groupBasionyms: false
+groupBasionyms: true
 
 blockedNames:
   - Diptera larva
