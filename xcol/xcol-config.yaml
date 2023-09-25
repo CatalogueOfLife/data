@@ -300,9 +300,7 @@ homonymExclusions:
     - Riodinidae
   Productus:
     - Aulostegidae
-  Productus:
     - Linoproductidae
-  Productus:
     - Productellidae
   Psorergates:
     - Cheyletidae
@@ -330,7 +328,6 @@ homonymExclusions:
     - Paeckelmanellidae
   Spiriferina:
     - Paraspiriferinidae
-  Spiriferina:
     - Spiriferellidae
   Sporomyxa:
     - Plasmodiophoraceae
