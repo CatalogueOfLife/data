@@ -2,7 +2,7 @@
 # https://github.com/gbif/gbif-configuration/blob/master/cli/nub/config/clb-nub.yaml
 
 # dataset metadata with project variables to be applied to each release
-alias: "XCOL-W{date,w}"
+alias: "XCOL-{date,yyyy-MM-dd}"
 title: Catalogue of Life Extended Checklist 
 version: "{date,yyyy-MM-dd}"
 description: |
