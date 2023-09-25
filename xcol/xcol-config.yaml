@@ -16,7 +16,14 @@ sourcePublisher:
 #  - 7ce8aef0-9e92-11dc-8738-b8a03c50a862 # Plazi
 #  - bb922300-7ddb-11de-a300-90ac77aa923f # ZooKeys
 #  - 750a8724-fa66-4c27-b645-bd58ac5ee010 # Biodiversity Data Journal
-
+- 0674aea0-a7e1-11d8-9534-b8a03c50a862 # Staatliche Naturwissenschaftliche Sammlungen Bayerns ORG
+- 2c39be5c-c11e-46d0-bcb4-552f2072d19f # Coleoptera de Colombia
+- cdef28b1-db4e-4c58-aa71-3c5238c2d0b5 # ISSG Invasive Species Specialist Group
+- 943a5811-d56e-4c37-853d-bd64957d3833 # Altai State University
+- 75642970-f855-11dd-8235-b8a03c50a862 # National Museum of Natural History, Luxembourg
+#  - d8d6c888-92e7-4036-9808-fb3812be61e1 # A Rocha Kenya, needs extra validation before being added
+#  - dcf2223a-5eae-4977-904c-ebd1819c603d # National Biodiversity Centre, needs extra validation before being added
+#  - 901834aa-b711-4e59-993e-544e9ba75a14 # Polish Biodiversity Information Network, needs extra validation before being added
 # specific list of CLB dataset keys to exclude as sectors being created for aboves source publisher keys
 sourceDatasetExclusion: 
 
