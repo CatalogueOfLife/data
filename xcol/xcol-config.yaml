@@ -47,6 +47,7 @@ sourcePublisher:
 #  - INDETERMINED
 #  - HIGHER_RANK_BINOMIAL
 #  - MISSING_GENUS
+#  - INCONSISTENT_NAME
 
 blockedNames:
   - Diptera larva
