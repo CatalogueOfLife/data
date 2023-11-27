@@ -40,14 +40,14 @@ sourcePublisher:
 #  - dcf2223a-5eae-4977-904c-ebd1819c603d # National Biodiversity Centre, needs extra validation before being added
 #  - 901834aa-b711-4e59-993e-544e9ba75a14 # Polish Biodiversity Information Network, needs extra validation before being added
 
-#issueExclusion:
-#  - UNPARSABLE_NAME
-#  - UNPARSABLE_AUTHORSHIP
-#  - NULL_EPITHET
-#  - INDETERMINED
-#  - HIGHER_RANK_BINOMIAL
-#  - MISSING_GENUS
-#  - INCONSISTENT_NAME
+issueExclusion:
+- UNPARSABLE_NAME
+- UNPARSABLE_AUTHORSHIP
+- NULL_EPITHET
+- INDETERMINED
+- HIGHER_RANK_BINOMIAL
+- MISSING_GENUS
+- INCONSISTENT_NAME
 
 blockedNames:
   - Diptera larva
