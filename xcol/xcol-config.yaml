@@ -26,21 +26,6 @@ removeEmptyGenera: false
 # activate the homotypic grouping?
 groupBasionyms: true
 
-# GBIF publisher keys to follow and create sectors for if missing
-sourcePublisher: 
-- 7ce8aef0-9e92-11dc-8738-b8a03c50a862 # Plazi
-#  - bb922300-7ddb-11de-a300-90ac77aa923f # ZooKeys
-- 750a8724-fa66-4c27-b645-bd58ac5ee010 # Biodiversity Data Journal
-- 0674aea0-a7e1-11d8-9534-b8a03c50a862 # Staatliche Naturwissenschaftliche Sammlungen Bayerns ORG
-- 2c39be5c-c11e-46d0-bcb4-552f2072d19f # Coleoptera de Colombia
-- cdef28b1-db4e-4c58-aa71-3c5238c2d0b5 # ISSG Invasive Species Specialist Group
-- 943a5811-d56e-4c37-853d-bd64957d3833 # Altai State University
-- 75642970-f855-11dd-8235-b8a03c50a862 # National Museum of Natural History, Luxembourg
-- c14b9ce2-9545-4376-8a3b-6741558c256a # Zoological Institute, Russian Academy of Sciences, St. Petersburg 
-#  - d8d6c888-92e7-4036-9808-fb3812be61e1 # A Rocha Kenya, needs extra validation before being added
-#  - dcf2223a-5eae-4977-904c-ebd1819c603d # National Biodiversity Centre, needs extra validation before being added
-#  - 901834aa-b711-4e59-993e-544e9ba75a14 # Polish Biodiversity Information Network, needs extra validation before being added
-
 issueExclusion:
 - UNPARSABLE_NAME
 - UNPARSABLE_AUTHORSHIP
@@ -69,6 +54,19 @@ blockedNames:
   - Hirundo D'Orbigny & Lafresnaye, 1838 # https://github.com/gbif/portal-feedback/issues/3250
   - Sedum rupestre Hacq. ex Nyman, 1879 # https://github.com/gbif/checklistbank/issues/233
   - Tricholaema leucomelan namaqua  # https://github.com/gbif/checklistbank/issues/46
+
+
+# List of regular expression patterns for scientific names that are globally blocked from any source.
+# Patterns are case insensitive and must not be anchored at the front. Any match will block the name.
+# Because of how YAML treats backslashes in double-quoted strings, note that all backslashes in a regex expression must be escaped when using double quotes. 
+# For example, all of these are valid:
+#   expression: \w*
+#   expression: '\w*'
+#   expression: "\\w*"
+# Best to avoid using double quotes!
+blockedNamePatterns:
+ - '^\? [a-z]+'
+ 
 
 # epithets keyed by family
 basionymExclusions:
@@ -490,6 +488,7 @@ sourceDatasetExclusion:
 - 169983
 - 170598
 - 170605
+- 171221
 - 171436
 - 172051
 - 172237
@@ -519,6 +518,7 @@ sourceDatasetExclusion:
 - 180053
 - 180055
 - 181704
+- 182069
 - 182452
 - 183563
 - 184864
@@ -544,6 +544,7 @@ sourceDatasetExclusion:
 - 194617
 - 194618
 - 195173
+- 197537
 - 198085
 - 198286
 - 198295
@@ -655,6 +656,7 @@ sourceDatasetExclusion:
 - 20801
 - 20806
 - 20822
+- 208293
 - 20838
 - 20839
 - 208660
@@ -678,6 +680,7 @@ sourceDatasetExclusion:
 - 20990
 - 20993
 - 20995
+- 209953
 - 20998
 - 20999
 - 21001
@@ -795,6 +798,7 @@ sourceDatasetExclusion:
 - 21718
 - 21719
 - 21720
+- 21726
 - 21731
 - 217328
 - 21751
@@ -1066,6 +1070,7 @@ sourceDatasetExclusion:
 - 2384
 - 23844
 - 23846
+- 23850
 - 23868
 - 239064
 - 23914
@@ -1326,6 +1331,7 @@ sourceDatasetExclusion:
 - 25612
 - 25626
 - 25629
+- 256298
 - 25632
 - 25639
 - 25640
@@ -1418,6 +1424,7 @@ sourceDatasetExclusion:
 - 26265
 - 2627
 - 26277
+- 262778
 - 262779
 - 262780
 - 26288
@@ -1436,6 +1443,7 @@ sourceDatasetExclusion:
 - 26379
 - 26392
 - 26394
+- 26395
 - 26399
 - 26400
 - 26402
@@ -2035,6 +2043,7 @@ sourceDatasetExclusion:
 - 30802
 - 30804
 - 30814
+- 30828
 - 30837
 - 30843
 - 30873
@@ -2762,6 +2771,7 @@ sourceDatasetExclusion:
 - 36307
 - 36308
 - 36323
+- 36324
 - 36374
 - 36383
 - 36389
@@ -2799,6 +2809,7 @@ sourceDatasetExclusion:
 - 36889
 - 36890
 - 36901
+- 3691
 - 36917
 - 36978
 - 36989
@@ -2814,6 +2825,9 @@ sourceDatasetExclusion:
 - 37205
 - 37206
 - 3721
+- 37234
+- 37237
+- 37238
 - 37247
 - 37249
 - 37251
@@ -2875,6 +2889,7 @@ sourceDatasetExclusion:
 - 37975
 - 37984
 - 37991
+- 37997
 - 38011
 - 38019
 - 3802
@@ -2906,6 +2921,8 @@ sourceDatasetExclusion:
 - 3841
 - 38414
 - 38443
+- 38478
+- 38481
 - 3854
 - 3855
 - 38585
@@ -2923,6 +2940,7 @@ sourceDatasetExclusion:
 - 38806
 - 38807
 - 38813
+- 3882
 - 38827
 - 38837
 - 38853
@@ -3020,6 +3038,7 @@ sourceDatasetExclusion:
 - 41234
 - 41248
 - 41293
+- 4130
 - 41331
 - 41376
 - 41400
@@ -3079,6 +3098,7 @@ sourceDatasetExclusion:
 - 42590
 - 42616
 - 42645
+- 4275
 - 42790
 - 42792
 - 4280
@@ -3092,10 +3112,12 @@ sourceDatasetExclusion:
 - 43120
 - 43149
 - 43220
+- 4331
 - 4332
 - 43328
 - 43343
 - 43429
+- 4346
 - 4350
 - 4356
 - 43602
@@ -3369,12 +3391,18 @@ sourceDatasetExclusion:
 - 50824
 - 50829
 - 50847
+- 5097
 - 51013
 - 51043
 - 51055
 - 51102
+- 5111
+- 5115
+- 5116
+- 5122
 - 51240
 - 51241
+- 5126
 - 51269
 - 51270
 - 51300
@@ -3396,9 +3424,11 @@ sourceDatasetExclusion:
 - 5164
 - 51640
 - 5165
+- 51659
 - 51677
 - 51685
 - 51687
+- 51695
 - 5170
 - 51718
 - 5172
@@ -3421,16 +3451,26 @@ sourceDatasetExclusion:
 - 5183
 - 51835
 - 5184
+- 51841
 - 5186
+- 51898
 - 51927
 - 5194
+- 51951
 - 5196
+- 51968
+- 51991
+- 52008
 - 52023
 - 52024
 - 52027
 - 52032
+- 52072
+- 52079
+- 52082
 - 52100
 - 52107
+- 52127
 - 52156
 - 52161
 - 52168
@@ -3658,6 +3698,7 @@ sourceDatasetExclusion:
 - 5453
 - 5454
 - 54562
+- 54563
 - 54581
 - 54589
 - 54595
@@ -3997,6 +4038,7 @@ sourceDatasetExclusion:
 - 6610
 - 6637
 - 6651
+- 66649
 - 6667
 - 6674
 - 6679
@@ -4393,6 +4435,7 @@ sourceDatasetExclusion:
 - 9645
 - 9646
 - 9657
+- 96619
 - 9665
 - 9671
 - 9676
@@ -4418,4 +4461,3 @@ sourceDatasetExclusion:
 - 9789
 - 99300
 - 99512
-
