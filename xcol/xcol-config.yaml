@@ -66,6 +66,11 @@ blockedNames:
 # Best to avoid using double quotes!
 blockedNamePatterns:
  - '^\? [a-z]+'
+ # unwanted patters from NCBI
+ - '(?i)\benvironmental sample\b'
+ - '(?i)\bunidentified\b
+ - '(?i)\buncultured\b
+
  
 
 # epithets keyed by family
