@@ -67,9 +67,9 @@ blockedNames:
 blockedNamePatterns:
  - '^\? [a-z]+'
  # unwanted patters from NCBI
- - '(?i)\benvironmental sample\b'
- - '(?i)\bunidentified\b
- - '(?i)\buncultured\b
+ - '\benvironmental sample\b'
+ - '\bunidentified\b
+ - '\buncultured\b
 
  
 
