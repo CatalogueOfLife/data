@@ -24,7 +24,8 @@ incertaeSedis:
 removeEmptyGenera: false
 
 # activate the homotypic grouping?
-groupBasionyms: true
+homotypicConsolidation: true
+homotypicConsolidationThreads: 8
 
 issueExclusion:
 - UNPARSABLE_NAME
