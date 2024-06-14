@@ -55,6 +55,7 @@ blockedNames:
   - Hirundo D'Orbigny & Lafresnaye, 1838 # https://github.com/gbif/portal-feedback/issues/3250
   - Sedum rupestre Hacq. ex Nyman, 1879 # https://github.com/gbif/checklistbank/issues/233
   - Tricholaema leucomelan namaqua  # https://github.com/gbif/checklistbank/issues/46
+  - Katharellidae  #https://github.com/CatalogueOfLife/xcol/issues/130
 
 
 # List of regular expression patterns for scientific names that are globally blocked from any source.
