@@ -72,6 +72,8 @@ blockedNamePatterns:
  - '(?i)\benvironmental sample\b'
  - '(?i)\bunidentified\b'
  - '(?i)\buncultured\b'
+ # unwanted group names from zoobank
+ - '.*\grp\..*'
 
  
 
