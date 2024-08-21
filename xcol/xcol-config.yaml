@@ -90,7 +90,9 @@ basionymExclusions:
 
     
 # specific list of CLB dataset keys to exclude as sectors being created for aboves source publisher keys
-sourceDatasetExclusion: 
+sourceDatasetExclusion:
+- 6675 # excluded to avoid duplicates
+# exclusion due to classification mismatch can be included when plazi fixes the issues
 - 2446
 - 2538
 - 2595
