@@ -57,6 +57,8 @@ blockedNames:
   - Tricholaema leucomelan namaqua  # https://github.com/gbif/checklistbank/issues/46
   - Katharellidae  #https://github.com/CatalogueOfLife/xcol/issues/130
   - Animalia # https://github.com/CatalogueOfLife/xcol/issues/164
+  - Plantae
+  - Phlegra fasiata https://github.com/CatalogueOfLife/xcol/issues/167#event-14045888782
 
 
 # List of regular expression patterns for scientific names that are globally blocked from any source.
