@@ -58,8 +58,7 @@ blockedNames:
   - Katharellidae  #https://github.com/CatalogueOfLife/xcol/issues/130
   - Animalia # https://github.com/CatalogueOfLife/xcol/issues/164
   - Plantae
-  - Phlegra fasiata https://github.com/CatalogueOfLife/xcol/issues/167#event-14045888782
-
+ 
 
 # List of regular expression patterns for scientific names that are globally blocked from any source.
 # Patterns are case insensitive and must not be anchored at the front. Any match will block the name.
