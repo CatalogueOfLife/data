@@ -70,14 +70,20 @@ blockedNames:
 # Best to avoid using double quotes!
 blockedNamePatterns:
  - '^\? [a-z]+'
- # unwanted patters from NCBI
+ # unwanted pattenrs from NCBI
  - '(?i)\benvironmental sample\b'
  - '(?i)\bunidentified\b'
  - '(?i)\buncultured\b'
  # unwanted group names from zoobank
  - '.*\grp\..*'
+ # unwanted patterns from iBOLD https://github.com/gbif/backbone-feedback/issues/28#issuecomment-2220382593
+ - \bspnr\b/i
+ - \bnr\b/i
+ - \bnsp\b/i
+ - \bindet\b/i
+ - \bindeterminate\b/i
+ - \bmorphospecies\b/i
 
- 
 
 # epithets keyed by family
 basionymExclusions:
