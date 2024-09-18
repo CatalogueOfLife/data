@@ -68,6 +68,9 @@ blockedNames:
 #   expression: '\w*'
 #   expression: "\\w*"
 # Best to avoid using double quotes!
+#
+# You can test regex patterns here nicely: https://regex101.com
+#
 blockedNamePatterns:
  - '^\? [a-z]+'
  # unwanted pattenrs from NCBI
