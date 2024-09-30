@@ -95,7 +95,15 @@ basionymExclusions:
   Nymphalidae:
     - mylitta # https://github.com/gbif/portal-feedback/issues/4332
 
-    
+
+# List of uninomials (genus & above) known to be unique across all life for a given rank
+# Only the first appearance of the name will create a taxon
+# all subsequent ones will be merged into the first
+enforceUnique:
+  GENUS:
+    - Anas
+
+
 # specific list of CLB dataset keys to exclude as sectors being created for aboves source publisher keys
 sourceDatasetExclusion:
 - 6675 # excluded to avoid duplicates
