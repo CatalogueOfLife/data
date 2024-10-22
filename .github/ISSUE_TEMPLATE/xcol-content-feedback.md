@@ -1,8 +1,8 @@
 ---
-name: XCOL content feedback
+name: xRelease content feedback
 about: User feedback on COL content from merged sources
 title: ''
-labels: feedback,xcol
+labels: feedback,xrelease
 assignees: camiplata,DianRHR
 
 ---
