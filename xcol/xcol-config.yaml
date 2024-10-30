@@ -78,10 +78,12 @@ blockedNamePatterns:
  # unwanted group names from zoobank
  - '.*\grp\..*'
  # unwanted patterns from iBOLD https://github.com/gbif/backbone-feedback/issues/28#issuecomment-2220382593
- - '\b(spnr|nr|nsp|morphospecies)\b/i'
+ - '\b(spnr|nr|nsp|morphospecies|Gen novum)\b/i'
  - '\b(indet|indeterminate)\b/i' # to be removed after 21 September as its part of the name parser then
  # unwanted hybrid placeholders from GRIN
  - '\bhybr\b'
+ # patterns from Plazi
+ -'\bGen_Indet\b'
 
 
 # epithets keyed by family
