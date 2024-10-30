@@ -83,7 +83,7 @@ blockedNamePatterns:
  # unwanted hybrid placeholders from GRIN
  - '\bhybr\b'
  # patterns from Plazi
- -'\bGen_Indet\b'
+ - '\bGen_Indet\b'
 
 
 # epithets keyed by family
