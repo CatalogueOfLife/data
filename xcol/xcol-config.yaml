@@ -43,6 +43,7 @@ blockedNames:
   - Gen sp
   - Gen spec
   - Gen_Indet
+  - Gen indet
   - Grey lichens
   - Incertae  # https://github.com/gbif/portal-feedback/issues/1845
   - Lichens
