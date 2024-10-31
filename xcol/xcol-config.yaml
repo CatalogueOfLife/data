@@ -42,8 +42,6 @@ blockedNames:
   - Gen # https://github.com/gbif/checklistbank/issues/230
   - Gen sp
   - Gen spec
-  - Gen_Indet
-  - Gen indet
   - Grey lichens
   - Incertae  # https://github.com/gbif/portal-feedback/issues/1845
   - Lichens
@@ -85,7 +83,7 @@ blockedNamePatterns:
  # unwanted hybrid placeholders from GRIN
  - '\bhybr\b'
  # patterns from Plazi
- - '\bGen_Indet\b'
+ - '\b(Gen_Indet|Gen indet)\b/i'
 
 
 # epithets keyed by family
