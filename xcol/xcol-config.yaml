@@ -108,6 +108,7 @@ enforceUnique:
 
 # specific list of CLB dataset keys to exclude as sectors being created for aboves source publisher keys
 sourceDatasetExclusion:
+- 4130 # Creates matching error https://github.com/CatalogueOfLife/data/issues/792
 - 6675 # excluded to avoid duplicates
 - 30084 # excluded due to wrong higher classification in all names  https://github.com/CatalogueOfLife/xcol/issues/179
 # exclusion due to classification mismatch can be included when plazi fixes the issues
