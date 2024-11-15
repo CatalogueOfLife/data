@@ -27,6 +27,20 @@ removeEmptyGenera: false
 homotypicConsolidation: true
 homotypicConsolidationThreads: 8
 
+#More about decisions https://github.com/CatalogueOfLife/data/issues/816
+decisions:
+  2317:
+    - mode: reviewed
+       subject: 
+           name: Cercopoidea
+           rank: superfamily
+
+  2317:
+    - mode: reviewed
+       subject: 
+           name: Fulgoromorpha
+           rank: infraorder
+          
 issueExclusion:
 - UNPARSABLE_NAME
 - UNPARSABLE_AUTHORSHIP
