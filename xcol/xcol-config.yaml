@@ -1,4 +1,5 @@
 # parts of this extended COL checklist configuration was copied from the backbone configs:
+# YAML syntax problems can be verified with https://www.yamllint.com
 # https://github.com/gbif/gbif-configuration/blob/master/cli/nub/config/clb-nub.yaml
 
 # dataset metadata with project variables to be applied to each release
@@ -28,19 +29,18 @@ homotypicConsolidation: true
 homotypicConsolidationThreads: 8
 
 #More about decisions https://github.com/CatalogueOfLife/data/issues/816
-decisions:
-  2317:
-    - mode: reviewed
-       subject: 
-           name: Cercopoidea
-           rank: superfamily
 
-  2317:
+decisions:
+  "2317":
     - mode: reviewed
-       subject: 
-           name: Fulgoromorpha
-           rank: infraorder
-          
+      subject:
+        name: Cercopoidea
+        rank: superfamily
+    - mode: reviewed
+      subject:
+        name: Fulgoromorpha
+        rank: infraorder
+
 issueExclusion:
 - UNPARSABLE_NAME
 - UNPARSABLE_AUTHORSHIP
