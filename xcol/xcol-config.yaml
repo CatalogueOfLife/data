@@ -4,8 +4,8 @@
 
 # dataset metadata with project variables to be applied to each release
 alias: "COL-{date,yyyy-MM-dd}"
-title: Catalogue of Life Checklist 
-version: "{date,yyyy-MM-dd}"
+title: Catalogue of Life 
+version: "XR {date,yyyy-MM-dd}"
 description: |
   The Catalogue of Life Checklist is a programmatically extended version of the COL Base Checklist from {date,yy.M}.
   It merges in additional names and other information from several often non global resources 
