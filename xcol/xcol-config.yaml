@@ -7,10 +7,8 @@ alias: "COL-{date,yyyy-MM-dd}"
 title: Catalogue of Life 
 version: "XR {date,yyyy-MM-dd}"
 description: |
-  The Catalogue of Life Checklist is a programmatically extended version of the COL Base Checklist from {date,yy.M}.
-  It merges in additional names and other information from several often non global resources 
-  with the aim to increase the coverage of names, include very recently published names and fill gaps in the COL Base checklist.
-  For this taxonomic treatments present in Plazis Treatmentbank and various Pensoft journals that publish to ChecklistBank are included.
+ The Extended Release of the Catalogue of Life is a programmatically enhanced version of the base COL, derived from {date, yy.M}.
+ It integrates additional names and information from various global, regional, and management checklists to expand the coverage of names, incorporate recently published names, and address gaps in the base COL .
 
 # taxon to use for incertae sedis names during merges
 incertaeSedis:
