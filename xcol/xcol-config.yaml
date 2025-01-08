@@ -125,6 +125,7 @@ sourceDatasetExclusion:
 - 6675 # excluded to avoid duplicates
 - 30084 # excluded due to wrong higher classification in all names  https://github.com/CatalogueOfLife/xcol/issues/179
 - 28224 # temporaly blocked, https://github.com/plazi/community/issues/337
+- 298906 # BDJ messy classification, https://github.com/CatalogueOfLife/data/issues/894
 
 # exclusion due to classification mismatch can be included when plazi fixes the issues
 
