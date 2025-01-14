@@ -4,8 +4,8 @@ An XRelease is to be started every friday.
 ## Preparation
 Before releasing we need to verify the following:
 
- 1. no [broken merge sectors]([url](https://www.checklistbank.org/catalogue/3/sector?broken=true&mode=merge)) exist
- 2. no source aliases are missing
+ 1. no [broken merge sectors](https://www.checklistbank.org/catalogue/3/sector?broken=true&mode=merge) exist
+ 2. no [source aliases](https://www.checklistbank.org/catalogue/3/sources) are missing
 
 
 ## Validation 
