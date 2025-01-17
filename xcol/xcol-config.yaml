@@ -89,7 +89,8 @@ blockedNamePatterns:
  # unwanted pattenrs from NCBI
  - '(?i)\b(environmental sample|unidentified|uncultured)\b'
  # unwanted group names from zoobank
- - '.*\grp\..*'
+ - '\bgrp\.\b'
+ - '\btobedeleted'
  # unwanted patterns from iBOLD https://github.com/gbif/backbone-feedback/issues/28#issuecomment-2220382593
  - '\b(spnr|nr|nsp|morphospecies|Gen novum)\b/i'
  - '\b(indet|indeterminate)\b/i' # to be removed after 21 September as its part of the name parser then
