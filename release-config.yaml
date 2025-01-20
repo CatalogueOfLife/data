@@ -1,4 +1,3 @@
-# parts of this extended COL checklist configuration was copied from the backbone configs:
 # YAML syntax problems can be verified with https://www.yamllint.com
 
 # dataset metadata with project variables to be applied to each release
@@ -12,10 +11,20 @@ metadata:
     The Catalogue of Life estimates 2.3M extant species on the planet recognised by taxonomists at present time. 
     This means that for many groups it continues to be deficient, and users may notice that many species are still missing from the Catalogue.
 
+  # If true a release will include as its authors all authors of all it's sources.
   addSourceAuthors: true
+
+  # If true a release will include as its authors all contributors of the project (not source contributors).
   addContributors: true
+
+  # Optional list of dataset types to exclude from sources to generate the release authors from. E.g. ARTICLE to exclude all authors from Plazi and BDJ sources.
   authorSourceExclusion: []
 
+# If true a release will issue new DOIs to changed sources.
 issueSourceDOIs: true
+
+# If true a release will first delete all bare names from the project before it copies data.
 removeBareNames: true
+
+# If true a release will prepare exports for the entire release in all common formats.
 prepareDownloads: true
