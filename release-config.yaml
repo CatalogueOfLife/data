@@ -1,0 +1,19 @@
+# parts of this extended COL checklist configuration was copied from the backbone configs:
+# YAML syntax problems can be verified with https://www.yamllint.com
+
+# dataset metadata with project variables to be applied to each release
+metadata:
+  alias: "COL-{date,yyyy-MM-dd}"
+  title: Catalogue of Life 
+  version: "XR {date,yyyy-MM-dd}"
+  description: |
+    This eXtended Release of the Catalogue of Life is a programmatically enhanced version of the base version {base.version} ({base.alias}).
+    It integrates additional names and information from various global, regional, and management checklists 
+    to expand the coverage of names, incorporate recently published names, and address gaps in the base COL.
+  addSourceAuthors: true
+  addContributors: true
+  authorSourceExclusion: []
+
+issueSourceDOIs: true
+removeBareNames: true
+prepareDownloads: true
