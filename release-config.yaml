@@ -3,13 +3,15 @@
 
 # dataset metadata with project variables to be applied to each release
 metadata:
-  alias: "COL-{date,yyyy-MM-dd}"
+  alias: "COL{date,yy.M}"
   title: Catalogue of Life 
-  version: "XR {date,yyyy-MM-dd}"
+  version: "{date}"
   description: |
-    This eXtended Release of the Catalogue of Life is a programmatically enhanced version of the base version {base.version} ({base.alias}).
-    It integrates additional names and information from various global, regional, and management checklists 
-    to expand the coverage of names, incorporate recently published names, and address gaps in the base COL.
+    The Catalogue of Life is an assembly of expert-based global species checklists with the aim to build a comprehensive catalogue of all known species of organisms on Earth. 
+    Continuous progress is made towards completion, but for now, it probably includes just over 80% of the world’s known species. 
+    The Catalogue of Life estimates 2.3M extant species on the planet recognised by taxonomists at present time. 
+    This means that for many groups it continues to be deficient, and users may notice that many species are still missing from the Catalogue.
+
   addSourceAuthors: true
   addContributors: true
   authorSourceExclusion: []
