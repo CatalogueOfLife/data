@@ -21,6 +21,7 @@ incertaeSedis:
       name: Biota
       rank: unranked
 
+failOnSyncErrors: true
 removeEmptyGenera: false
 
 # activate the homotypic grouping?
