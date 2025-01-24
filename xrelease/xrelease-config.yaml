@@ -21,15 +21,15 @@ incertaeSedis:
       name: Biota
       rank: unranked
 
-failOnSyncErrors: true
+failOnSyncErrors: false
 removeEmptyGenera: false
 
 # activate the homotypic grouping?
 homotypicConsolidation: true
 homotypicConsolidationThreads: 8
 
-#More about decisions https://github.com/CatalogueOfLife/data/issues/816
-
+# More about decisions 
+# https://github.com/CatalogueOfLife/data/issues/816
 decisions:
   "2317":
     - mode: reviewed
