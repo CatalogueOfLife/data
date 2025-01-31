@@ -3,13 +3,14 @@
 # https://github.com/gbif/gbif-configuration/blob/master/cli/nub/config/clb-nub.yaml
 
 # dataset metadata with project variables to be applied to each release
-alias: "COL-{date,yyyy-MM-dd}"
-title: Catalogue of Life 
-version: "XR {date,yyyy-MM-dd}"
-description: |
-  This eXtended Release of the Catalogue of Life is a programmatically enhanced version of the base version {base.version} ({base.alias}).
-  It integrates additional names and information from various global, regional, and management checklists 
-  to expand the coverage of names, incorporate recently published names, and address gaps in the base COL.
+metadata:
+  alias: "COL-{date,yyyy-MM-dd}"
+  title: Catalogue of Life 
+  version: "XR {date,yyyy-MM-dd}"
+  description: |
+    This eXtended Release of the Catalogue of Life is a programmatically enhanced version of the base version {base.version} ({base.alias}).
+    It integrates additional names and information from various global, regional, and management checklists 
+    to expand the coverage of names, incorporate recently published names, and address gaps in the base COL.
 
 # taxon to use for incertae sedis names during merges
 incertaeSedis:
