@@ -100,6 +100,8 @@ blockedNamePatterns:
  - '\bhybr\b'
  # patterns from Plazi
  - '\b(Gen_Indet|Gen indet)\b/i'
+ # https://github.com/plazi/community/issues/387
+ - '\bundefined\b'
 
 
 # epithets keyed by family
