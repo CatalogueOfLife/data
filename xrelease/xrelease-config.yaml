@@ -8,9 +8,13 @@ metadata:
   title: Catalogue of Life 
   version: "XR {date,yyyy-MM-dd}"
   description: |
-    This eXtended Release of the Catalogue of Life is a programmatically enhanced version of the base version {base.version} ({base.alias}).
-    It integrates additional names and information from various global, regional, and management checklists 
-    to expand the coverage of names, incorporate recently published names, and address gaps in the base COL.
+    This eXtended Release (XR) of the Catalogue of Life is a programmatically enhanced version of the base version {base.version} ({base.alias}).
+    It integrates information from {mergeSources} overlapping taxonomic and nomenclatural global, regional, national and management checklists available in ChecklistBank.
+    
+    The XR addresses several gaps of the base release and also enriches the existing names with information such as authorships, references, and vernacular names. Higher taxonomy is being added only in selected groups with important gaps. Meanwhile, the information from the global data sources of the base version remains unmodified.
+
+    This enhanced process is continuously evolving and undergoing quality control checks by COL editors and its community. Due to its programmatic nature as well as the taxonomic and nomenclatural differences among the sources, some issues may arise but these are tackled as fast as possible. 
+    If you find any problem please log it in the COL’s data GitHub repository: https://github.com/CatalogueOfLife/data/issues/new?template=xcol-content-feedback.md
 
 # taxon to use for incertae sedis names during merges
 incertaeSedis:
