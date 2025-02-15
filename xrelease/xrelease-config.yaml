@@ -9,7 +9,7 @@ metadata:
   version: "XR {date,yyyy-MM-dd}"
   description: |
     This eXtended Release (XR) of the Catalogue of Life is a programmatically enhanced version of the base version {base.version} ({base.alias}).
-    It integrates information from {mergeSources} overlapping taxonomic and nomenclatural global, regional, national and management checklists available in ChecklistBank.
+    It integrates information from many overlapping taxonomic and nomenclatural global, regional, national and management checklists available in ChecklistBank.
     
     The XR addresses several gaps of the base release and also enriches the existing names with information such as authorships, references, and vernacular names. Higher taxonomy is being added only in selected groups with important gaps. Meanwhile, the information from the global data sources of the base version remains unmodified.
 
