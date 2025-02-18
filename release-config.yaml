@@ -11,42 +11,44 @@ metadata:
     The Catalogue of Life estimates 2.3M extant species on the planet recognised by taxonomists at present time. 
     This means that for many groups it continues to be deficient, and users may notice that many species are still missing from the Catalogue.
 
-### What's new in March 2025 edition?
+    ### What's new in March 2025 edition?
 
-#### XX checklists have been updated:
+    #### XX checklists have been updated:
 
-* 3i Auchenorrhyncha
-* Alucitoidea
-* Entiminae
-* Gelechiidae
-* GLI
-* ITIS
-* Pterophoroidea
-* Scarabs
-* SF Aphid
-* SF Chrysididae
-* SF Coleorrhyncha
-* SF Coreoidea
-* SF Dermaptera
-* SF Embioptera
-* SF Grylloblattodea
-* SF Isoptera 
-* SF Lygaeoidea 
-* SF Mantodea 
-* SF Mantophasmatodea
-* SF Orthoptera 
-* SF Permopsocida
-* SF Phasmida 
-* SF Plecoptera 
-* SF Psocodea 
-* SF Zoraptera
-* WCO 
-* WOL 
-* WoRMS, 65 checklists
+     * 3i Auchenorrhyncha
+     * Alucitoidea
+     * Entiminae
+     * Gelechiidae
+     * GLI
+     * ITIS
+     * Pterophoroidea
+     * Scarabs
+     * SF Aphid
+     * SF Chrysididae
+     * SF Coleorrhyncha
+     * SF Coreoidea
+     * SF Dermaptera
+     * SF Embioptera
+     * SF Grylloblattodea
+     * SF Isoptera 
+     * SF Lygaeoidea 
+     * SF Mantodea 
+     * SF Mantophasmatodea
+     * SF Orthoptera 
+     * SF Permopsocida
+     * SF Phasmida 
+     * SF Plecoptera 
+     * SF Psocodea 
+     * SF Zoraptera
+     * WCO 
+     * WOL 
+     * WoRMS, 65 checklists
+     
+     #### Other changes:
+     
+     * COOL, Psyl'list, The White-Files (versions of Feb 2019), Systema Dipterorum (version 5.6 of Dec 2024) were re-synced
 
-#### Other changes:
 
-* COOL, Psyl'list, The White-Files (versions of Feb 2019), Systema Dipterorum (version 5.6 of Dec 2024) were re-synced
   # If true a release will include as its authors all authors of all it's sources.
   addSourceAuthors: true
 
