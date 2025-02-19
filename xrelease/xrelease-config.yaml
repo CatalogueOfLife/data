@@ -8,13 +8,22 @@ metadata:
   title: Catalogue of Life
   version: "{date,yyyy-MM-dd} XR"
   description: |
-    This eXtended Release (XR) of the Catalogue of Life is a programmatically enhanced version of the base version {base.version} ({base.alias}).
-    It integrates information from {mergeSources} overlapping taxonomic and nomenclatural global, regional, national and management checklists available in ChecklistBank.
+    This eXtended Release (XR) of the Catalogue of Life is a programmatically enhanced version of the Catalogue of Life base release {base.version} ({base.alias}).
+    It integrates information from {mergeSources} overlapping taxonomic and nomenclatural global, regional, national and management data sources (checklists) 
+    as well as originating from digitised literature available in Catalogue of Life's infrastructure ChecklistBank.
     
-    The XR addresses several gaps of the base release and also enriches the existing names with information such as authorships, references, and vernacular names. Higher taxonomy is being added only in selected groups with important gaps. Meanwhile, the information from the global data sources of the base version remains unmodified.
+    The XR addresses several gaps of the Catalogue of Life base release and also enriches the existing names with information such as authorships, references, and vernacular names. 
+    It also adds molecular data, such as barcode index numbers or operational taxonomic units to the Catalogue of Life. 
+    Higher taxonomy is being added only in selected groups with important gaps. 
+    Meanwhile, the information from the global data sources of the Catalogue of Life base release remains unmodified.
 
-    This enhanced process is continuously evolving and undergoing quality control checks by COL editors and its community. Due to its programmatic nature as well as the taxonomic and nomenclatural differences among the sources, some issues may arise but these are tackled as fast as possible. 
-    If you find any problem please log it in the [COL’s data GitHub repository](https://github.com/CatalogueOfLife/data/issues/new?template=xcol-content-feedback.md)    
+    This enhanced process is continuously evolving and undergoing quality control checks by COL editors and its community. 
+    Due to its programmatic nature as well as the taxonomic and nomenclatural differences among the data sources used, some issues may arise. 
+    We therefore caution the user that taxonomic sectors in the Catalogue of Life eXtended Release are not as scrutinized by taxonomists as is the case with the Catalogue of Life the base release.
+
+    If you find any problem please log it in the [COL’s data GitHub repository](https://github.com/CatalogueOfLife/data/issues/new?template=xcol-content-feedback.md).
+    We will do our best to resolve these issues as soon as possible.
+
   completeness: 90
   #conversion:
   #  url: https://github.com/CatalogueOfLife/backend/blob/master/core/src/main/java/life/catalogue/release/XRelease.java
