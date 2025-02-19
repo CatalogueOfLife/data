@@ -16,6 +16,19 @@ metadata:
     This enhanced process is continuously evolving and undergoing quality control checks by COL editors and its community. Due to its programmatic nature as well as the taxonomic and nomenclatural differences among the sources, some issues may arise but these are tackled as fast as possible. 
     If you find any problem please log it in the [COL’s data GitHub repository](https://github.com/CatalogueOfLife/data/issues/new?template=xcol-content-feedback.md)    
   completeness: 90
+  #conversion:
+  #  url: https://github.com/CatalogueOfLife/backend/blob/master/core/src/main/java/life/catalogue/release/XRelease.java
+  #  description: Describe how the merging works
+
+  # If true a release will include as its authors all authors of all it's sources.
+  addSourceAuthors: true
+
+  # If true a release will include as its authors all contributors of the project (not source contributors).
+  addContributors: true
+
+  # Optional list of dataset types to exclude from sources to generate the release authors from. E.g. ARTICLE to exclude all authors from Plazi and BDJ sources.
+  authorSourceExclusion: 
+    - ARTICLE
 
 
 # taxon to use for incertae sedis names during merges
