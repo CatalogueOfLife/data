@@ -4,8 +4,8 @@
 
 # dataset metadata with project variables to be applied to each release
 metadata:
-  alias: "COL{date,yy.M}"
-  title: Catalogue of Life 
+  alias: "COL{date,yy.M} XR"
+  title: Catalogue of Life
   version: "{date,yyyy-MM-dd} XR"
   description: |
     This eXtended Release (XR) of the Catalogue of Life is a programmatically enhanced version of the base version {base.version} ({base.alias}).
