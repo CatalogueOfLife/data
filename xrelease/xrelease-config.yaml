@@ -181,7 +181,7 @@ metadata:
 
   # additional creators that should be appended to the primary ones, but in alphabetical order and potentially merged with source authors, see addSourceAuthors flag
   additionalCreators:
-  -
+   -
     orcid: 0000-0001-9286-1200
     given: Donat
     family: Agosti
@@ -314,7 +314,7 @@ metadata:
     note: Lead Developer Plazi
     address: Bern, Switserland
     organisation: Plazi
-  -
+   -
     given: Jacek
     family: Swedo
     country: PL
