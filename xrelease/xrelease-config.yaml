@@ -8,20 +8,12 @@ metadata:
   title: Catalogue of Life
   version: "{date,yyyy-MM-dd} XR"
   description: |
-    This eXtended Release (XR) of the Catalogue of Life is a programmatically enhanced version of the Catalogue of Life base release {base.version} ({base.alias}).
-    It integrates information from {mergeSources} overlapping taxonomic and nomenclatural global, regional, national and management data sources (checklists) 
-    as well as originating from digitised literature available in Catalogue of Life's infrastructure ChecklistBank.
+    The Catalogue of Life eXtended Release (XR) is a programmatically enhanced version of the Catalogue of Life base release {base.version} ({base.alias}). It integrates information from {mergeSources} overlapping taxonomic and nomenclatural global, regional, national and management data sources (checklists) as well as originating from digitised literature available in Catalogue of Life's infrastructure ChecklistBank.
     
-    The XR addresses several gaps of the Catalogue of Life base release and also enriches the existing names with information such as authorships, references, and vernacular names. 
-    It also adds molecular data, such as barcode index numbers or operational taxonomic units to the Catalogue of Life. 
-    Higher taxonomy is being added only in selected groups with important gaps. 
-    Meanwhile, the information from the global data sources of the Catalogue of Life base release remains unmodified.
+    The XR addresses several gaps of the Catalogue of Life base release and also enriches the existing names with information such as authorships, references, and vernacular names. It also adds molecular data, such as barcode index numbers or operational taxonomic units, to the Catalogue of Life. Higher taxonomy is being added only in selected groups with important gaps. Meanwhile, the information from the global data sources of the Catalogue of Life base release remains unmodified.
 
-    This enhanced process is continuously evolving and undergoing quality control checks by COL editors and its community. 
-    Due to its programmatic nature as well as the taxonomic and nomenclatural differences among the data sources used, some issues may arise. 
-    We therefore caution the user that taxonomic sectors in the Catalogue of Life eXtended Release are not as scrutinized by taxonomists as is the case with the Catalogue of Life the base release.
-
-    If you find any problem please log it in the [COL’s data GitHub repository](https://github.com/CatalogueOfLife/data/issues/new?template=xcol-content-feedback.md).
+    This enhanced process is continuously evolving and undergoing quality control checks by COL editors and its community. Due to its programmatic nature as well as the taxonomic and nomenclatural differences among the data sources used, some issues may arise. 
+    We therefore caution the user, and invite everyone to help log data issues in the [COL’s data GitHub repository](https://github.com/CatalogueOfLife/data/issues/new?template=xcol-content-feedback.md). 
     We will do our best to resolve these issues as soon as possible.
 
   contact:
@@ -45,7 +37,7 @@ metadata:
     family: Bánki
     city: Amsterdam
     country: NL
-    note: COL Managing Director
+    note: COL Executive Director
     address: Amsterdam, Netherlands
     organisation: Catalogue of Life
    -
@@ -189,6 +181,15 @@ metadata:
 
   # additional creators that should be appended to the primary ones, but in alphabetical order and potentially merged with source authors, see addSourceAuthors flag
   additionalCreators:
+  -
+    orcid: 0000-0001-9286-1200
+    given: Donat
+    family: Agosti
+    city: Bern
+    country: CH
+    note: President Plazi
+    address: Bern, Switserland
+    organisation: Plazi
    -
     orcid: 0000-0003-4994-0653
     given: Nicolas
@@ -305,6 +306,15 @@ metadata:
     address: Washington, D.C., United States of America
     organisation: Smithsonian Institution
    -
+    orcid: 0000-0002-6073-3658
+    given: Guido
+    family: Sauter
+    city: Bern
+    country: CH
+    note: Lead Developer Plazi
+    address: Bern, Switserland
+    organisation: Plazi
+  -
     given: Jacek
     family: Swedo
     country: PL
