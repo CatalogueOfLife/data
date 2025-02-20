@@ -201,6 +201,15 @@ metadata:
     address: Vancouver, Canada
     organisation: University of British Columbia
    -
+    orcid: 0000-0002-0713-0751
+    given: Laurance
+    family: Benichou
+    city: Paris
+    country: FR
+    note: Liaison European Journal of Taxonomy
+    address: Paris, France
+    organisation: European Journal of Taxonomy
+   -
     orcid: 0000-0002-8840-2121
     given: Maria Marta
     family: Cigliano
@@ -238,6 +247,15 @@ metadata:
     address: Canberra, Australia
     organisation: Australian National Botanic Gardens
    -
+    orcid: 0000-0001-8558-6845
+    given: Teodor
+    family: Georgiev
+    city: Sofia
+    country: BG
+    note: Chief Technological Officer Pensoft Publishers
+    address: Sofia, Bulgaria
+    organisation: Pensoft Publishers
+   -
     orcid: 0000-0002-1703-5723
     given: Ji
     family: Li-Qiang
@@ -265,6 +283,15 @@ metadata:
     note: Global Team, Taxonomy Group
     address: Washington, D.C., United States of America
     organisation: US Geological Survey / Smithsonian Institution
+   -
+    orcid: 0000-0002-2186-5033
+    given: Lyubomir
+    family: Penev
+    city: Sofia
+    country: BG
+    note: Chief Executive Officer Pensoft Publishers
+    address: Sofia, Bulgaria
+    organisation: Pensoft Publishers
    -
     orcid: 0000-0003-0768-1286
     given: Richard
