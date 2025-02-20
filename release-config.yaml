@@ -2,6 +2,7 @@
 
 # dataset metadata with project variables to be applied to each release
 metadata:
+  bad: "COL{date,yy.M}
   alias: "COL{date,yy.M}"
   title: Catalogue of Life 
   version: "{date}"
