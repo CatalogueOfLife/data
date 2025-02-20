@@ -24,20 +24,404 @@ metadata:
     If you find any problem please log it in the [COL’s data GitHub repository](https://github.com/CatalogueOfLife/data/issues/new?template=xcol-content-feedback.md).
     We will do our best to resolve these issues as soon as possible.
 
+  contact:
+    city: Amsterdam
+    country: NL
+    email: support@catalogueoflife.org
+    address: Amsterdam, Netherlands
+    organisation: COL Secretariat
+
+  publisher:
+    city: Amsterdam
+    country: NL
+    address: Amsterdam, Netherlands
+    organisation: Catalogue of Life
+
+  # the primary creators in exact order as they should appear in the release
+  creator:
+   -
+    orcid: 0000-0001-6197-9951
+    given: Olaf
+    family: Bánki
+    city: Amsterdam
+    country: NL
+    note: COL Managing Director
+    address: Amsterdam, Netherlands
+    organisation: Catalogue of Life
+   -
+    orcid: 0000-0003-2137-2690
+    given: Yury
+    family: Roskov
+    city: Champaign
+    state: IL
+    country: US
+    note: COL Executive Editor
+    address: Champaign, IL, United States of America
+    organisation: Illinois Natural History Survey
+   -
+    orcid: 0000-0001-7757-1889
+    given: Markus
+    family: Döring
+    rorid: 05fjyn938
+    city: Berlin
+    country: DE
+    note: COL Lead Developer
+    address: Berlin, Germany
+    organisation: GBIF
+   -
+    orcid: 0000-0002-9770-2345
+    given: Geoff
+    family: Ower
+    city: Champaign
+    state: IL
+    country: US
+    note: COL Data Manager
+    address: Champaign, IL, United States of America
+    organisation: Illinois Natural History Survey
+   -
+    orcid: 0000-0002-3951-4856
+    given: Diana Raquel
+    family: Hernández Robles
+    city: Mexico City
+    country: MX
+    note: COL Editor
+    address: Mexico City, Mexico
+    organisation: Catalogue of Life
+   -
+    orcid: 0000-0002-1632-9818
+    given: Camila Andrea
+    family: Plata Corredor
+    city: Bogotá
+    country: CO
+    note: COL Editor
+    address: Bogotá, Colombia
+    organisation: Catalogue of Life
+   -
+    orcid: 0000-0003-1691-239X
+    given: Thomas
+    family: Stjernegaard Jeppesen
+    rorid: 05fjyn938
+    city: Copenhagen
+    country: DK
+    note: COL UI Developer
+    address: Copenhagen, Denmark
+    organisation: GBIF
+   -
+    given: Ari
+    family: Örn
+    country: FI
+    note: ColDP Quality Assurance checks
+    address: Finland
+    organisation: Volunteer for Catalogue of Life
+   -
+    orcid: 0000-0001-6609-0609
+    given: Thomas
+    family: Pape
+    department: Natural History Museum of Denmark
+    city: Copenhagen
+    country: DK
+    note: Global Team Chair, Taxonomy Group
+    address: Copenhagen, Denmark
+    organisation: University of Copenhagen
+   -
+    orcid: 0000-0001-6492-4016
+    given: Donald
+    family: Hobern
+    city: Canberra
+    country: AU
+    note: Taxonomy Group Chair
+    address: Canberra, Australia
+    organisation: Catalogue of Life Australia
+   -
+    orcid: 0000-0002-0724-7060
+    given: Stephen
+    family: Garnett
+    city: Darwin
+    country: AU
+    note: Species list Governance group Chair
+    address: Darwin, Australia
+    organisation: Charles Darwin University
+   -
+    orcid: 0000-0001-7909-4166
+    given: Holly
+    family: Little
+    city: Washington DC
+    country: US
+    note: Paleo group chair
+    address: Washington DC, United States of America
+    organisation: Smithsonian Institution
+   -
+    orcid: 0000-0001-9985-9250
+    given: R. Edward
+    family: DeWalt
+    city: Champaign
+    state: IL
+    country: US
+    note: Catalogue of Life Chair
+    address: Champaign, IL, United States of America
+    organisation: Illinois Natural History Survey
+   -
+    orcid: 0000-0001-9112-5340
+    given: Keping
+    family: Ma
+    city: Beijing
+    country: CN
+    address: Beijing, China
+    organisation: Chinese Academy of Sciences
+   -
+    orcid: 0000-0002-5788-9010
+    given: Joe
+    family: Miller
+    city: Copenhagen
+    country: DK
+    note: COL+ Partnership
+    address: Copenhagen, Denmark
+    organisation: GBIF
+   -
+    orcid: 0000-0003-1038-3028
+    given: Thomas
+    family: Orrell
+    city: Washington, D.C.
+    country: US
+    note: COL Partnership
+    address: Washington, D.C., United States of America
+    organisation: Smithsonian Institution
+
+  # additional creators that should be appended to the primary ones, but in alphabetical order and potentially merged with source authors, see addSourceAuthors flag
+  additionalCreators:
+   -
+    orcid: 0000-0003-4994-0653
+    given: Nicolas
+    family: Bailly
+    department: Beaty Biodiversity Museum
+    city: Vancouver
+    country: CA
+    note: Taxonomy Group
+    address: Vancouver, Canada
+    organisation: University of British Columbia
+   -
+    orcid: 0000-0002-8840-2121
+    given: Maria Marta
+    family: Cigliano
+    department: Museo de La Plata
+    city: Buenos Aires
+    country: AR
+    note: Global Team, Taxonomy Group
+    address: Buenos Aires, Argentina
+    organisation: Universidad Nacional de La Plata
+   -
+    orcid: 0000-0003-2362-0328
+    given: Mark John
+    family: Costello
+    city: Auckland
+    country: NZ
+    note: Taxonomy Group
+    address: Auckland, New Zealand
+    organisation: University of Auckland
+   -
+    orcid: 0000-0002-2168-9471
+    given: Wim
+    family: Decock
+    city: Oostende
+    country: BE
+    note: WoRMS liaison
+    address: Oostende, Belgium
+    organisation: Vlaams Instituut voor de Zee (VLIZ)
+   -
+    orcid: 0000-0001-5737-8803
+    given: Anne
+    family: Fuchs
+    city: Canberra
+    country: AU
+    note: Global Team
+    address: Canberra, Australia
+    organisation: Australian National Botanic Gardens
+   -
+    orcid: 0000-0002-1703-5723
+    given: Ji
+    family: Li-Qiang
+    department: Key Laboratory of Animal Ecology and Conservation Biology
+    city: Beijing
+    country: CN
+    note: Global Team
+    address: Beijing, China
+    organisation: Chinese Academy of Sciences
+   -
+    orcid: 0000-0001-9907-4779
+    given: Jeyaraney
+    family: Kathirithamby
+    department: Department of Zoology
+    country: GB
+    note: Taxonomy Group
+    address: United Kingdom
+    organisation: University of oxford
+   -
+    orcid: 0000-0002-7987-0679
+    given: David
+    family: Nicolson
+    city: Washington, D.C.
+    country: US
+    note: Global Team, Taxonomy Group
+    address: Washington, D.C., United States of America
+    organisation: US Geological Survey / Smithsonian Institution
+   -
+    orcid: 0000-0003-0768-1286
+    given: Richard
+    family: Pyle
+    city: Honolulu
+    state: Hawaii
+    country: US
+    note: Global Team, Taxonomy Group
+    address: Honolulu, Hawaii, United States of America
+    organisation: Bernice Pauahi Bishop Museum
+   -
+    given: Lauren
+    family: Raz
+    city: Bogotá
+    country: CO
+    note: Global Team, Taxonomy Group
+    address: Bogotá, Colombia
+    organisation: National University of Colombia
+   -
+    orcid: 0000-0003-1887-5211
+    given: Tony
+    family: Rees
+    note: Taxonomy Group
+   -
+    orcid: 0000-0001-6215-3617
+    given: Tim
+    family: Robertson
+    city: Copenhagen
+    country: DK
+    note: Information Systems Group
+    address: Copenhagen, Denmark
+    organisation: GBIF
+   -
+    given: Michael
+    family: Ruggiero
+    city: Washington, D.C.
+    country: US
+    note: Taxonomy Group
+    address: Washington, D.C., United States of America
+    organisation: Smithsonian Institution
+   -
+    given: Jacek
+    family: Swedo
+    country: PL
+    note: Taxonomy Group
+    address: Poland
+    organisation: University of Gdansk
+   -
+    given: Bart
+    family: Vanhoorne
+    city: Oostende
+    country: BE
+    note: Information Systems Group
+    address: Oostende, Belgium
+    organisation: Vlaams Instituut voor de Zee (VLIZ)
+   -
+    orcid: 0000-0002-7775-5300
+    given: Nina
+    family: Wambiji
+    city: Mombasa
+    country: KE
+    note: Global Team
+    address: Mombasa, Kenya
+    organisation: Kenya Marine and Fisheries Research Institute
+   -
+    given: Haylee
+    family: Weaver
+    department: Department of the Environment
+    city: Canberra
+    country: AU
+    note: Global Team
+    address: Canberra, Australia
+    organisation: Australian Government
+   -
+    given: Mathew
+    family: Yoder
+    city: Champaign
+    state: IL
+    country: US
+    note: TaxonWorks liaison
+    address: Champaign, IL, United States of America
+    organisation: Illinois Natural History Survey
+   -
+    given: Christoph
+    family: Hauser
+    city: Stuttgart
+    country: DE
+    address: Stuttgart, Germany
+    organisation: Staatliches Museum fur Naturkunde Stuttgart
+   -
+    given: Tim
+    family: Littlewood
+    city: London
+    country: GB
+    address: London, United Kingdom
+    organisation: Natural History Museum
+   -
+    orcid: 0000-0001-8680-973X
+    given: Koen
+    family: Martens
+    department: FADA
+    city: Brussels
+    country: BE
+    note: Global Team
+    address: Brussels, Belgium
+    organisation: Royal Belgian Institute of Natural Sciences (RBINS)
+   -
+    orcid: 0000-0003-1279-2722
+    given: Scott
+    family: Thomson
+    city: Petrópolis, Manaus
+    state: State of Amazonas, 69055-010
+    country: BR
+    note: Global Team
+    address: Petrópolis, Manaus, State of Amazonas, 69055-010, Brazil
+    organisation: Centro de Estudos dos Quelônios da Amazônia - CEQUA
+   -
+    orcid: 0000-0002-3530-013X
+    given: Tobias
+    family: Guldberg Frøslev
+    rorid: 05fjyn938
+    city: Copenhagen
+    country: DK
+    note: Global Team
+    address: Copenhagen, Denmark
+    organisation: Global Biodiversity Information Facility
+   -
+    orcid: 0000-0001-8861-6317
+    given: Sz-Yi
+    family: Tsai
+    department: TaiCOL, TaiBIF
+    city: Taipei City, Taiwan, Chinese Taipei
+    note: Global Team
+    address: Taipei City, Taiwan, Chinese Taipei
+    organisation: Academica Sinica
+   -
+    orcid: 0000-0002-8160-7941
+    given: Leen
+    family: Vandepitte
+    city: Oostende
+    country: BE
+    note: WoRMS coordinator
+    address: Oostende, Belgium
+    organisation: Vlaams Instituut voor de Zee (VLIZ)
+
+  # If true a release will include as its authors all authors of all it's sources.
+  addSourceAuthors: true
+
+  # Optional list of dataset types to exclude from sources to generate the release authors from. E.g. ARTICLE to exclude all authors from Plazi and BDJ sources.
+  authorSourceExclusion: 
+    - ARTICLE
+
   completeness: 90
   #conversion:
   #  url: https://github.com/CatalogueOfLife/backend/blob/master/core/src/main/java/life/catalogue/release/XRelease.java
   #  description: Describe how the merging works
 
-  # If true a release will include as its authors all authors of all it's sources.
-  addSourceAuthors: true
 
-  # If true a release will include as its authors all contributors of the project (not source contributors).
-  addContributors: true
-
-  # Optional list of dataset types to exclude from sources to generate the release authors from. E.g. ARTICLE to exclude all authors from Plazi and BDJ sources.
-  authorSourceExclusion: 
-    - ARTICLE
 
 
 # taxon to use for incertae sedis names during merges
