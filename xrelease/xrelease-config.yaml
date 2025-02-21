@@ -457,7 +457,7 @@ metadata:
   #conversion:
   #  url: https://github.com/CatalogueOfLife/backend/blob/master/core/src/main/java/life/catalogue/release/XRelease.java
   #  description: Describe how the merging works
-
+  checklistConfidence: 4
 
 
 
