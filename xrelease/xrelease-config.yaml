@@ -589,9 +589,7 @@ sourceDatasetExclusion:
 - 28224 # temporaly blocked, https://github.com/plazi/community/issues/337
 - 298906 # BDJ messy classification, https://github.com/CatalogueOfLife/data/issues/894
 - 53474 # temporal block plazi dataset https://github.com/plazi/community/issues/388
-
-# exclude BDJ journals not reviewed, from taxa with low gaps, and from 2020 an below
-- 307870
+- 307870 # exclude BDJ journals not reviewed, from taxa with low gaps, and from 2020 an below
 - 307869
 - 307868
 - 307782
