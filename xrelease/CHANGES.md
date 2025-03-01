@@ -3,7 +3,8 @@ We document here all major editorial changes for each weekly [COL XRelease]([url
 
 ### 2025, Week 9
 - Add IRMNG sector for Coleoptera, see [875](https://github.com/CatalogueOfLife/data/issues/875), [874](https://github.com/CatalogueOfLife/data/issues/874)
-- Add INat sector for, Elatoroidea see [965](https://github.com/CatalogueOfLife/data/issues/965)
+- Add iNat sector for Elatoroidea see [965](https://github.com/CatalogueOfLife/data/issues/965)
+- Update parameter Haptophyta WoRMS sector to have more classsification detailes for Algae
 
 
 ### 2025, Week 8
