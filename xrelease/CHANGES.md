@@ -1,6 +1,10 @@
 # COL eXtended Release historic ChangeLog
 We document here all major editorial changes for each weekly [COL XRelease]([url](https://www.checklistbank.org/dataset?limit=50&offset=0&origin=xrelease&releasedFrom=3&reverse=false)).
 
+### 2025, Week 10
+- Add Tenebrionidea sector from iNat, https://github.com/CatalogueOfLife/data/issues/969
+
+
 ### 2025, Week 9
 - Add IRMNG sector for Coleoptera, see [875](https://github.com/CatalogueOfLife/data/issues/875), [874](https://github.com/CatalogueOfLife/data/issues/874)
 - Add iNat sector for Elatoroidea see [965](https://github.com/CatalogueOfLife/data/issues/965)
