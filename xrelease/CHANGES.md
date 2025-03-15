@@ -12,13 +12,14 @@ We document here all major editorial changes for each weekly [COL XRelease]([url
 - Add IRMNG sector for Coleoptera, see [875](https://github.com/CatalogueOfLife/data/issues/875), [874](https://github.com/CatalogueOfLife/data/issues/874)
 - Add iNat sector for Elatoroidea see [965](https://github.com/CatalogueOfLife/data/issues/965)
 - Update parameter Haptophyta WoRMS sector to have more classsification detailes for Algae
+- Change in priority (down to 31) of Sector Plantae from WoRMS, to avoid duplicate merging of certain families . Moved below sector Haptophyta. 
 
 
 ### 2025, Week 8
  - Add Higher clasification for Charophyta from WoRMS to cover algae HC gap
  - Add Higher clasification for Chlorophyta from WoRMS to cover algae HC gap
  - Remove Algae Patch, to be latter erased from ClB
- - Add Higher clasification for Algospongia (Plantae incertae sedis) from WoRMS to cover algae HC gap
+ - Add sector Plantae incertae sedis from WoRMS to include Higher clasification for Algospongia and Vendophyceae to cover extinct families onf plants and algae HC gap
  - Add BDJ reviewed checklists related to Insects, Arachnids and Fungi 2021-2025, all from 2021-2023 and 2025 where individually checked. For 2024 only the checklist with major amount of megred names where checked. The publisher was added, and all the checklist not belonging to the above mentioned categories were blocked.
  - Improve XR patch ([Commit 5cfea58
 ](https://github.com/CatalogueOfLife/data-xrelease-patch/commit/a2e070506d8342ffca558a48f9a773406068df01), [Commit a2e0705
