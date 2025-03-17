@@ -467,10 +467,6 @@ incertaeSedis:
   name: incertae sedis
   rank: unranked
   status: PROVISIONALLY_ACCEPTED
-  classification: 
-    - 
-      name: Biota
-      rank: unranked
 
 failOnSyncErrors: false
 removeEmptyGenera: false
