@@ -11,13 +11,10 @@ metadata:
     The Catalogue of Life estimates 2.3M extant species on the planet recognised by taxonomists at present time. 
     This means that for many groups it continues to be deficient, and users may notice that many species are still missing from the Catalogue.
 
-    ### What's new in March 2025 edition?
+    ### What's new in April 2025 edition?
+  
 
-    #### New global checklist:
-
-     * WoRMS Mysidacea: World List of Lophogastrida, Stygiomysida and Mysida _replaced order Mysida from ITIS and added new global checklists for crustacean orders Stygiomysida and †Pygocephalomorpha_
-
-    #### 88 checklists have been updated:
+    #### XX checklists have been updated:
 
      * 3i Auchenorrhyncha    
      * Alucitoidea
@@ -42,7 +39,7 @@ metadata:
      * World Ferns
      * World Plants
      * WSC (a new import via API)
-     * WoRMS, 65 checklists
+     * WoRMS, 66 checklists
      
     #### Other changes:
      * Systema Dipterorum ver. 5.6 of Dec 2024 and ReptileDB of Mar 2024 re-synced.
