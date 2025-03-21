@@ -7,6 +7,8 @@ metadata:
   alias: "COL{date,yy.M} XR"
   title: Catalogue of Life
   version: "{date,yyyy-MM-dd} XR"
+  completeness: 90
+  confidence: 4  
   description: |
     The Catalogue of Life eXtended Release (XR) is a programmatically enhanced version of the Catalogue of Life base release {base.version} ({base.alias}). It integrates information from {mergeSources} overlapping taxonomic and nomenclatural global, regional, national and management data sources (checklists) as well as originating from digitised literature available in Catalogue of Life's infrastructure ChecklistBank.
     
@@ -453,9 +455,6 @@ metadata:
   authorSourceExclusion: 
     - ARTICLE
 
-  completeness: 90
-  confidence: 5
-  
   #conversion:
   #  url: https://github.com/CatalogueOfLife/backend/blob/master/core/src/main/java/life/catalogue/release/XRelease.java
   #  description: Describe how the merging works
