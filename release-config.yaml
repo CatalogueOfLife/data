@@ -20,6 +20,7 @@ metadata:
      * Alucitoidea
      * GLI
      * ITIS   
+     * LPSN
      * Pterophoroidea  
      * Scarabs
      * SF Aphid
@@ -42,7 +43,7 @@ metadata:
      * WoRMS, 66 checklists
      
     #### Other changes:
-     * Systema Dipterorum ver. 5.6 of Dec 2024 and ReptileDB of Mar 2024 re-synced.
+     * ITIS phylum Cyanobacteriota was brought back over LPSN data.
        
 
 
