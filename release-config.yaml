@@ -19,12 +19,13 @@ metadata:
     #### XX checklists have been updated:
 
      * 3i Auchenorrhyncha    
-     * Alucitoidea
+     * AntCat
+     * Bryonames
      * GLI
      * ICTV MSL
      * ITIS   
      * LPSN
-     * Pterophoroidea  
+     * LWS fleas
      * Scarabs
      * SF Aphid
      * SF Chrysididae
@@ -37,12 +38,8 @@ metadata:
      * SF Phasmida 
      * SF Plecoptera 
      * SF Psocodea 
-     * Tortricid.net
      * WCO 
      * WOL
-     * World Ferns
-     * World Plants
-     * WSC (a new import via API)
      * WoRMS, 66 checklists
      
     #### Other changes:
