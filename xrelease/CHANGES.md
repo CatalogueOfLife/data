@@ -1,11 +1,13 @@
 # COL eXtended Release historic ChangeLog
 We document here all major editorial changes for each weekly [COL XRelease]([url](https://www.checklistbank.org/dataset?limit=50&offset=0&origin=xrelease&releasedFrom=3&reverse=false)).
 
+
+### 2025, Week 14
+- Add [PR2](https://www.checklistbank.org/dataset/308974/about) sector
+
+
 ### 2025, Week 11
 - Temporal addition of Tipulidae sector from Systema Dipterorum - to be removed when CCW gets updated see [927](https://github.com/CatalogueOfLife/data/issues/927) [926](https://github.com/CatalogueOfLife/data/issues/926)
-
-
-
 - Add Tenebrionidea sector from iNat, https://github.com/CatalogueOfLife/data/issues/969
 
 ### 2025, Week 9
