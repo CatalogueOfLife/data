@@ -463,6 +463,7 @@ metadata:
 
 # taxon to use for incertae sedis names during merges
 incertaeSedis:
+  id: S
   name: incertae sedis
   rank: unranked
   status: PROVISIONALLY_ACCEPTED
