@@ -1,6 +1,9 @@
 # COL eXtended Release historic ChangeLog
 We document here all major editorial changes for each weekly [COL XRelease]([url](https://www.checklistbank.org/dataset?limit=50&offset=0&origin=xrelease&releasedFrom=3&reverse=false)).
 
+### 2025, Week 16
+- Remove PR2 sector see https://github.com/CatalogueOfLife/data/issues/1009
+  
 ### 2025, Week 15
 - Add sector TAXREF Ichneumonoidea (priority 97) including subfamilies and tribes to prevent misplacing of genus under Diptera. see https://github.com/CatalogueOfLife/data/issues/1004
   
