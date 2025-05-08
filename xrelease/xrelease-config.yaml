@@ -567,6 +567,8 @@ basionymExclusions:
     - guttulata # https://github.com/CatalogueOfLife/testing/issues/135
   Nymphalidae:
     - mylitta # https://github.com/gbif/portal-feedback/issues/4332
+  Arrenuridae:
+    - comorosensis # https://github.com/CatalogueOfLife/data/issues/1006 
 
 
 # List of uninomials (genus & above) known to be unique across all life for a given rank
