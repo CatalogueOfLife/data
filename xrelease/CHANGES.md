@@ -1,6 +1,19 @@
 # COL eXtended Release historic ChangeLog
 We document here all major editorial changes for each weekly [COL XRelease]([url](https://www.checklistbank.org/dataset?limit=50&offset=0&origin=xrelease&releasedFrom=3&reverse=false)).
 
+### 2025, Week 20
+- ZooKeys  [bb922300-7ddb-11de-a300-90ac77aa923f] Publisher added last import to the project was on the 22025-03-01 vía plazi
+- MycoKeys  [b0e7edd4-d8b5-4b1c-bb5f-f6484e16c21c] Publisher added last import to the project was on the 22025-03-01 vía plazi
+- PhytoKeys  [fc871c4a-bb5e-4db6-b332-487bc23797f1] Publisher added last import to the project was on the 22025-03-01 vía plazi
+- Updated exclision of BDJ into the config file, 100+ BDJ dataset are now allowed to merge
+
+
+
+### 2025, Week 19
+- Rematchs Coloptera sectors given the recent adition of Bouchards classification to the base release
+- Updated exclision of BDJ into the config file, 100+ BDJ dataset are now allowed to merge
+
+
 ### 2025, Week 16
 - Remove PR2 sector see https://github.com/CatalogueOfLife/data/issues/1009
   
