@@ -1,6 +1,9 @@
 # COL eXtended Release historic ChangeLog
 We document here all major editorial changes for each weekly [COL XRelease]([url](https://www.checklistbank.org/dataset?limit=50&offset=0&origin=xrelease&releasedFrom=3&reverse=false)).
 
+### 2025, Week 21
+- Remove PBDB to test how does it impact the GBIF occurrences coverage
+
 ### 2025, Week 20
 - ZooKeys  [bb922300-7ddb-11de-a300-90ac77aa923f] Publisher added last import to the project was on the 22025-03-01 vía plazi
 - MycoKeys  [b0e7edd4-d8b5-4b1c-bb5f-f6484e16c21c] Publisher added last import to the project was on the 22025-03-01 vía plazi
