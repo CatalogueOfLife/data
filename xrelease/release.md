@@ -1,5 +1,6 @@
 ## Schedule
 An XRelease is to be started every friday.
+The monthly version should be published in the second half of every month *after* a new base release was published.
 
 ## Prepare Friday Releases
 Before releasing we need to verify the following:
