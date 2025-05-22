@@ -15,7 +15,7 @@ Before releasing we need to verify the following:
  2. scan [build logs](https://www.checklistbank.org/dataset/3LXRC/about) for any `ERROR` entries
  3. release [issues](https://www.checklistbank.org/dataset/3LXRC/issues)
  4. scan [GBIF impact tool](https://www.checklistbank.org/tools/gbif-impact)
- 5. review [ID logs](https://download.checklistbank.org/releases/3/)
+ 5. review [ID logs](https://download.checklistbank.org/releases/3/) (exact link can be found on [metadata](https://www.checklistbank.org/dataset/3LXRC/about) page which includes the attempt number)
  6. review [incertae sedis taxa](https://www.checklistbank.org/dataset/3LXRC/taxon/S) and metric changes compared to last published release.
  7. review [metadata](https://www.checklistbank.org/dataset/3LXRC/about)
  
