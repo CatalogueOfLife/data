@@ -15,6 +15,8 @@ Before releasing we need to verify the following:
  2. scan [build logs](https://www.checklistbank.org/dataset/3LXRC/about) for any `ERROR` entries
  3. release [issues](https://www.checklistbank.org/dataset/3LXRC/issues)
  4. scan [GBIF impact tool](https://www.checklistbank.org/tools/gbif-impact)
+ 5. review [ID logs]([https://www.checklistbank.org/tools/gbif-impact](https://download.checklistbank.org/releases/3/)
+ 6. review [incertae sedis taxa](https://www.checklistbank.org/dataset/3LXRC/taxon/S) and metric changes compared to last published release.
  
 ## Publishing the XR
 Once a new base release is published around the middle of the month the following XRs in the same month can be used to publish the monthly XR.
