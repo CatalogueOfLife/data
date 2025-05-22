@@ -1,7 +1,7 @@
 ## Schedule
 An XRelease is to be started every friday.
 
-## Preparation
+## Prepare Friday Releases
 Before releasing we need to verify the following:
 
  1. no [broken merge sectors](https://www.checklistbank.org/catalogue/3/sector?broken=true&mode=merge) exist
@@ -16,3 +16,6 @@ Before releasing we need to verify the following:
  3. release [issues](https://www.checklistbank.org/dataset/3LXRC/issues)
  4. scan [GBIF impact tool](https://www.checklistbank.org/tools/gbif-impact)
  
+## Publishing the XR
+Once a new base release is published around the middle of the month the following XRs in the same month can be used to publish the monthly XR.
+If nothing blocking is found in the validation above, the XR immediately following the base release should be used. Otherwise we have one week to focus on fixing things and start building a new XR manually before the regular friday build to save time.
