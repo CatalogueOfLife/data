@@ -13,7 +13,7 @@ Before releasing we need to verify the following:
 
  1. [failed sector syncs](https://www.checklistbank.org/catalogue/3/sector/sync?limit=25&offset=0&state=failed)
  2. scan [build logs](https://www.checklistbank.org/dataset/3LXRC/about) for any `ERROR` entries
- 3. release [issues](https://www.checklistbank.org/dataset/3LXRC/issues)
+ 3. compare release [issues](https://www.checklistbank.org/dataset/3LXRC/issues) with last release
  4. scan [GBIF impact tool](https://www.checklistbank.org/tools/gbif-impact)
  5. review [ID logs](https://download.checklistbank.org/releases/3/) (exact link can be found on [metadata](https://www.checklistbank.org/dataset/3LXRC/about) page which includes the attempt number)
  6. review [incertae sedis taxa](https://www.checklistbank.org/dataset/3LXRC/taxon/S) and metric changes compared to last published release.
