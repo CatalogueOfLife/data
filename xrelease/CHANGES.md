@@ -4,13 +4,15 @@ We document here all major editorial changes for each weekly [COL XRelease]([url
 ### 2025, Week 21
 - Remove PBDB to test how does it impact the GBIF occurrences coverage
 
-### 2025, Week 20
-Release [333](https://download.checklistbank.org/releases/3/411), published as [COL25.5 XR](https://www.checklistbank.org/dataset/309864)
+### 2025, Week 20 
+[CLB 309864](https://www.checklistbank.org/dataset/309864), [#411](https://download.checklistbank.org/releases/3/411)
+published as **COL25.5 XR**
 - ZooKeys  [bb922300-7ddb-11de-a300-90ac77aa923f] Publisher added last import to the project was on the 22025-03-01 vía plazi
 - MycoKeys  [b0e7edd4-d8b5-4b1c-bb5f-f6484e16c21c] Publisher added last import to the project was on the 22025-03-01 vía plazi
 - PhytoKeys  [fc871c4a-bb5e-4db6-b332-487bc23797f1] Publisher added last import to the project was on the 22025-03-01 vía plazi
 
 ### 2025, Week 19
+[CLB 309741](https://www.checklistbank.org/dataset/309741), [#406](https://download.checklistbank.org/releases/3/406)
 - Rematchs Coloptera sectors given the recent adition of Bouchards classification to the base release
 - Updated exclusion of BDJ into the config file, 100+ BDJ dataset are now allowed to merge
 
