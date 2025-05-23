@@ -3,6 +3,8 @@ We document here all major editorial changes for each weekly [COL XRelease]([url
 
 ### 2025, Week 21 https://www.checklistbank.org/dataset/309864/about
 - Remove PBDB to test how does it impact the GBIF occurrences coverage
+- Inclusion of PR2 (sector for Amoebozoa)
+- Inclusion of IRMNG (sector Animalia -Exclusion of Animalia (awaiting allocation) and Animalia incertae sedis in decisions-). 
 
 ### 2025, Week 20 
 [CLB 309864](https://www.checklistbank.org/dataset/309864), [#411](https://download.checklistbank.org/releases/3/411)
