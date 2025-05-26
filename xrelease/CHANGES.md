@@ -1,13 +1,15 @@
 # COL eXtended Release historic ChangeLog
 We document here all major editorial changes for each weekly [COL XRelease]([url](https://www.checklistbank.org/dataset?limit=50&offset=0&origin=xrelease&releasedFrom=3&reverse=false)).
 
-### 2025, Week 21 https://www.checklistbank.org/dataset/309864/about
+### 2025, Week 21
+XR Link: https://www.checklistbank.org/dataset/309864/about
 - Remove PBDB to test how does it impact the GBIF occurrences coverage
 - Inclusion of PR2 (sector for Amoebozoa)
 - Inclusion of IRMNG (sector Animalia -Exclusion of Animalia (awaiting allocation) and Animalia incertae sedis in decisions-). 
 - Changes in decisions in Plazi datasets recently corrected, to include mites properly placed (not in Diptera)
 
 ### 2025, Week 20 
+XR Link: https://www.checklistbank.org/dataset/309864/about
 [CLB 309864](https://www.checklistbank.org/dataset/309864), [#411](https://download.checklistbank.org/releases/3/411)
 published as ```COL25.5 XR```
 - ZooKeys  [bb922300-7ddb-11de-a300-90ac77aa923f] Publisher added last import to the project was on the 22025-03-01 vía plazi
