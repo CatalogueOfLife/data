@@ -591,6 +591,7 @@ sourceDatasetExclusion:
 - 298906 # BDJ messy classification, https://github.com/CatalogueOfLife/data/issues/894
 - 53474 # temporal block plazi dataset https://github.com/plazi/community/issues/388
 - 308023 # Creates matching error https://github.com/CatalogueOfLife/data/issues/967
+- 52840 # Blocked due to errors in digitization of species that already existis in COL
 # exclude BDJ journals not reviewed, from taxa with low gaps, and from 2020 an below
 - 52129
 - 52092
