@@ -583,6 +583,7 @@ enforceUnique:
 sourceDatasetExclusion:
 - 292056 # genus chromista https://github.com/plazi/community/issues/349
 - 264120 # Block due to misspellings on the original paper https://github.com/CatalogueOfLife/data/issues/1113
+- 7664 #  Block due to misspellings on the original paper Orthoptera
 - 4130 # Creates matching error https://github.com/CatalogueOfLife/data/issues/792
 - 6675 # excluded to avoid duplicates
 - 30084 # excluded due to wrong higher classification in all names  https://github.com/CatalogueOfLife/xcol/issues/179
