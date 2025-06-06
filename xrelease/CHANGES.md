@@ -4,22 +4,23 @@ We document here all major editorial changes for each weekly [COL XRelease]([url
 
 ### 2025, Week 23
 - Publisher added as Plazi Journals have become independed on the GBIF registry
-    07fa07e6-9d4f-4b82-99fb-1a2055991233: AINV # pensoft African Invertebrates
-    7597e7d3-b8d6-4ecf-84a3-d731d8b6d290: ESYS # pensoft Evolutionary Systematics
-    43999f3b-3220-490b-83f4-954cd43c3f6c: VZOO # pensoft Vertebrate Zoology
-    3996dc51-9cce-445b-a06f-7aba727bb0d8: HERP # pensoft Herpetozoa
-    d9a8e26f-f479-45f2-9bf3-144c25965646: FREC # pensoft FR Fossil Record
-    5aaf6f62-72a5-403f-8fae-e8f9cd4a18cd: CENT # pensoft Contributions to Entomology
-    9eb1b78c-2c2b-431e-8fd7-492734770611: ASP # pensoft Arthropod Systematics & Phylogeny
-    a019af3a-3982-4c10-9a27-2a793d40ed97: CAUC # pensoft Caucasiana
-    af62a723-bd15-484a-995e-6fc6720c54f0: AIEP # pensoft AIEP Acta Ichthyologica et Piscatoria
-    ac084e47-e95d-4e30-ab94-115d4dec59b2: DEZ # pensoft DEZ Deutsche Entomologische Zeitschrift
-    24eb42e2-7877-4e58-af67-4aea8a3cd177: NLEP # pensoft NL Nota Lepidopterologica
-    78b5476e-1eb5-4531-9ff1-e1971d43eb4d: SUBB # pensoft Subterranean Biology
-    b7dc6d5d-49b7-4b55-936a-fb85e33d65e1: JOR # pensoft Journal of Orthoptera Research
-    eb49971d-5d73-4534-a87a-81443c0cd66b: IBOT # pensoft Italian Botanist
-    aa95865f-a32f-46d4-8a10-178d69436a90: ZITT # pensoft Zitteliana
-    f6406919-13e5-48e9-9e99-8226df18fa6d: ALPE # pensoft Alpine Entomology
+    - 07fa07e6-9d4f-4b82-99fb-1a2055991233: AINV # pensoft African Invertebrates
+    - 7597e7d3-b8d6-4ecf-84a3-d731d8b6d290: ESYS # pensoft Evolutionary Systematics
+    - 43999f3b-3220-490b-83f4-954cd43c3f6c: VZOO # pensoft Vertebrate Zoology
+    - 3996dc51-9cce-445b-a06f-7aba727bb0d8: HERP # pensoft Herpetozoa
+    - d9a8e26f-f479-45f2-9bf3-144c25965646: FREC # pensoft FR Fossil Record
+    - 5aaf6f62-72a5-403f-8fae-e8f9cd4a18cd: CENT # pensoft Contributions to Entomology
+    - 9eb1b78c-2c2b-431e-8fd7-492734770611: ASP # pensoft Arthropod Systematics & Phylogeny
+    - a019af3a-3982-4c10-9a27-2a793d40ed97: CAUC # pensoft Caucasiana
+    - af62a723-bd15-484a-995e-6fc6720c54f0: AIEP # pensoft AIEP Acta Ichthyologica et Piscatoria
+    - ac084e47-e95d-4e30-ab94-115d4dec59b2: DEZ # pensoft DEZ Deutsche Entomologische Zeitschrift
+    - 24eb42e2-7877-4e58-af67-4aea8a3cd177: NLEP # pensoft NL Nota Lepidopterologica
+    - 78b5476e-1eb5-4531-9ff1-e1971d43eb4d: SUBB # pensoft Subterranean Biology
+    - b7dc6d5d-49b7-4b55-936a-fb85e33d65e1: JOR # pensoft Journal of Orthoptera Research
+    - eb49971d-5d73-4534-a87a-81443c0cd66b: IBOT # pensoft Italian Botanist
+    - aa95865f-a32f-46d4-8a10-178d69436a90: ZITT # pensoft Zitteliana
+    - f6406919-13e5-48e9-9e99-8226df18fa6d: ALPE # pensoft Alpine Entomology
+- Block plazi datases on config file as a result of Orthoptera revision by taxonomist OSF
 
 
 ### 2025, Week 21
