@@ -582,7 +582,8 @@ enforceUnique:
 # specific list of CLB dataset keys to exclude as sectors being created for aboves source publisher keys
 sourceDatasetExclusion:
 - 292056 # genus chromista https://github.com/plazi/community/issues/349
-- 264120 # Block due to misspellings on the original paper https://github.com/CatalogueOfLife/data/issues/1113
+- 264120 # Block plazi dataset due to misspellings on the original paper https://github.com/CatalogueOfLife/data/issues/1113
+- 264218 # Block plazi dataset due to misspellings on the original paper  Pangiopsis vs Plangiopsis 
 - 7664 #  Block due to misspellings on the original paper Orthoptera
 - 4130 # Creates matching error https://github.com/CatalogueOfLife/data/issues/792
 - 6675 # excluded to avoid duplicates
