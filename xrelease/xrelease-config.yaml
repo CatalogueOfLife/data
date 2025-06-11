@@ -595,6 +595,7 @@ sourceDatasetExclusion:
 - 264218 # Block plazi dataset due to misspellings on the original paper  Pangiopsis vs Plangiopsis 
 - 7664 #  Block due to misspellings on the original paper Orthoptera
 - 49681 #  Block due to misspellings on the original paper Orthoptera
+- 44950 #  Block due to misspellings on the original paper Orthoptera
 # exclude BDJ journals not reviewed, from taxa with low gaps, and from 2020 an below
 - 52129
 - 52092
