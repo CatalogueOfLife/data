@@ -597,6 +597,8 @@ sourceDatasetExclusion:
 - 49681 #  Block due to misspellings on the original paper Orthoptera
 - 44950 #  Block due to misspellings on the original paper Orthoptera
 - 46488 #  Block due to misspellings on the original paper Orthoptera
+- 8903 #  Block due to misspellings on the original paper Orthoptera
+- 4401 #  Block due to misspellings on the original paper Orthoptera
 # exclude BDJ journals not reviewed, from taxa with low gaps, and from 2020 an below
 - 52129
 - 52092
