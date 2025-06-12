@@ -3,6 +3,7 @@ We document here all major editorial changes for each weekly [COL XRelease]([url
 
 ### 2025, Week 24
 - Fixed subject of IUCN Animalia for some reason it was pointing to a lower taxa
+- Inclusion of sector UKSI Ichneumonoidea (priority 98) including subfamilies and tribes to prevent misplacing of genus under Diptera. see https://github.com/CatalogueOfLife/data/issues/1004
 
 
 ### 2025, Week 23
