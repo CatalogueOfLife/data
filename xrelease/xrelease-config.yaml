@@ -29,7 +29,7 @@ metadata:
     city: Amsterdam
     country: NL
     address: Amsterdam, Netherlands
-    organisation: Catalogue of Life
+    organisation: Catalogue of Life Foundation
 
   # the primary creators in exact order as they should appear in the release
   creator:
@@ -41,7 +41,7 @@ metadata:
     country: NL
     note: COL Executive Director
     address: Amsterdam, Netherlands
-    organisation: Catalogue of Life
+    organisation: Catalogue of Life Foundation
    -
     orcid: 0000-0003-2137-2690
     given: Yury
@@ -49,7 +49,7 @@ metadata:
     city: Champaign
     state: IL
     country: US
-    note: COL Executive Editor
+    note: COL Managing Editor
     address: Champaign, IL, United States of America
     organisation: Illinois Natural History Survey
    -
@@ -80,7 +80,7 @@ metadata:
     country: MX
     note: COL Editor
     address: Mexico City, Mexico
-    organisation: Catalogue of Life
+    organisation: Catalogue of Life Foundation
    -
     orcid: 0000-0002-1632-9818
     given: Camila Andrea
@@ -89,7 +89,7 @@ metadata:
     country: CO
     note: COL Editor
     address: Bogotá, Colombia
-    organisation: Catalogue of Life
+    organisation: Catalogue of Life Foundation
    -
     orcid: 0000-0003-1691-239X
     given: Thomas
@@ -154,14 +154,6 @@ metadata:
     note: Catalogue of Life Chair
     address: Champaign, IL, United States of America
     organisation: Illinois Natural History Survey
-   -
-    orcid: 0000-0001-9112-5340
-    given: Keping
-    family: Ma
-    city: Beijing
-    country: CN
-    address: Beijing, China
-    organisation: Chinese Academy of Sciences
    -
     orcid: 0000-0002-5788-9010
     given: Joe
@@ -385,20 +377,6 @@ metadata:
     note: TaxonWorks liaison
     address: Champaign, IL, United States of America
     organisation: Illinois Natural History Survey
-   -
-    given: Christoph
-    family: Hauser
-    city: Stuttgart
-    country: DE
-    address: Stuttgart, Germany
-    organisation: Staatliches Museum fur Naturkunde Stuttgart
-   -
-    given: Tim
-    family: Littlewood
-    city: London
-    country: GB
-    address: London, United Kingdom
-    organisation: Natural History Museum
    -
     orcid: 0000-0001-8680-973X
     given: Koen
