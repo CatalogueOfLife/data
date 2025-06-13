@@ -217,14 +217,6 @@ metadata:
     address: Champaign, IL, United States of America
     organisation: Illinois Natural History Survey
    -
-    orcid: 0000-0001-9112-5340
-    given: Keping
-    family: Ma
-    city: Beijing
-    country: CN
-    address: Beijing, China
-    organisation: Chinese Academy of Sciences
-   -
     orcid: 0000-0002-5788-9010
     given: Joe
     family: Miller
@@ -402,20 +394,6 @@ metadata:
     note: TaxonWorks liaison
     address: Champaign, IL, United States of America
     organisation: Illinois Natural History Survey
-   -
-    given: Christoph
-    family: Hauser
-    city: Stuttgart
-    country: DE
-    address: Stuttgart, Germany
-    organisation: Staatliches Museum fur Naturkunde Stuttgart
-   -
-    given: Tim
-    family: Littlewood
-    city: London
-    country: GB
-    address: London, United Kingdom
-    organisation: Natural History Museum
    -
     orcid: 0000-0001-8680-973X
     given: Koen
