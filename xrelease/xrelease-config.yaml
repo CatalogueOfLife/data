@@ -569,16 +569,17 @@ sourceDatasetExclusion:
 - 308023 # Creates matching error https://github.com/CatalogueOfLife/data/issues/967
 - 52840 # Blocked due to errors in digitization of species that already existis in COL
 # Blocked datasets due to misspelling detected during the Orthoptera revisión 2025-06
-- 264120 # Block plazi dataset due to misspellings on the original paper https://github.com/CatalogueOfLife/data/issues/1113
-- 264218 # Block plazi dataset due to misspellings on the original paper  Pangiopsis vs Plangiopsis 
-- 48740 #  Block due to misspellings on the original paper Orthoptera
-- 49681 #  Block due to misspellings on the original paper Orthoptera
+- 4401 #  Block due to misspellings on the original paper Orthoptera
+- 7664 #  Block due to misspellings on the original paper Orthoptera
+- 8903 #  Block due to misspellings on the original paper Orthoptera
 - 44950 #  Block due to misspellings on the original paper Orthoptera
 - 46488 #  Block due to misspellings on the original paper Orthoptera
 - 48634 #  Block due to misspellings on the original paper Orthoptera
-- 8903 #  Block due to misspellings on the original paper Orthoptera
-- 7664 #  Block due to misspellings on the original paper Orthoptera
-- 4401 #  Block due to misspellings on the original paper Orthoptera
+- 48740 #  Block due to misspellings on the original paper Orthoptera
+- 48909 #  Block due to misspellings on the original paper Orthoptera
+- 49681 #  Block due to misspellings on the original paper Orthoptera
+- 264120 # Block plazi dataset due to misspellings on the original paper https://github.com/CatalogueOfLife/data/issues/1113
+- 264218 # Block plazi dataset due to misspellings on the original paper  Pangiopsis vs Plangiopsis 
 
 # exclude BDJ journals not reviewed, from taxa with low gaps, and from 2020 an below
 - 52129
