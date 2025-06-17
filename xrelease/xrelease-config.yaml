@@ -6,7 +6,7 @@
 metadata:
   alias: "COL{date,yy.M} XR"
   title: Catalogue of Life
-  version: "{date,yyyy-MM-dd} XR"
+  version: Annual Checklist 2025 XR #"{date,yyyy-MM-dd} XR"
   completeness: 90
   confidence: 4  
   description: |
