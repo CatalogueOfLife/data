@@ -481,6 +481,7 @@ issueExclusion:
 - HIGHER_RANK_BINOMIAL
 - MISSING_GENUS
 - INCONSISTENT_NAME
+- PARTIALLY_PARSABLE_NAME
 
 blockedNames:
   - Diptera larva
