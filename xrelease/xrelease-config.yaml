@@ -581,6 +581,12 @@ sourceDatasetExclusion:
 - 49681 #  Block due to misspellings on the original paper Orthoptera
 - 264120 # Block plazi dataset due to misspellings on the original paper https://github.com/CatalogueOfLife/data/issues/1113
 - 264218 # Block plazi dataset due to misspellings on the original paper  Pangiopsis vs Plangiopsis 
+# Blocked datasets following the Auchenorrhyncha expert review  2024
+- 2485 # Block chresonym is beter deal with at 3i
+- 298431 #Authorship problems
+- 269229 # Small diferences lead to duplicates
+- 229647 # Authorship problems on the DWC-A export
+- 39007 # Better handled in 3i, Remove to avoid duplicates due to some authorship diferences
 
 # exclude BDJ journals not reviewed, from taxa with low gaps, and from 2020 an below
 - 52129
