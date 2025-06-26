@@ -3,6 +3,8 @@ We document here all major editorial changes for each weekly [COL XRelease]([url
 
 ### 2025, Week 26
 - Block Plazi datasets following the Auchenorrhyncha dataset
+- Block Lepidoptera for DAISE sector https://github.com/CatalogueOfLife/data/issues/817
+- Block names from taxref identified during the Orthoptera review https://github.com/CatalogueOfLife/data/issues/1046
 
 ### 2025, Week 25
 - Inclusion of sector UKSI Ichneumonoidea (priority 98) including subfamilies and tribes to prevent misplacing of genus under Diptera. see https://github.com/CatalogueOfLife/data/issues/1004
