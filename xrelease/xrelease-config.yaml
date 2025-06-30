@@ -4,17 +4,27 @@
 
 # dataset metadata with project variables to be applied to each release
 metadata:
-  alias: "COL{date,yy.M} XR"
+  alias: "COL{date,yy.M} XR" #  "COL{date,yy} XR"
   title: Catalogue of Life
-  version: Annual Checklist 2025 eXtended Release #"{date,yyyy-MM-dd} XR"
+  version: "{date,yyyy-MM-dd} XR" # Annual Checklist 2025 XR
   completeness: 90
   confidence: 4  
   description: |
-    The Catalogue of Life aims to build a comprehensive catalogue of all known species of organisms on Earth. The Catalogue of Life has two types of releases that reflect different gradients in quality. The Catalogue of Life Base Release is verified by experts, specifically for Catalogue of Life. The Base Release is extended with other data sources. The Catalogue of Life eXtended Release (COL XR) is a programmatically enhanced version of the Catalogue of Life Base Release {base.version} ({base.alias}). It integrates information from {mergeSources} overlapping taxonomic and nomenclatural global, regional, national and management data sources (checklists) as well as originating from digitised literature available in Catalogue of Life's infrastructure ChecklistBank. Data sources included in the Catalogue of Life eXtended Release are indicated with the XR icon.
+    The Catalogue of Life aims to build a comprehensive catalogue of all known species of organisms on Earth. 
+    The Catalogue of Life has two types of releases that reflect different gradients in quality. 
+    The Catalogue of Life Base Release is verified by experts, specifically for Catalogue of Life. 
+    The Base Release is extended with other data sources. 
+    The Catalogue of Life eXtended Release (COL XR) is a programmatically enhanced version of the Catalogue of Life Base Release {base.version} ({base.alias}). 
+    It integrates information from {mergeSources} overlapping taxonomic and nomenclatural global, regional, national and management data sources (checklists) 
+    as well as originating from digitised literature available in Catalogue of Life's infrastructure ChecklistBank. 
+    Data sources included in the Catalogue of Life eXtended Release are indicated with the XR icon.
     
-    The Catalogue of Life eXtended Release addresses several gaps of the Catalogue of Life Base Release and also enriches the existing names with information such as authorships, references, and vernacular names. It also adds molecular data, such as barcode index numbers or operational taxonomic units, to the Catalogue of Life. Higher taxonomy is being added only in selected groups with important gaps. Meanwhile, the information from the global data sources of the Catalogue of Life Base Release remains unmodified.
+    The Catalogue of Life eXtended Release addresses several gaps of the Catalogue of Life Base Release and also enriches the existing names with information such as authorships, references, and vernacular names. 
+    It also adds molecular data, such as barcode index numbers or operational taxonomic units, to the Catalogue of Life. Higher taxonomy is being added only in selected groups with important gaps. 
+    Meanwhile, the information from the global data sources of the Catalogue of Life Base Release remains unmodified.
 
-    This enhanced process is continuously evolving and undergoing quality control checks by COL editors and its community. Due to its programmatic nature as well as the taxonomic and nomenclatural differences among the data sources used, some issues may arise. 
+    This enhanced process is continuously evolving and undergoing quality control checks by COL editors and its community. 
+    Due to its programmatic nature as well as the taxonomic and nomenclatural differences among the data sources used, some issues may arise. 
     We therefore caution the user, and invite everyone to help log data issues in the [COL’s data GitHub repository](https://github.com/CatalogueOfLife/data/issues/new?template=xcol-content-feedback.md). 
     We will do our best to resolve these issues as soon as possible.
 
