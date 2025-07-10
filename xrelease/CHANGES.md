@@ -3,6 +3,7 @@ We document here all major editorial changes for each weekly [COL XRelease]([url
 
 ### 2025, Week 28
 - Modification in Sector of dataset 2021 (Checklist of Beetles (Coleoptera) of Canada and Alaska) to include only family, genera, species ans subspecies.
+- Add the full World Plants Catalogue to test how much additional information is added https://www.checklistbank.org/dataset/309839/classification, and defined if it should be included or not
   
 ### 2025, Week 26
 - Block Plazi datasets following the Auchenorrhyncha dataset
