@@ -448,6 +448,11 @@ metadata:
   #  description: Describe how the merging works
 
 
+# If true a release will issue new DOIs to changed sources.
+issueSourceDOIs: false
+
+# If true a release will prepare exports for the entire release in all common formats.
+prepareDownloads: true
 
 # taxon to use for incertae sedis names during merges
 incertaeSedis:
@@ -570,403 +575,402 @@ enforceUnique:
 
 # specific list of CLB dataset keys to exclude as sectors being created for aboves source publisher keys
 sourceDatasetExclusion:
-- 292056 # genus chromista https://github.com/plazi/community/issues/349
-- 4130 # Creates matching error https://github.com/CatalogueOfLife/data/issues/792
-- 6675 # excluded to avoid duplicates
-- 30084 # excluded due to wrong higher classification in all names  https://github.com/CatalogueOfLife/xcol/issues/179
-- 28224 # temporaly blocked, https://github.com/plazi/community/issues/337
-- 298906 # BDJ messy classification, https://github.com/CatalogueOfLife/data/issues/894
-- 53474 # temporal block plazi dataset https://github.com/plazi/community/issues/388
-- 308023 # Creates matching error https://github.com/CatalogueOfLife/data/issues/967
-- 52840 # Blocked due to errors in digitization of species that already existis in COL
-# Blocked datasets due to misspelling detected during the Orthoptera revisión 2025-06
-- 4401 #  Block due to misspellings on the original paper Orthoptera
-- 7664 #  Block due to misspellings on the original paper Orthoptera
-- 8903 #  Block due to misspellings on the original paper Orthoptera
-- 44950 #  Block due to misspellings on the original paper Orthoptera
-- 46488 #  Block due to misspellings on the original paper Orthoptera
-- 48634 #  Block due to misspellings on the original paper Orthoptera
-- 48740 #  Block due to misspellings on the original paper Orthoptera
-- 48909 #  Block due to misspellings on the original paper Orthoptera
-- 49681 #  Block due to misspellings on the original paper Orthoptera
-- 264120 # Block plazi dataset due to misspellings on the original paper https://github.com/CatalogueOfLife/data/issues/1113
-- 264218 # Block plazi dataset due to misspellings on the original paper  Pangiopsis vs Plangiopsis 
-# Blocked datasets following the Auchenorrhyncha expert review  2024
-- 2485 # Block chresonym is beter deal with at 3i
-- 298431 #Authorship problems
-- 269229 # Small diferences lead to duplicates
-- 229647 # Authorship problems on the DWC-A export
-- 39007 # Better handled in 3i, Remove to avoid duplicates due to some authorship diferences
-
-# exclude BDJ journals not reviewed, from taxa with low gaps, and from 2020 an below
-- 52129
-- 52092
-- 52082
-- 52081
-- 52079
-- 52078
-- 52075
-- 52073
-- 52072
-- 52068
-- 52065
-- 52064
-- 52062
-- 52057
-- 52056
-- 52053
-- 52052
-- 52051
-- 52050
-- 52049
-- 52047
-- 52046
-- 52016
-- 52015
-- 52009
-- 52007
-- 51999
-- 51998
-- 51996
-- 51992
-- 51988
-- 51987
-- 51986
-- 51984
-- 51982
-- 51978
-- 51976
-- 51975
-- 52055
-- 51970
-- 51968
-- 51967
-- 51963
-- 51962
-- 51961
-- 51959
-- 51954
-- 51953
-- 51949
-- 51948
-- 51946
-- 51945
-- 51943
-- 51942
-- 51939
-- 51938
-- 51937
-- 51911
-- 51902
-- 51900
-- 51898
-- 51897
-- 51896
-- 51895
-- 51893
-- 51887
-- 51871
-- 51858
-- 51857
-- 51855
-- 51854
-- 51852
-- 51850
-- 51842
-- 51841
-- 51839
-- 307782
-- 51695
-- 51692
-- 51674
-- 51654
-- 51652
-- 50982
-- 50837
-- 48455
-- 42814
-- 42813
-- 42812
-- 41377
-- 39191
-- 38874
-- 38873
-- 38872
-- 38871
-- 38481
-- 38480
-- 38479
-- 38282
-- 38281
-- 37995
-- 37237
-- 37238
-- 36326
-- 36325
-- 36324
-- 36244
-- 32911
-- 30832
-- 30831
-- 30828
-- 30827
-- 30826
-- 37234
-- 30834
-- 30829
-- 30825
-- 30824
-- 30284
-- 30086
-- 29669
-- 28856
-- 28854
-- 28852
-- 28851
-- 28850
-- 28848
-- 26996
-- 26993
-- 26991
-- 26988
-- 26395
-- 26279
-- 25827
-- 25577
-- 9746
-- 5153
-- 5150
-- 5149
-- 5148
-- 5145
-- 5144
-- 5143
-- 5142
-- 5141
-- 5140
-- 5139
-- 5138
-- 5137
-- 5136
-- 5135
-- 5134
-- 5128
-- 5127
-- 23852
-- 23851
-- 23849
-- 23848
-- 23791
-- 23571
-- 22417
-- 22351
-- 22333
-- 21975
-- 21884
-- 21726
-- 21687
-- 21605
-- 21575
-- 21560
-- 21364
-- 21030
-- 8674
-- 5129
-- 5126
-- 5125
-- 5124
-- 5123
-- 5122
-- 5119
-- 5116
-- 5115
-- 5114
-- 5113
-- 5112
-- 5111
-- 5110
-- 5108
-- 5106
-- 5105
-- 5103
-- 5100
-- 5097
-- 5096
-- 5095
-- 5094
-- 5093
-- 5092
-- 5091
-- 5090
-- 5089
-- 5088
-- 5086
-- 5085
-- 5069
-- 5059
-- 4972
-- 4915
-- 4898
-- 4867
-- 4795
-- 4345
-- 4344
-- 4331
-- 4330
-- 4315
-- 4275
-- 4257
-- 4233
-- 4168
-- 4167
-- 4149
-- 4136
-- 4135
-- 4134
-- 4129
-- 4128
-- 4016
-- 3934
-- 3692
-- 3691
-- 3651
-- 3309
-- 3219
-- 3157
-- 2305
-- 20853
-- 20852
-- 20851
-- 20849
-- 20848
-- 20847
-- 20846
-- 20845
-- 96619
-- 95776
-- 83298
-- 68734
-- 58070
-- 56520
-- 56023
-- 55884
-- 55807
-- 55509
-- 55483
-- 55474
-- 55473
-- 53635
-- 53509
-- 33076
-- 24976
-- 24898
-- 24538
-- 209953
-- 20844
-- 20843
-- 208293
-- 20741
-- 204649
-- 20030
-- 20028
-- 20027
-- 20026
-- 20025
-- 20024
-- 20023
-- 20022
-- 20021
-- 20020
-- 20019
-- 20004
-- 179122
-- 179121
-- 174665
-- 174663
-- 173167
-- 171221
-- 164824
-- 159029
-- 143759
-- 130290
-- 116577
-- 112658
-- 108267
-- 59579
-- 58508
-- 55350
-- 55139
-- 54829
-- 54273
-- 53883
-- 53753
-- 53721
-- 53516
-- 53374
-- 31718
-- 28484
-- 284161
-- 283253
-- 282070
-- 281621
-- 280864
-- 280640
-- 278537
-- 275279
-- 274780
-- 270531
-- 270530
-- 268879
-- 265949
-- 259878
-- 256298
-- 249819
-- 240175
-- 227986
-- 197537
-- 55875
-- 51915
-- 306678
-- 306442
-- 305729
-- 305374
-- 305048
-- 304755
-- 304682
-- 304680
-- 304394
-- 304147
-- 303649
-- 303605
-- 303379
-- 301958
-- 301956
-- 301955
-- 301954
-- 301488
-- 300108
-- 300075
-- 299582
-- 299559
-- 299023
-- 298706
-- 298395
-- 297673
-- 297571
-- 297408
-- 297333
-- 296447
-- 296101
-- 294461
-- 293573
-- 292012
-- 291422
-- 291306
-- 290093
-- 290092
-- 288773
-- 287569
-- 287020
-- 25266
-- 24617
-- 38809
+ - 292056 # genus chromista https://github.com/plazi/community/issues/349
+ - 4130 # Creates matching error https://github.com/CatalogueOfLife/data/issues/792
+ - 6675 # excluded to avoid duplicates
+ - 30084 # excluded due to wrong higher classification in all names  https://github.com/CatalogueOfLife/xcol/issues/179
+ - 28224 # temporaly blocked, https://github.com/plazi/community/issues/337
+ - 298906 # BDJ messy classification, https://github.com/CatalogueOfLife/data/issues/894
+ - 53474 # temporal block plazi dataset https://github.com/plazi/community/issues/388
+ - 308023 # Creates matching error https://github.com/CatalogueOfLife/data/issues/967
+ - 52840 # Blocked due to errors in digitization of species that already existis in COL
+ # Blocked datasets due to misspelling detected during the Orthoptera revisión 2025-06
+ - 4401 #  Block due to misspellings on the original paper Orthoptera
+ - 7664 #  Block due to misspellings on the original paper Orthoptera
+ - 8903 #  Block due to misspellings on the original paper Orthoptera
+ - 44950 #  Block due to misspellings on the original paper Orthoptera
+ - 46488 #  Block due to misspellings on the original paper Orthoptera
+ - 48634 #  Block due to misspellings on the original paper Orthoptera
+ - 48740 #  Block due to misspellings on the original paper Orthoptera
+ - 48909 #  Block due to misspellings on the original paper Orthoptera
+ - 49681 #  Block due to misspellings on the original paper Orthoptera
+ - 264120 # Block plazi dataset due to misspellings on the original paper https://github.com/CatalogueOfLife/data/issues/1113
+ - 264218 # Block plazi dataset due to misspellings on the original paper  Pangiopsis vs Plangiopsis 
+ # Blocked datasets following the Auchenorrhyncha expert review  2024
+ - 2485 # Block chresonym is beter deal with at 3i
+ - 298431 #Authorship problems
+ - 269229 # Small diferences lead to duplicates
+ - 229647 # Authorship problems on the DWC-A export
+ - 39007 # Better handled in 3i, Remove to avoid duplicates due to some authorship diferences
+ # exclude BDJ journals not reviewed, from taxa with low gaps, and from 2020 an below
+ - 52129
+ - 52092
+ - 52082
+ - 52081
+ - 52079
+ - 52078
+ - 52075
+ - 52073
+ - 52072
+ - 52068
+ - 52065
+ - 52064
+ - 52062
+ - 52057
+ - 52056
+ - 52053
+ - 52052
+ - 52051
+ - 52050
+ - 52049
+ - 52047
+ - 52046
+ - 52016
+ - 52015
+ - 52009
+ - 52007
+ - 51999
+ - 51998
+ - 51996
+ - 51992
+ - 51988
+ - 51987
+ - 51986
+ - 51984
+ - 51982
+ - 51978
+ - 51976
+ - 51975
+ - 52055
+ - 51970
+ - 51968
+ - 51967
+ - 51963
+ - 51962
+ - 51961
+ - 51959
+ - 51954
+ - 51953
+ - 51949
+ - 51948
+ - 51946
+ - 51945
+ - 51943
+ - 51942
+ - 51939
+ - 51938
+ - 51937
+ - 51911
+ - 51902
+ - 51900
+ - 51898
+ - 51897
+ - 51896
+ - 51895
+ - 51893
+ - 51887
+ - 51871
+ - 51858
+ - 51857
+ - 51855
+ - 51854
+ - 51852
+ - 51850
+ - 51842
+ - 51841
+ - 51839
+ - 307782
+ - 51695
+ - 51692
+ - 51674
+ - 51654
+ - 51652
+ - 50982
+ - 50837
+ - 48455
+ - 42814
+ - 42813
+ - 42812
+ - 41377
+ - 39191
+ - 38874
+ - 38873
+ - 38872
+ - 38871
+ - 38481
+ - 38480
+ - 38479
+ - 38282
+ - 38281
+ - 37995
+ - 37237
+ - 37238
+ - 36326
+ - 36325
+ - 36324
+ - 36244
+ - 32911
+ - 30832
+ - 30831
+ - 30828
+ - 30827
+ - 30826
+ - 37234
+ - 30834
+ - 30829
+ - 30825
+ - 30824
+ - 30284
+ - 30086
+ - 29669
+ - 28856
+ - 28854
+ - 28852
+ - 28851
+ - 28850
+ - 28848
+ - 26996
+ - 26993
+ - 26991
+ - 26988
+ - 26395
+ - 26279
+ - 25827
+ - 25577
+ - 9746
+ - 5153
+ - 5150
+ - 5149
+ - 5148
+ - 5145
+ - 5144
+ - 5143
+ - 5142
+ - 5141
+ - 5140
+ - 5139
+ - 5138
+ - 5137
+ - 5136
+ - 5135
+ - 5134
+ - 5128
+ - 5127
+ - 23852
+ - 23851
+ - 23849
+ - 23848
+ - 23791
+ - 23571
+ - 22417
+ - 22351
+ - 22333
+ - 21975
+ - 21884
+ - 21726
+ - 21687
+ - 21605
+ - 21575
+ - 21560
+ - 21364
+ - 21030
+ - 8674
+ - 5129
+ - 5126
+ - 5125
+ - 5124
+ - 5123
+ - 5122
+ - 5119
+ - 5116
+ - 5115
+ - 5114
+ - 5113
+ - 5112
+ - 5111
+ - 5110
+ - 5108
+ - 5106
+ - 5105
+ - 5103
+ - 5100
+ - 5097
+ - 5096
+ - 5095
+ - 5094
+ - 5093
+ - 5092
+ - 5091
+ - 5090
+ - 5089
+ - 5088
+ - 5086
+ - 5085
+ - 5069
+ - 5059
+ - 4972
+ - 4915
+ - 4898
+ - 4867
+ - 4795
+ - 4345
+ - 4344
+ - 4331
+ - 4330
+ - 4315
+ - 4275
+ - 4257
+ - 4233
+ - 4168
+ - 4167
+ - 4149
+ - 4136
+ - 4135
+ - 4134
+ - 4129
+ - 4128
+ - 4016
+ - 3934
+ - 3692
+ - 3691
+ - 3651
+ - 3309
+ - 3219
+ - 3157
+ - 2305
+ - 20853
+ - 20852
+ - 20851
+ - 20849
+ - 20848
+ - 20847
+ - 20846
+ - 20845
+ - 96619
+ - 95776
+ - 83298
+ - 68734
+ - 58070
+ - 56520
+ - 56023
+ - 55884
+ - 55807
+ - 55509
+ - 55483
+ - 55474
+ - 55473
+ - 53635
+ - 53509
+ - 33076
+ - 24976
+ - 24898
+ - 24538
+ - 209953
+ - 20844
+ - 20843
+ - 208293
+ - 20741
+ - 204649
+ - 20030
+ - 20028
+ - 20027
+ - 20026
+ - 20025
+ - 20024
+ - 20023
+ - 20022
+ - 20021
+ - 20020
+ - 20019
+ - 20004
+ - 179122
+ - 179121
+ - 174665
+ - 174663
+ - 173167
+ - 171221
+ - 164824
+ - 159029
+ - 143759
+ - 130290
+ - 116577
+ - 112658
+ - 108267
+ - 59579
+ - 58508
+ - 55350
+ - 55139
+ - 54829
+ - 54273
+ - 53883
+ - 53753
+ - 53721
+ - 53516
+ - 53374
+ - 31718
+ - 28484
+ - 284161
+ - 283253
+ - 282070
+ - 281621
+ - 280864
+ - 280640
+ - 278537
+ - 275279
+ - 274780
+ - 270531
+ - 270530
+ - 268879
+ - 265949
+ - 259878
+ - 256298
+ - 249819
+ - 240175
+ - 227986
+ - 197537
+ - 55875
+ - 51915
+ - 306678
+ - 306442
+ - 305729
+ - 305374
+ - 305048
+ - 304755
+ - 304682
+ - 304680
+ - 304394
+ - 304147
+ - 303649
+ - 303605
+ - 303379
+ - 301958
+ - 301956
+ - 301955
+ - 301954
+ - 301488
+ - 300108
+ - 300075
+ - 299582
+ - 299559
+ - 299023
+ - 298706
+ - 298395
+ - 297673
+ - 297571
+ - 297408
+ - 297333
+ - 296447
+ - 296101
+ - 294461
+ - 293573
+ - 292012
+ - 291422
+ - 291306
+ - 290093
+ - 290092
+ - 288773
+ - 287569
+ - 287020
+ - 25266
+ - 24617
+ - 38809
