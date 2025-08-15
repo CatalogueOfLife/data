@@ -427,3 +427,9 @@ prepareDownloads: true
 # blockedNamePatterns:
 # - '\bsp\.'
 # - '\bsp\b'
+
+ignoredReleases: 
+  # bad ids
+  - 311239 # COL25.7 XR 
+  - 309864 # COL25.5 XR
+  - 308651 # COL25.3 XR
