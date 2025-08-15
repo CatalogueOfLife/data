@@ -430,6 +430,7 @@ prepareDownloads: true
 
 ignoredReleases: 
   # bad ids
+  - 272972 # COL23.10
   - 311239 # COL25.7 XR 
   - 309864 # COL25.5 XR
   - 308651 # COL25.3 XR
