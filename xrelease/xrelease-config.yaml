@@ -10,9 +10,9 @@ metadata:
   completeness: 90
   confidence: 4  
   description: |
-    This is a temporary preview of the Catalogue of Life eXtended Release (COL XR). 
-    Please do not store or rely on the identifiers, as this feature is still under development.
-    This version will be retired in a few months as we refine the release process.
+    This is a preview of the Catalogue of Life eXtended Release (COL XR) which will be retired soon.
+    Please do not store or rely on the identifiers, as these can still change in the final version.
+
     The Catalogue of Life is building a comprehensive catalogue of all known species on Earth. 
     It offers two types of releases that reflect different levels of quality. 
     The Base Release is curated and verified by experts specifically for COL. 
