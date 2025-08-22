@@ -980,6 +980,8 @@ sourceDatasetExclusion:
 
 
 ignoredReleases: 
+  - 308651 # COL25.3 XR
+  - 309864 # COL25.5 XR
 
 actions:
   - method: POST
