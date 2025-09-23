@@ -22,6 +22,7 @@ metadata:
      * FishBase via Aphia at VLIZ
      * GLI
      * ITIS
+     * LWS fleas
      * Scarabs    
      * SF Aphid
      * SF Chrysididae
@@ -42,7 +43,7 @@ metadata:
      * WoRMS, 66 checklists
 
       #### Other changes:
-     * LDL Neuropterida of Jul 2018 was re-synced with a correction for the paleotaxa visibility above the genus rank 
+     * LDL Neuropterida of Jul 2018 was re-synced with a correction for the paleotaxa visibility above the genus rank
    
 
 
