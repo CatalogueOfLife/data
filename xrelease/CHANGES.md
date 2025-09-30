@@ -1,6 +1,13 @@
 # COL eXtended Release historic ChangeLog
 We document here all major editorial changes for each weekly [COL XRelease]([url](https://www.checklistbank.org/dataset?limit=50&offset=0&origin=xrelease&releasedFrom=3&reverse=false)).
 
+
+### 2025, Week 40
+- Block Plazi dataset: https://github.com/CatalogueOfLife/data/issues/1254
+
+### 2025, Week 39
+- Add Bold insects dataset to test merging
+
 ### 2025, Week 28
 - Modification in Sector of dataset 2021 (Checklist of Beetles (Coleoptera) of Canada and Alaska) to include only family, genera, species ans subspecies.
 - Add the full World Plants Catalogue to test how much additional information is added https://www.checklistbank.org/dataset/309839/classification, and defined if it should be included or not
