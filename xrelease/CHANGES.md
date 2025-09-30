@@ -4,6 +4,7 @@ We document here all major editorial changes for each weekly [COL XRelease]([url
 
 ### 2025, Week 40
 - Block Plazi dataset: https://github.com/CatalogueOfLife/data/issues/1254
+- Block doubful name: https://github.com/CatalogueOfLife/data/issues/1250
 
 ### 2025, Week 39
 - Add Bold insects dataset to test merging
