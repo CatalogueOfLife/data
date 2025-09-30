@@ -586,6 +586,7 @@ sourceDatasetExclusion:
  - 53474 # temporal block plazi dataset https://github.com/plazi/community/issues/388
  - 308023 # Creates matching error https://github.com/CatalogueOfLife/data/issues/967
  - 52840 # Blocked due to errors in digitization of species that already existis in COL
+ - 298356 # Block https://github.com/CatalogueOfLife/data/issues/1254
  # Blocked datasets due to misspelling detected during the Orthoptera revisión 2025-06
  - 4401 #  Block due to misspellings on the original paper Orthoptera
  - 7664 #  Block due to misspellings on the original paper Orthoptera
@@ -976,7 +977,6 @@ sourceDatasetExclusion:
  - 25266
  - 24617
  - 38809
-
 
 
 ignoredReleases: 
