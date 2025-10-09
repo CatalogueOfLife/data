@@ -1,7 +1,11 @@
 # COL eXtended Release historic ChangeLog
 We document here all major editorial changes for each weekly [COL XRelease]([url](https://www.checklistbank.org/dataset?limit=50&offset=0&origin=xrelease&releasedFrom=3&reverse=false)).
 
+### 2025, Week 41
+- Block Opiliones in IRMNG, UKSI, ITIS, Plazi (42 datasets that were providing names to Opiliones), Zoobank, TaxRef, DynTaxa, NorTaxa, TaiCOL, WoRMS. https://github.com/CatalogueOfLife/data/issues/1261
+- Decisions in different datasets to avoid duplicated names  https://github.com/CatalogueOfLife/data/issues/1257
 
+  
 ### 2025, Week 40
 - Block Plazi dataset: https://github.com/CatalogueOfLife/data/issues/1254
 - Block doubful name: https://github.com/CatalogueOfLife/data/issues/1250
