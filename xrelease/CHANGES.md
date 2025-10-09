@@ -4,6 +4,7 @@ We document here all major editorial changes for each weekly [COL XRelease]([url
 ### 2025, Week 41
 - Block Opiliones in IRMNG, UKSI, ITIS, Plazi (42 datasets that were providing names to Opiliones), Zoobank, TaxRef, DynTaxa, NorTaxa, TaiCOL, WoRMS. https://github.com/CatalogueOfLife/data/issues/1261
 - Decisions in different datasets to avoid duplicated names  https://github.com/CatalogueOfLife/data/issues/1257
+- Add only BINs from the entiry BOLD dataset https://github.com/CatalogueOfLife/data/issues/1262
 
   
 ### 2025, Week 40
