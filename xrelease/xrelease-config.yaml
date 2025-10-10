@@ -602,6 +602,27 @@ sourceDatasetExclusion:
  - 269229 # Small diferences lead to duplicates
  - 229647 # Authorship problems on the DWC-A export
  - 39007 # Better handled in 3i, Remove to avoid duplicates due to some authorship diferences
+ # Blocked datasets following the Opiliones expert feedback
+ - 29819 #Checklist of an Opilionid family
+ - 40455 #Review of an opilionid genus in Brazil
+ - 53767 #Revision of Cosmetidae species in AMerica
+ - 308277 #Opiliones from France
+ - 273369 #Redescription of species of Opiliones 
+ - 307211 #Revision of genus Noescotelemon (Opiliones) 
+ - 311037 #Reinstatement of genus Pseudoleiobunum 
+ - 3203 #new genus and species Cyphophthalmi 
+ - 20617 #Taxonomic notes on a new gneric synonym
+ - 24373 #New genus in Argentina
+ - 34515 #Two new species in Neopilionidae
+ - 35740 # New genus and species New Zealand Enantiobuninae
+ - 37167 #Notes on species of Geraecormobius
+ - 39075 #Revalidation of Brazilian genus DIscocirtanus
+ - 152186 #Revision of genus Dicranopalpus in Spain
+ - 183008 #Description of new genus and species Gonyleptidae Brazil
+ - 298601 #Diversity of genus Eutimesius in Colombia, Venezuela
+ - 307966 #Revision of genus Discocyrtus
+ - 309630 #Australasian Neopilionidae
+ - 311625 #Systematic placement of genus Timesius
  # exclude BDJ journals not reviewed, from taxa with low gaps, and from 2020 an below
  - 52129
  - 52092
