@@ -623,6 +623,22 @@ sourceDatasetExclusion:
  - 307966 #Revision of genus Discocyrtus
  - 309630 #Australasian Neopilionidae
  - 311625 #Systematic placement of genus Timesius
+ - 26413 #Review of Gonyleptelus 
+ - 7622 #Revision of ANdean genus Sadocus
+ - 4999 #Identity of Chilean Pachylus crassus
+ - 3586 # diversity Nemastoma bidentatum
+ - 307825 # Chilean Parabalta bicornis
+ - 50323 #Japanese species Leiobunum hiraiwai
+ - 44869 #Description of Caelopyginae species
+ - 23975 #Revalidation of Brazilian Obidosus and description of species Protimesius
+ - 113070 #Morphology cladistics of Cosmetidae
+ - 251528 #Cladistic analysis of Paravima
+ - 24989 #Description of new species Progonyleptoidellus
+ - 8783 #Studies on genus Homolophus
+ - 281325 #Annotated list of Georgian harvestmen
+ - 34831 #Systematic assignments in Gonyleptoidea
+ - 21990 #Tax revision ANdean genus Eulibitia
+ - 122795 #Systematic revision ANdean family Metasarcidae
  # exclude BDJ journals not reviewed, from taxa with low gaps, and from 2020 an below
  - 52129
  - 52092
