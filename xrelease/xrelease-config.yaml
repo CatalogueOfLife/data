@@ -1019,4 +1019,4 @@ ignoredReleases:
 
 actions:
   - method: POST
-    url: https://builds.gbif.org/job/col-gbif-impact-matching-ws/buildWithParameters?token=dwTF5uJJ-o97Fhhx_12edrtfZ7173tggs&BUILD_IMAGE=true&DATASET=xcolrc&DATASET_KEY={key}&DATASET_ALIAS={alias}
+    url: https://builds.gbif.org/job/col-gbif-impact-matching-ws/buildWithParameters?token=dwTF5uJJ-o97Fhhx_12edrtfZ7173tggs&BUILD_IMAGE=true&DATASET=xcolrc&DATASET_KEY={key}&DATASET_ALIAS={alias}&cause=XR+release+build+{key}
