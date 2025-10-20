@@ -548,6 +548,8 @@ blockedNamePatterns:
  - '\b(Gen_Indet|Gen indet)\b/i'
  # https://github.com/plazi/community/issues/387
  - '\bundefined\b'
+  # https://github.com/CatalogueOfLife/data/issues/1277
+ - '(?i)\bCandidatus\b'
 
 
 # epithets keyed by family
