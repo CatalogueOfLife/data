@@ -438,3 +438,14 @@ ignoredReleases:
   - 311239 # COL25.7 XR 
   - 309864 # COL25.5 XR
   - 308651 # COL25.3 XR
+
+actions:
+  # update preview portal
+  - method: POST
+    url: https://builds.gbif.org/view/COL/job/col-portal-preview/build?token=1LOImC9AL8e1RH2vdM71&cause=base+release+build+{key}
+
+publishActions:
+  # prepare matcher file once published
+  - method: POST
+    auth: "coldeploy:g2o.d43svHngu4HsEp7Xwlo"
+    url: https://api.checklistbank.org/admin/matcher/{key}/prepare
