@@ -2,10 +2,12 @@
 We document here all major editorial changes for each weekly [COL XRelease]([url](https://www.checklistbank.org/dataset?limit=50&offset=0&origin=xrelease&releasedFrom=3&reverse=false)).
 
 
+### 2025, Week 43
+- Blocking IRMNG Names for Auchenorrhyncha Families: Cercopidae, Cicadellidae, Cixiidae, Membracidae, Issidae, Derbidae
+
+
 ### 2025, Week 42
 - Add Catalogue of life China that now has a cc-by license to test resuls https://www.checklistbank.org/dataset/312616/classification
-- 
-
 
 
 ### 2025, Week 41
