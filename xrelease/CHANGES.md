@@ -4,6 +4,7 @@ We document here all major editorial changes for each weekly [COL XRelease]([url
 
 ### 2025, Week 43
 - Blocking IRMNG Names for Auchenorrhyncha Families: Cercopidae, Cicadellidae, Cixiidae, Membracidae, Issidae, Derbidae
+- Remove BOLD insecta
 
 
 ### 2025, Week 42
