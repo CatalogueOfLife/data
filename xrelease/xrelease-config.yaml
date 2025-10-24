@@ -448,7 +448,8 @@ metadata:
 
 
 # If true a release will issue new DOIs to changed sources.
-issueSourceDOIs: false
+issueSourceDOIs: true
+issuePublisherSourceDOIs: false
 
 # If true a release will prepare exports for the entire release in all common formats.
 prepareDownloads: true

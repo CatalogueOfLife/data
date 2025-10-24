@@ -414,6 +414,7 @@ metadata:
 
 # If true a release will issue new DOIs to changed sources.
 issueSourceDOIs: true
+issuePublisherSourceDOIs: true
 
 # If true a release will first delete all bare names from the project before it copies data.
 removeBareNames: true
