@@ -1030,3 +1030,8 @@ publishActions:
   - method: POST
     auth: "coldeploy:g2o.d43svHngu4HsEp7Xwlo"
     url: https://api.checklistbank.org/admin/matcher/{key}/prepare
+  # rebuild portal sitemap
+  - method: POST
+    url: https://builds.gbif.org/job/col-portal-sitemap//buildWithParameters?token=1LOImC9AL8e1RH2vdM71&cause=XR+publication+{key}
+
+
