@@ -16,7 +16,7 @@ metadata:
     The eXtended Release (COL XR) builds on the Base Release {base.version} ({base.alias}) by programmatically integrating additional data sources.
     It integrates information from {mergeSources} overlapping taxonomic and nomenclatural global, regional, national and management data sources (checklists) 
     as well as originating from digitised literature available in Catalogue of Life's infrastructure ChecklistBank. 
-    New names and other data included in the COL XR are indicated with the XR icon. The icon is only visible in ChecklistBank.    
+    New names and other data included in the COL XR are indicated with the XR icon. 
    
     This release addresses several gaps of the Base Release and also enriches the existing names with information such as authorships, references, and vernacular names. 
     It also adds molecular data, such as barcode index numbers or operational taxonomic units, to the Catalogue of Life. Higher taxonomy is being added only in selected groups with important gaps. 
