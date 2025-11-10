@@ -46,7 +46,8 @@ metadata:
      * WoRMS, 66 checklists
    
     #### Other changes:
-     * The Hymenoptera management classification has been updated in line with ITIS
+     * The Hymenoptera management classification has been updated in line with ITIS.
+     * HymIS Crabronidae & Rhopalosomatidae, HymIS Pompilidae, ITIS, SF Chrysididae, Taxapad Ichneumonoidea, UCD, Vespidae were re-synced.
 
   contact:
     city: Amsterdam
