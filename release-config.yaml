@@ -13,18 +13,14 @@ metadata:
     The Catalogue of Life estimates 2.3M extant species on the planet recognised by taxonomists at present time. 
     This means that for many groups it continues to be deficient, and users may notice that many species are still missing from the Catalogue.
 
-    ### What's new in November 2025 edition?  
+    ### What's new in December 2025 edition?  
 
-    #### 92 checklists have been updated:
+    #### XX checklists have been updated:
      
      * 3i Auchenorrhyncha
      * AntCat
      * Entiminae
      * FishBase via Aphia at VLIZ
-     * Hepialidae
-     * Gelechiidae
-     * GLI
-     * Pterophoroidea
      * ReptileDB updated and assigned into ITIS & CoL management classification
      * Scarabs
      * SF Aphid
@@ -45,10 +41,7 @@ metadata:
      * World Plants
      * WoRMS, 66 checklists
    
-    #### Other changes:
-     * The Hymenoptera management classification has been updated in line with ITIS.
-     * HymIS Crabronidae & Rhopalosomatidae, HymIS Pompilidae, ITIS, SF Chrysididae, Taxapad Ichneumonoidea, UCD, Vespidae were re-synced.
-
+    
   contact:
     city: Amsterdam
     country: NL
