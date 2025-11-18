@@ -2,6 +2,11 @@
 We document here all major editorial changes for each weekly [COL XRelease]([url](https://www.checklistbank.org/dataset?limit=50&offset=0&origin=xrelease&releasedFrom=3&reverse=false)).
 
 
+### 2025, Week 46
+[CLB 313100](https://www.checklistbank.org/dataset/313100), [#515](https://download.checklistbank.org/releases/3/515)
+- make nomenclatural names provisional again: https://github.com/CatalogueOfLife/data/issues/1319#issuecomment-3534814004
+- merge nomenclatural properties `gender` and `etymology`: https://github.com/CatalogueOfLife/backend/issues/1468
+
 ### 2025, Week 43
 - Blocking IRMNG Names for Auchenorrhyncha Families: Cercopidae, Cicadellidae, Cixiidae, Membracidae, Issidae, Derbidae
 - Remove BOLD insecta
