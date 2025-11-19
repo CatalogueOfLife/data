@@ -6,6 +6,9 @@ We document here all major editorial changes for each weekly [COL XRelease]([url
 [CLB 313100](https://www.checklistbank.org/dataset/313100), [#515](https://download.checklistbank.org/releases/3/515)
 - make nomenclatural names provisional again: https://github.com/CatalogueOfLife/data/issues/1319#issuecomment-3534814004
 - merge nomenclatural properties `gender` and `etymology`: https://github.com/CatalogueOfLife/backend/issues/1468
+  
+### 2025, Week 45
+- Block Scarabaeoidea in IRMNG, TaxRef, ITIS, UKSI, DynTaxa, IUCN, TaiCOL.  https://github.com/CatalogueOfLife/data/issues/1327
 
 ### 2025, Week 43
 - Blocking IRMNG Names for Auchenorrhyncha Families: Cercopidae, Cicadellidae, Cixiidae, Membracidae, Issidae, Derbidae
