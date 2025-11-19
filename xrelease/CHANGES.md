@@ -9,6 +9,7 @@ We document here all major editorial changes for each weekly [COL XRelease]([url
 - block several Homo species from Zoobank https://github.com/CatalogueOfLife/data/issues/1299, https://github.com/CatalogueOfLife/data/issues/1300 , https://github.com/CatalogueOfLife/data/issues/1301 , https://github.com/CatalogueOfLife/data/issues/1302 , https://github.com/CatalogueOfLife/data/issues/1303 , https://github.com/CatalogueOfLife/data/issues/1304
 - Extinct flag on Mauisaurus https://github.com/CatalogueOfLife/data/issues/1298
 - Block Scarab species from ZooBank https://github.com/CatalogueOfLife/data/issues/1327
+- Block Siphonius from ITIS (misspelled) https://github.com/CatalogueOfLife/data/issues/1318#issuecomment-3534566679
   
 ### 2025, Week 45
 - Block Scarabaeoidea in IRMNG, TaxRef, ITIS, UKSI, DynTaxa, IUCN, TaiCOL.  https://github.com/CatalogueOfLife/data/issues/1327
