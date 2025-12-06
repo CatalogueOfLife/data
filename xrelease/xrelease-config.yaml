@@ -587,8 +587,7 @@ sourceDatasetExclusion:
  - 308023 # Creates matching error https://github.com/CatalogueOfLife/data/issues/967
  - 52840 # Blocked due to errors in digitization of species that already existis in COL
  - 298356 # Block https://github.com/CatalogueOfLife/data/issues/1254
- - 193461 # with misspellings and a most recent version of the publication is already digitized by Plazi ad creates cinfussion. https://github.com/CatalogueOfLife/data/issues/1363#issuecomment-3608095044
- - 193458 # with misspellings. Order Rodentia - Family Sciuridae Wilson & Reeder, 2005 2nd Edition https://github.com/CatalogueOfLife/data/issues/1337 
+ 
  # Blocked datasets due to misspelling detected during the Orthoptera revisión 2025-06
  - 4401 #  Block due to misspellings on the original paper Orthoptera
  - 7664 #  Block due to misspellings on the original paper Orthoptera
@@ -602,6 +601,41 @@ sourceDatasetExclusion:
  - 264120 # Block plazi dataset due to misspellings on the original paper https://github.com/CatalogueOfLife/data/issues/1113
  - 264218 # Block plazi dataset due to misspellings on the original paper  Pangiopsis vs Plangiopsis
  - 193458 # Block plazi https://github.com/CatalogueOfLife/data/issues/1337
+
+ # Blocked datasets correspondant to chapters in 2nd edition of Wilson & Reeder 2005. https://github.com/CatalogueOfLife/data/issues/1368
+ - 193461 # with misspellings Order Primates https://github.com/CatalogueOfLife/data/issues/1363#issuecomment-3608095044
+ - 193458 # with misspellings. Order Rodentia - Family Sciuridae Wilson & Reeder, 2005 2nd Edition https://github.com/CatalogueOfLife/data/issues/1337 
+ - 194058 # Order Carnivora 2nd Edition
+ - 194059 # Order Artiodactyla 2nd Edition
+ - 193271 # Order Cetacea
+ - 193485 # Order Chiroptera
+ - 193483 # Order Dasyuromorphia
+ - 193482 # Order Dermoptera
+ - 193481 # Order Didelphimorphia
+ - 193479 # Order Diprotodontia
+ - 193476 # Order Hyracoidea
+ - 193473 # Order Lagomorpha
+ - 193472 # Order Macroscelidea
+ - 193471 # Order Microbiotheria
+ - 193470 # Order Monotremata
+ - 193467 # Order Notoryctemorphia
+ - 193466 # Order Paucituberculata 
+ - 193464 # Order Peramelemorphia
+ - 193463 # Order Perissodactyla 
+ - 193462 # Order Pholidota
+ - 193460 # Order Proboscidea
+ - 194061 # Order Rodentia - Family Anomaluridae
+ - 194060 # Order Rodentia - Family Aplodontidae
+ - 193486 # Order Rodentia - Family Castoridae
+ - 193484 # Order Rodentia - Family Ctenodactylidae
+ - 193480 # Order Rodentia - Family Dipodidae
+ - 193478 # Order Rodentia - Family Geomyidae
+ - 193477 # Order Rodentia - Family Heteromyidae
+ - 193469 # Order Rodentia - Family Muridae
+ - 193465 # Order Rodentia - Family Pedetidae
+ - 193459 # Order Scandentia
+ - 193457 # Order Sirenia
+ - 193456 # Order Tubulidentata
  
  # Blocked datasets following the Auchenorrhyncha expert review  2024
  - 2485 # Block chresonym is beter deal with at 3i
