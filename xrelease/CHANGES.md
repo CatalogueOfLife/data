@@ -1,6 +1,9 @@
 # COL eXtended Release historic ChangeLog
 We document here all major editorial changes for each weekly [COL XRelease]([url](https://www.checklistbank.org/dataset?limit=50&offset=0&origin=xrelease&releasedFrom=3&reverse=false)).
 
+### 2026, Weeks 1 & 2
+- block of names (editorial decisions) that created duplicates
+- iNat sectors for Vespoidea and Chrysididae
 
 ### 2025, Week 46
 [CLB 313100](https://www.checklistbank.org/dataset/313100), [#515](https://download.checklistbank.org/releases/3/515)
