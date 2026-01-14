@@ -1,6 +1,11 @@
 # COL eXtended Release historic ChangeLog
 We document here all major editorial changes for each weekly [COL XRelease]([url](https://www.checklistbank.org/dataset?limit=50&offset=0&origin=xrelease&releasedFrom=3&reverse=false)).
 
+### 2026, Week 3
+- New source and sector included to fill gap in Tenebrionidae: https://www.checklistbank.org/dataset/313711/about
+- New source and sector included to fill gap in Tenebrionidae: https://www.checklistbank.org/catalogue/3/dataset/5678/metadata
+- Block genus Neogarganus from TAXREF (missplaced) , should be included from IRMNG. https://github.com/CatalogueOfLife/data/issues/1410
+
 ### 2026, Weeks 1 & 2
 - block of names (editorial decisions) that created duplicates
 - iNat sectors for Vespoidea and Chrysididae
