@@ -2,6 +2,7 @@
 We document here all major editorial changes for each weekly [COL XRelease]([url](https://www.checklistbank.org/dataset?limit=50&offset=0&origin=xrelease&releasedFrom=3&reverse=false)).
 
 ### 2026, Week 3
+[CLB 313811](https://www.checklistbank.org/dataset/313811/about), [#539](https://download.checklistbank.org/releases/3/539/)
 - New source and sector included to fill gap in Tenebrionidae: https://www.checklistbank.org/dataset/313711/about
 - New source and sector included to fill gap in Tenebrionidae: https://www.checklistbank.org/catalogue/3/dataset/5678/metadata
 - Block genus Neogarganus from TAXREF (missplaced) , should be included from IRMNG. https://github.com/CatalogueOfLife/data/issues/1410
