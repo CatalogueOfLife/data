@@ -587,6 +587,7 @@ sourceDatasetExclusion:
  - 308023 # Creates matching error https://github.com/CatalogueOfLife/data/issues/967
  - 52840 # Blocked due to errors in digitization of species that already existis in COL
  - 298356 # Block https://github.com/CatalogueOfLife/data/issues/1254
+ - 7136 # excluded, the lack of higher classification and error in digitization generate lots of duplicates. Most of the genus and species are covered by LPSN
  
  # Blocked datasets due to misspelling detected during the Orthoptera revisión 2025-06
  - 4401 #  Block due to misspellings on the original paper Orthoptera
