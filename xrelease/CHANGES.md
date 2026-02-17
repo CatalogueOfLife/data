@@ -1,6 +1,11 @@
 # COL eXtended Release historic ChangeLog
 We document here all major editorial changes for each weekly [COL XRelease]([url](https://www.checklistbank.org/dataset?limit=50&offset=0&origin=xrelease&releasedFrom=3&reverse=false)).
 
+### 2026, Week 6 & 7
+_ Exclusion of datasets creating duplicates: 7136, 300094 , 22282, 2839,
+- Exclusion of dataset due to erroneous classification: 309204
+- Decisions in ChecklistBank to block names with duplicates in COL-China 
+  
 ### 2026, Week 3
 Published as COL26.1 XR: [CLB 313811](https://www.checklistbank.org/dataset/313811/about), [#539](https://download.checklistbank.org/releases/3/539/)
 
