@@ -1066,15 +1066,15 @@ ignoredReleases:
 actions:
   # build gbif impact metrics
   - method: POST
-    url: https://builds.gbif.org/job/col-gbif-impact-matching-ws/buildWithParameters?token=dwTF5uJJ-o97Fhhx_12edrtfZ7173tggs&BUILD_IMAGE=true&DATASET=xcolrc&DATASET_KEY={key}&DATASET_ALIAS={alias}&cause=XR+release+build+{key}
+    url: "https://builds.gbif.org/job/col-gbif-impact-matching-ws/buildWithParameters?token=dwTF5uJJ-o97Fhhx_12edrtfZ7173tggs&BUILD_IMAGE=true&DATASET=xcolrc&DATASET_KEY={key}&DATASET_ALIAS={alias}&cause=XR+release+build+{key}"
 
 publishActions:
   # prepare matcher file once published
   - method: POST
     auth: "coldeploy:g2o.d43svHngu4HsEp7Xwlo"
-    url: https://api.checklistbank.org/admin/matcher/{key}/prepare
+    url: "https://api.checklistbank.org/admin/matcher/{key}/prepare"
   # rebuild portal sitemap
   - method: POST
-    url: https://builds.gbif.org/job/col-portal-sitemap//buildWithParameters?token=1LOImC9AL8e1RH2vdM71&cause=XR+publication+{key}
+    url: "https://builds.gbif.org/job/col-portal-sitemap/buildWithParameters?token=1LOImC9AL8e1RH2vdM71&cause=XR+publication+{key}"
 
 
