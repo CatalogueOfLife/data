@@ -451,9 +451,6 @@ metadata:
 issueSourceDOIs: true
 issuePublisherSourceDOIs: false
 
-# If true a release will prepare exports for the entire release in all common formats.
-prepareDownloads: true
-
 # taxon to use for incertae sedis names during merges
 incertaeSedis:
   id: S
