@@ -41,8 +41,10 @@ metadata:
      * WCO
      * WOL
      * WoRMS, 66 checklists
+     * WSC
    
     #### Other changes:
+     * All checklists hosted in TaxonWorks (SFs, 3i Auchenorrhyncha, Entiminae, GLI, WCO, WOL) were processed using the new TW exporter.
      * CilCat of Jan 2012 was re-synced.
     
   contact:
