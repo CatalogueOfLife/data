@@ -21,8 +21,7 @@ metadata:
      * AntCat
      * Entiminae
      * FishBase via Aphia at VLIZ
-     * Gelechiidae
-     * GLI
+     * Gelechiidae     
      * ICTV MSL
      * ITIS
      * ReptileDB
@@ -45,7 +44,7 @@ metadata:
    
     #### Other changes:
      * All checklists hosted in TaxonWorks (SFs, 3i Auchenorrhyncha, Entiminae, GLI, WCO, WOL) were processed using the new TW exporter.
-     * CilCat of Jan 2012 was re-synced.
+     * CilCat of Jan 2012 & Systema Dipterorum Dec 2025 were re-synced.
     
   contact:
     city: Amsterdam
