@@ -13,16 +13,13 @@ metadata:
     The Catalogue of Life estimates 2.3M extant species on the planet recognised by taxonomists at present time. 
     This means that for many groups it continues to be deficient, and users may notice that many species are still missing from the Catalogue.
 
-    ### What's new in March 2026 edition?  
+    ### What's new in April 2026 edition?  
       
-    #### 89 checklists have been updated:
+    #### XX checklists have been updated:
      
      * 3i Auchenorrhyncha
-     * AntCat
      * Entiminae
      * FishBase via Aphia at VLIZ
-     * Gelechiidae     
-     * ICTV MSL
      * ITIS
      * ReptileDB
      * Scarabs     
@@ -39,12 +36,10 @@ metadata:
      * SF Psocodea
      * WCO
      * WOL
-     * WoRMS, 66 checklists
-     * WSC
-   
-    #### Other changes:
-     * All checklists hosted in TaxonWorks (SFs, 3i Auchenorrhyncha, Entiminae, GLI, WCO, WOL) were processed using the new TW exporter.
-     * CilCat of Jan 2012, Systema Dipterorum of Dec 2025 & SF Grylloblattodea of Jan 2026 were re-synced.
+     * World Ferns
+     * World Plants
+     * WoRMS, 66 checklists     
+       
     
   contact:
     city: Amsterdam
