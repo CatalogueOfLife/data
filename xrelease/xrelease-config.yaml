@@ -682,8 +682,8 @@ sourceDatasetExclusion:
  - 122795 #Systematic revision ANdean family Metasarcidae
 
  # Blocked datasets digitized by Plazi from gray literature like Environmental Impact Assesment (EIA - World Bank) 
- - 312822 ENVIRONMENTAL IMPACT ASSESSMENT (EIA) OF WORLD BANK FINANCED SIDDHIRGANJ https://github.com/CatalogueOfLife/data/issues/1482
- - 312516 ESTUDIO DE IMPACTO AMBIENTAL (EIA) DEL PARQUE SOLAR FOTOVOLTAICO GUAYEPO
+ - 312822 # ENVIRONMENTAL IMPACT ASSESSMENT (EIA) OF WORLD BANK FINANCED SIDDHIRGANJ https://github.com/CatalogueOfLife/data/issues/1482
+ - 312516 # ESTUDIO DE IMPACTO AMBIENTAL (EIA) DEL PARQUE SOLAR FOTOVOLTAICO GUAYEPO
  
  # exclude BDJ journals not reviewed, from taxa with low gaps, and from 2020 an below
  - 52129
