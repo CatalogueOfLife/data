@@ -447,9 +447,6 @@ metadata:
   #  description: Describe how the merging works
 
 
-# If true a release will issue new DOIs to changed sources.
-issueSourceDOIs: true
-issuePublisherSourceDOIs: false
 
 # taxon to use for incertae sedis names during merges
 incertaeSedis:
