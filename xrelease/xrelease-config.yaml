@@ -4,7 +4,7 @@
 
 # dataset metadata with project variables to be applied to each release
 metadata:
-  alias: "COL26.3 XR" #  "COL{date,yy.M} XR"
+  alias: "COL{date,yy.M} XR"
   title: Catalogue of Life
   version: "{date,yyyy-MM-dd} XR" # Annual Checklist 2025 XR
   completeness: 90
@@ -457,6 +457,12 @@ incertaeSedis:
 
 failOnSyncErrors: false
 removeEmptyGenera: false
+
+# If true algorithmic detects and synonymizes (sub)species misspellings per family as part of the homotypic grouping.
+misspellingConsolidation: true
+
+# Flag exact same, accepted names but with different authors as provisionally accepted.
+flagDuplicatesAsProvisional: true
 
 # activate the homotypic grouping?
 homotypicConsolidation: true
