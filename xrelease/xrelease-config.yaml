@@ -520,6 +520,7 @@ blockedNames:
   - Katharellidae  #https://github.com/CatalogueOfLife/xcol/issues/130
   - Animalia # https://github.com/CatalogueOfLife/xcol/issues/164
   - Plantae
+  - Melolonthidae # https://github.com/CatalogueOfLife/data/issues/1545
  
 
 # List of regular expression patterns for scientific names that are globally blocked from any source.
