@@ -1,6 +1,11 @@
 # COL eXtended Release historic ChangeLog
 We document here all major editorial changes for each weekly [COL XRelease]([url](https://www.checklistbank.org/dataset?limit=50&offset=0&origin=xrelease&releasedFrom=3&reverse=false)).
 
+### 2026, Week 16 
+- Change in priority of sectors from Worms with Algae
+- Change in priority of sector from GRIN: from 8 to 158
+- Block of names in project (duplicates) and in config file:  https://github.com/CatalogueOfLife/data/issues/1545
+
 ### 2026, Week 6 & 7
 _ Exclusion of datasets creating duplicates: 7136, 300094 , 22282, 2839,
 - Exclusion of dataset due to erroneous classification: 309204
