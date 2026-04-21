@@ -4,6 +4,7 @@ We document here all major editorial changes for each weekly [COL XRelease]([url
 ### 2026, Week 16 
 - Change in priority of sectors from Worms with Algae
 - Change in priority of sector from GRIN: from 8 to 158
+- Sector from WoRMS (dataset 2011) Plantae:Plantae deleted
 - Block of names in project (duplicates) and in config file:  https://github.com/CatalogueOfLife/data/issues/1545
 
 ### 2026, Week 6 & 7
