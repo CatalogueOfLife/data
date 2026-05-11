@@ -552,6 +552,8 @@ blockedNamePatterns:
  - '\bundefined\b'
   # https://github.com/CatalogueOfLife/data/issues/1277
  - '(?i)\bCandidatus\b'
+   # https://github.com/CatalogueOfLife/data/issues/1571
+ - '(?i)\b"Candidatus\b'
 
 
 # epithets keyed by family
