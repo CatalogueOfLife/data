@@ -5,6 +5,8 @@ Each entry is headed by the dataset version date (`YYYY-MM-DD`), followed when k
 
 For an automatically generated changelog that offers change metrics please see https://www.catalogueoflife.org/data/changelog
 
+### 2026-05-15
+- Mollusca was blocked from WoRMS (dataset 2011) - comment on day 2026-05-15 [issue 1500](https://github.com/CatalogueOfLife/data/issues/1500) due to contradictions with MolluscaBase
 
 ### 2026-04-24
 [CLB 315026](https://www.checklistbank.org/dataset/315026/about), [#576](https://download.checklistbank.org/releases/3/576/)
