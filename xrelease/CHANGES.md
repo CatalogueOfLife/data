@@ -5,6 +5,12 @@ Each entry is headed by the dataset version date (`YYYY-MM-DD`), followed when k
 
 For an automatically generated changelog that offers change metrics please see https://www.catalogueoflife.org/data/changelog
 
+### 2026-05-22
+- Sector added from NCBI, just Bacteria, scientific names. Test: Candidatus, unidentified and uncultured names should not be included. 
+- Editorial decisions: blocked names in UKSI and IRMNG
+- Pycnopodiidae was blocked as it's current status is unclear. It's currently accepted as a subfamily in WoRMS, but with the same LSID that Pynopodiidae had. https://github.com/CatalogueOfLife/data/issues/1584
+- Dataset 26425 was blocked because it had completely erroneous information.
+  
 ### 2026-05-15
 - The Reptile Database with literature sector  (dataset #223917) was removed from project as it was including just 1 reference for one duplicated name)
   
