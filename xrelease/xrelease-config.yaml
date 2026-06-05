@@ -553,10 +553,10 @@ blockedNamePatterns:
  - '\bundefined\b'
   # https://github.com/CatalogueOfLife/data/issues/1277
  - '(?i)\bCandidatus\b'
-   # https://github.com/CatalogueOfLife/data/issues/1571
+  # https://github.com/CatalogueOfLife/data/issues/1571
  - '(?i)\b"Candidatus\b'
- # unwanted patterns from PR2 https://github.com/CatalogueOfLife/data/issues/1597
-- '\blineage\b/i'
+  # unwanted patterns from PR2 https://github.com/CatalogueOfLife/data/issues/1597
+ - '\blineage\b/i'
 
 # epithets keyed by family
 basionymExclusions:
