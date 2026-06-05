@@ -538,7 +538,7 @@ blockedNames:
 blockedNamePatterns:
  - '^\? [a-z]+'
  # Unwanted ? in any name in any part related to https://github.com/CatalogueOfLife/backend/issues/1510
- - '^\?.*$'
+ - '\(\?\)'
  # unwanted pattenrs from NCBI
  - '(?i)\b(environmental sample|unidentified|uncultured)\b'
  # unwanted group names from zoobank
