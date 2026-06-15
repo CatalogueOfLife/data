@@ -11,18 +11,16 @@ metadata:
   confidence: 4  
   description: |
     The Catalogue of Life is building a comprehensive catalogue of all known species on Earth. 
-    It offers two types of releases that reflect different levels of quality. 
-    The Base Release is curated and verified by experts specifically for COL. 
-    The eXtended Release (COL XR) builds on the Base Release {base.version} ({base.alias}) by programmatically integrating additional data sources.
-    It integrates information from {mergeSources} overlapping taxonomic and nomenclatural global, regional, national and management data sources (checklists) 
-    as well as originating from digitised literature available in Catalogue of Life's infrastructure ChecklistBank. 
-    New names and other data included in the COL XR are indicated with the XR icon. 
-   
-    This release addresses several gaps of the Base Release and also enriches the existing names with information such as authorships, references, and vernacular names. 
+    This Extended Release (XR) builds on the Base Release {base.version} ({base.alias}) by programmatically integrating 
+    information from {mergeSources} overlapping taxonomic and nomenclatural sources - global, regional, national and management data sources (checklists) 
+    as well as sources originating from digitised literature available in Catalogue of Life's infrastructure ChecklistBank. 
+
+    It addresses several gaps of the Base Release and also enriches the existing names with information such as authorships, references, and vernacular names. 
     It also adds molecular data, such as barcode index numbers or operational taxonomic units, to the Catalogue of Life. Higher taxonomy is being added only in selected groups with important gaps. 
     Meanwhile, the information from the global data sources of the Catalogue of Life Base Release remains unmodified.
+    New names and other data included in the COL XR are indicated with the XR icon. 
 
-    This enhanced process is continuously evolving and undergoing quality control checks by COL editors and its community. 
+    The assembly process is continuously evolving and undergoing quality control checks by COL editors and its community. 
     Due to its programmatic nature as well as the taxonomic and nomenclatural differences among the data sources used, some issues may arise. 
     We therefore caution the user, and invite everyone to help log data issues in the [COL’s data GitHub repository](https://github.com/CatalogueOfLife/data/issues/new?template=xcol-content-feedback.md). 
     We will do our best to resolve these issues as soon as possible.
