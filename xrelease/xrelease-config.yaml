@@ -1079,6 +1079,9 @@ actions:
   # build gbif impact metrics
   - method: POST
     url: "https://builds.gbif.org/job/col-gbif-impact-matching-ws/buildWithParameters?token=dwTF5uJJ-o97Fhhx_12edrtfZ7173tggs&BUILD_IMAGE=true&DATASET=xcolrc&DATASET_KEY={key}&DATASET_ALIAS={alias}&cause=XR+release+build+{key}"
+  # update preview portal
+  - method: POST
+    url: "https://builds.gbif.org/view/COL/job/col-portal/buildWithParameters?ENV=preview&token=1LOImC9AL8e1RH2vdM71&cause=extended+release+build+{key}"
 
 publishActions:
   # prepare matcher file once published
