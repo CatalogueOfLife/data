@@ -11,20 +11,26 @@ metadata:
   confidence: 4  
   description: |
     The Catalogue of Life is building a comprehensive catalogue of all known species on Earth. To achieve it, its assembly process comprises two major phases.
-    The first phase brings together information curated and verified by experts specifically for the Catalogue of Life at a global level. The result of this phase, the Base Release, is a dataset published monthly and annually. 
-    Current and historical versions are available for use and consultation in [Catalogue of Life’s website](https://www.catalogueoflife.org/) as well as its infrastructure, [ChecklistBank](https://www.checklistbank.org/).
+    The first phase brings together information curated and verified by experts specifically for the Catalogue of Life at a global level. 
+    The result of this phase, the Base Release, is a dataset published monthly and annually. 
+    Current and historical versions are available for use and consultation on [Catalogue of Life’s website](https://www.catalogueoflife.org/) as well as its infrastructure,
+    [ChecklistBank](https://www.checklistbank.org/).
+    
     The second phase builds on the Base Release {base.version} ({base.alias}) by programmatically integrating additional information from {mergeSources} overlapping taxonomic and nomenclatural
     sources - global, regional, national and management data sources (checklists), as well as from digitised literature available through ChecklistBank.
     The result of this phase, the Extended Release (COL XR), is a separate dataset published monthly and annually.
-    The EXtended Release is the current taxonomic framework used by [GBIF](https://www.gbif.org/https://www.gbif.org/). It addresses several gaps in the Base Release and enriches existing names with additional information such authorships, references and vernacular names. It also incorporates molecular data, including barcode index numbers 
+    
+    The Extended Release is the current taxonomic framework used by [GBIF](https://www.gbif.org/). It addresses several gaps in the Base Release and enriches 
+    existing names with additional information such as authorships, references and vernacular names. It also incorporates molecular data, including barcode index numbers 
     and operational taxon units. Higher-level taxonomy is added only for selected groups with significant gaps.
     The additional information included in COL XR is easily identified on the Catalogue of Life website using the XR icon. When downloading the dataset, or subsets of it, 
-    the <merged> field can be used to distinguish integrated information from content originating in the Base Release. The original content contributed through the Catalogue of Life Base Release
+    the 'merged' field can be used to distinguish integrated information from content originating in the Base Release. The original content contributed through the Catalogue of Life Base Release
     is preserved, while additional information is integrated alongside it.
+    
     Users interested in the expert-curated source catalogue without additional programmatic integrations should consult the Catalogue of Life Base Release.
     This enhanced process is continuously evolving and undergoes ongoing quality-control checks by COL editors and the wider community.
     Due to the programmatic nature of COL XR, as well as taxonomic and nomenclatural differences among the data sources used, some issues may arise.
-    Users are encouraged to report suspected issues through the COL data the [COL’s data GitHub repository](https://github.com/CatalogueOfLife/data/issues/new?template=xcol-content-feedback.md). 
+    Users are encouraged to report suspected issues through the [COL’s data GitHub repository](https://github.com/CatalogueOfLife/data/issues/new?template=xcol-content-feedback.md). 
     We will do our best to resolve reported issues as soon as possible.
 
     
