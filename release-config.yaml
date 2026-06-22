@@ -13,23 +13,14 @@ metadata:
     The Catalogue of Life estimates 2.3M extant species on the planet recognised by taxonomists at present time. 
     This means that for many groups it continues to be deficient, and users may notice that many species are still missing from the Catalogue.
 
-    ### What's new in June 2026 edition?  
+    ### What's new in July 2026 edition?  
 
-    ####  New global checklist:
-
-    * SF Selected Insecta Orders replaced SF Grylloblattodea (currently incl. superorder †Archaeorthoptera and orders Archaeognatha, †Cnemidolestida, †Eoblattida, Notoptera , Reculida, Zygentoma)
-
-    ####  91 checklists have been updated:
+        ####  XX checklists have been updated:
      
      * 3i Auchenorrhyncha
-     * Alucitoidea
-     * AntCat
      * Entiminae
      * FishBase via Aphia at VLIZ
-     * Gelechiidae
-     * GLI
      * ITIS
-     * Pterophoroidea
      * Scarabs     
      * SF Aphid
      * SF Chrysididae
@@ -41,11 +32,12 @@ metadata:
      * SF Orthoptera
      * SF Phasmida
      * SF Plecoptera
-     * SF Psocodea     
+     * SF Psocodea
+     * SF Selected Insecta Orders    
+     * Systema Dipterorum 
+     * UCD
      * WCO
-     * WOL
-     * World Ferns
-     * World Plants
+     * WOL     
      * WoRMS, 66 checklists         
         
   contact:
