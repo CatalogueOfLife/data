@@ -610,6 +610,7 @@ sourceDatasetExclusion:
  - 2839 # Contains many genus with "spp" as authoship, merging and generating duplicates  https://github.com/CatalogueOfLife/data/issues/1477
  - 33905 # Nomenclator with multiple errors in classification, digitization and inclusion of varieties as accepted taxa. https://github.com/CatalogueOfLife/data/issues/1525
  - 26425 # Dataset with completely erroneous data and classification https://github.com/plazi/community/issues/534
+ - 6238 # Dataset only providing 16 names,14 of them are generating duplicates. 
  
  # Blocked datasets due to misspelling detected during the Orthoptera revisión 2025-06
  - 4401 #  Block due to misspellings on the original paper Orthoptera
