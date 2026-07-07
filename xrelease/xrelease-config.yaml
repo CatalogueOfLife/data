@@ -590,6 +590,10 @@ enforceUnique:
   GENUS:
     - Anas
 
+# Accepted taxa of the project that will be shielded from all merge syncs
+protectedGroups:
+  ORDER:
+    - Opiliones
 
 # specific list of CLB dataset keys to exclude as sectors being created for aboves source publisher keys
 sourceDatasetExclusion:
