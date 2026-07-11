@@ -4,6 +4,8 @@ We document here all major editorial changes for each weekly [COL XRelease](http
 Each entry is headed by the dataset version date (`YYYY-MM-DD`), followed when known by links to the ChecklistBank dataset, the release attempt log, and the DOI.
 
 For an automatically generated changelog that offers change metrics please see https://www.catalogueoflife.org/data/changelog
+### 2026-07-10
+- Inclusion of specific Plazi dataset as sector to fill gap in family Chrysididae: Hymenoptera (Dataset 313716). Ranks included: subfamilies, tribes, genus, species and subspecies)
 ### 2026-06-12
 - NCBI sector removed (scientific names in Bacteria): unsuccessfull test, the mayority of the names merged were informal or not validly published names (according to LPSN).
 - Sources removed: [2032](https://www.checklistbank.org/dataset/2032/metadata) and [55472](https://www.checklistbank.org/dataset/55472/metadata): no information was merged from them. 
