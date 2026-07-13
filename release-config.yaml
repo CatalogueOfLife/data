@@ -18,7 +18,7 @@ metadata:
        ####  New global checklist:
      * SF Blattodea (it replaced SF Isoptera and expanded taxonomic coverage)
 
-        ####  XX checklists have been updated:
+        ####  93 checklists have been updated:
           
      * 3i Auchenorrhyncha
      * Bryonames
@@ -52,6 +52,7 @@ metadata:
         ####  Other changes:
         
      * The Species Files checklists for Coleorrhyncha, Embioptera, Grylloblattodea, Isoptera, Mantophasmatodea, †Permopsocida & Zoraptera have now been consolidated into SF Blattodea & SF Selected Insecta Orders and retired from CoL as independent entries.
+     * WTaxa of Apr 2021 and Staphbase of Aug 2022 have been re-synced
 
   contact:
     city: Amsterdam
