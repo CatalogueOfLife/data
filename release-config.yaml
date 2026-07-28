@@ -13,22 +13,18 @@ metadata:
     The Catalogue of Life estimates 2.3M extant species on the planet recognised by taxonomists at present time. 
     This means that for many groups it continues to be deficient, and users may notice that many species are still missing from the Catalogue.
 
-    ### What's new in July 2026 edition?  
+    ### What's new in August 2026 edition?  
 
        ####  New global checklist:
-     * SF Blattodea (it replaced SF Isoptera and expanded taxonomic coverage)
+     * The beetle family Dermestidae as a new part of Háva's Catalogue
 
-       ####  93 checklists have been updated:
+       ####  XX checklists have been updated:
           
      * 3i Auchenorrhyncha
-     * Bryonames
      * Entiminae
      * FishBase via Aphia at VLIZ
      * GLI
-     * Global Gracillariidae
      * ITIS
-     * Pterophoroidea
-     * ReptileDB
      * Scarabs     
      * SF Aphid
      * SF Chrysididae
@@ -41,18 +37,12 @@ metadata:
      * SF Phasmida
      * SF Plecoptera
      * SF Psocodea
-     * SF Selected Insecta Orders (it now includes previously independent Species Files for Grylloblattodea, Coleorrhyncha, Embioptera, Mantophasmatodea, †Permopsocida, and Zoraptera)   
-     * Systema Dipterorum 
-     * The Scorpion Files
+     * SF Selected Insecta Orders
      * UCD
      * WCO
      * WOL     
      * WoRMS, 66 checklists         
-        
-       ####  Other changes:
-        
-     * The Species Files checklists for Coleorrhyncha, Embioptera, Grylloblattodea, Isoptera, Mantophasmatodea, †Permopsocida & Zoraptera have now been consolidated into SF Blattodea & SF Selected Insecta Orders and retired from CoL as independent entries.
-     * WTaxa of Apr 2021, StaphBase of Aug 2022, and CilCat of Jan 2012 have been re-synced
+     
 
   contact:
     city: Amsterdam
