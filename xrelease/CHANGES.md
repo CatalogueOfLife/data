@@ -4,6 +4,9 @@ We document here all major editorial changes for each weekly [COL XRelease](http
 Each entry is headed by the dataset version date (`YYYY-MM-DD`), followed when known by links to the ChecklistBank dataset, the release attempt log, and the DOI.
 
 For an automatically generated changelog that offers change metrics please see https://www.catalogueoflife.org/data/changelog
+### 2026-07-29
+- Sector of dataset [2029](https://www.checklistbank.org/dataset/2029/metadata) was modified to only merge species and subspecies. See [#1646](https://github.com/CatalogueOfLife/data/issues/1646)
+
 ### 2026-07-15
 - Inclusion of Swiss National Coleoptera Databank (Checklist) (dataset 5977) to cover several gaps in Coleoptera
 - Inclusion of sector Tenebrionidae from iNat (only species and subspecies) to cover gap in the family. 
