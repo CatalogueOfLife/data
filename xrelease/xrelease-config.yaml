@@ -531,6 +531,7 @@ blockedNames:
   - Plantae
   - Melolonthidae # https://github.com/CatalogueOfLife/data/issues/1545
   - Pycnopodiidae # missinterpretation based on an outdated record. https://github.com/CatalogueOfLife/data/issues/1584
+  - Cyclorrhapha # It's a clade name. https://github.com/CatalogueOfLife/data/issues/1553
  
 
 # List of regular expression patterns for scientific names that are globally blocked from any source.
