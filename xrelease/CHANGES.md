@@ -4,6 +4,34 @@ We document here all major editorial changes for each weekly [COL XRelease](http
 Each entry is headed by the dataset version date (`YYYY-MM-DD`), followed when known by links to the ChecklistBank dataset, the release attempt log, and the DOI.
 
 For an automatically generated changelog that offers change metrics please see https://www.catalogueoflife.org/data/changelog
+
+### 2026-08-17 to 2026-08-17
+- Reestablishment of 12 sectors after being accidentally deleted :
+
+  WORMS 
+  (sectors with * originally included ranks above order, this time the project configuration didn't allowed to merge names above order):
+  - Rhodophyta (ranks to merge: Family and genus) Target: Plantae as phylum Rhodophyta wasn't detected in the project configuration.  
+  - Chlorophyta (ranks to merge: Family and genus). Target: Plantae as phylum Chlorophyta wasn't detected in the project configuration.  
+  - Charophyta* (ranks to merge: Order, Family and genus).  Target: Plantae as phylum Charophyta wasn't detected in the project configuration. 
+  - Cryptophyta* (ranks to merge: Order, Family and genus) Target: Chromista
+  - Haptophyta* (ranks to merge: Order, Family and genus) Target: Chromista
+  
+  IRMNG
+  - Chromista
+  - Archaea
+  - Coleoptera (only genera)
+  - Animalia
+  - Paleo sector (undefined Target and Subject,  to only merge extinct names in all kingdoms)
+
+  PR2: Amoebozoa
+   
+- Sectors deleted: 
+  - GTDB : Archaea and Bacteria. Won't be added in this version, we still need to check further details pon which names to include.
+  - Dakatcha Plants (101788) it was including only 8 names (misspellings or with wrong taxonomic rank)
+    
+- Several names blocked in project decisions
+
+
 ### 2026-08-17
 - Sector included from dataset [310770](https://www.checklistbank.org/dataset/310770/metadata) to include links to BHL on each name. 
 
