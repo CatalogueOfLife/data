@@ -5,6 +5,10 @@ Each entry is headed by the dataset version date (`YYYY-MM-DD`), followed when k
 
 For an automatically generated changelog that offers change metrics please see https://www.catalogueoflife.org/data/changelog
 
+### 2026-08-28
+
+- Block in configfile Plazi dataset cussing an interference with the id of Mantodea  https://github.com/plazi/community/issues/557
+
 ### 2026-08-17 to 2026-08-17
 - Reestablishment of 12 sectors after being accidentally deleted :
 
