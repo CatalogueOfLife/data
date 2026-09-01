@@ -4,6 +4,8 @@ We document here all major editorial changes for each weekly [COL XRelease](http
 Each entry is headed by the dataset version date (`YYYY-MM-DD`), followed when known by links to the ChecklistBank dataset, the release attempt log, and the DOI.
 
 For an automatically generated changelog that offers change metrics please see https://www.catalogueoflife.org/data/changelog
+### 2026-08-31
+- Sector of Brazilian Flora reestablished from  Myrtales to Plantae https://github.com/CatalogueOfLife/data/issues/1688
 
 ### 2026-08-28
 
