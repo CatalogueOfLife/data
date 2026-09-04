@@ -567,8 +567,9 @@ blockedNamePatterns:
  - '(?i)\bCandidatus\b'
   # https://github.com/CatalogueOfLife/data/issues/1571
  - '(?i)\b"Candidatus\b'
-  # unwanted patterns from PR2 https://github.com/CatalogueOfLife/data/issues/1597
- - '^[A-Za-z]+-lineage$'
+  # unwanted patterns from PR2 https://github.com/CatalogueOfLife/data/issues/1597 
+  # and https://github.com/CatalogueOfLife/data/issues/1686
+ - '^[A-Za-z0-9]+-lineage$'
 
 # epithets keyed by family
 basionymExclusions:
