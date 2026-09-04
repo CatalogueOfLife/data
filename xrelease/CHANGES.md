@@ -6,6 +6,7 @@ Each entry is headed by the dataset version date (`YYYY-MM-DD`), followed when k
 For an automatically generated changelog that offers change metrics please see https://www.catalogueoflife.org/data/changelog
 ### 2026-08-31
 - Sector of Brazilian Flora reestablished from  Myrtales to Plantae https://github.com/CatalogueOfLife/data/issues/1688
+- Inclusion of sector for Cichorieae Systematics Portal (only for hybrid names)  https://github.com/CatalogueOfLife/data/issues/914
 
 ### 2026-08-28
 
