@@ -555,12 +555,12 @@ blockedNamePatterns:
  - '\bgrp\.\b'
  - '\btobedeleted'
  # unwanted patterns from iBOLD https://github.com/gbif/backbone-feedback/issues/28#issuecomment-2220382593
- - '\b(spnr|nr|nsp|morphospecies|Gen novum)\b/i'
- - '\b(indet|indeterminate)\b/i' # to be removed after 21 September as its part of the name parser then
+ - '\b(spnr|nr|nsp|morphospecies|Gen novum)\b'
+ - '\b(indet|indeterminate)\b' # to be removed after 21 September as its part of the name parser then
  # unwanted hybrid placeholders from GRIN
  - '\bhybr\b'
  # patterns from Plazi
- - '\b(Gen_Indet|Gen indet)\b/i'
+ - '\b(Gen_Indet|Gen indet)\b'
  # https://github.com/plazi/community/issues/387
  - '\bundefined\b'
   # https://github.com/CatalogueOfLife/data/issues/1277
