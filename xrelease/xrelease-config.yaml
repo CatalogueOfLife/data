@@ -532,6 +532,7 @@ blockedNames:
   - Melolonthidae # https://github.com/CatalogueOfLife/data/issues/1545
   - Pycnopodiidae # missinterpretation based on an outdated record. https://github.com/CatalogueOfLife/data/issues/1584
   - Cyclorrhapha # It's a clade name. https://github.com/CatalogueOfLife/data/issues/1553
+  - Procytherur a sp. 2 Franz et al., 2018   # mangled Procytherura sp. 2 from Wannenmacher2021 (3869) https://github.com/CatalogueOfLife/data/issues/1568#issuecomment-5598586603
  
 
 # List of regular expression patterns for scientific names that are globally blocked from any source.
