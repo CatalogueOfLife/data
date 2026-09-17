@@ -4,7 +4,12 @@ We document here all major editorial changes for each weekly [COL XRelease](http
 Each entry is headed by the dataset version date (`YYYY-MM-DD`), followed when known by links to the ChecklistBank dataset, the release attempt log, and the DOI.
 
 For an automatically generated changelog that offers change metrics please see https://www.catalogueoflife.org/data/changelog
+### 2026-09-17
+[CLB316329](https://www.checklistbank.org/dataset/316329/metadata) 
+- sector for Brazilian Flora was deleted as it was creating duplicates [#1715](https://github.com/CatalogueOfLife/data/issues/1715)
+
 ### 2026-08-31
+[CLB316165](https://www.checklistbank.org/dataset/316165/metadata)  published as COL26.8 XR
 - Sector of Brazilian Flora reestablished from  Myrtales to Plantae https://github.com/CatalogueOfLife/data/issues/1688
 - Inclusion of sector for Cichorieae Systematics Portal (only for hybrid names)  https://github.com/CatalogueOfLife/data/issues/914
 
