@@ -44,6 +44,7 @@ For an automatically generated changelog that offers change metrics please see h
 
 ### 2026-08-07
 - Two sectors were added from GTDB: Archaea and Bacteria. To cover GBIF occurrences not covered by the XR.  See [#915](https://github.com/gbif/backbone-feedback/issues/915)
+- World plant merge sector was removed see [1660](https://github.com/CatalogueOfLife/data/issues/1660)
 
 ### 2026-07-29
 - Sector of dataset [2029](https://www.checklistbank.org/dataset/2029/metadata) was modified to only merge species and subspecies. See [#1646](https://github.com/CatalogueOfLife/data/issues/1646)
