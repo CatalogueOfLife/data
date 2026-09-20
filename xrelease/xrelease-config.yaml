@@ -678,6 +678,7 @@ sourceDatasetExclusion:
  - 269229 # Small diferences lead to duplicates
  - 229647 # Authorship problems on the DWC-A export
  - 39007 # Better handled in 3i, Remove to avoid duplicates due to some authorship diferences
+ - 38478 #
  
  # Blocked datasets digitized by Plazi from gray literature like Environmental Impact Assesment (EIA - World Bank) 
  - 312822 # ENVIRONMENTAL IMPACT ASSESSMENT (EIA) OF WORLD BANK FINANCED SIDDHIRGANJ https://github.com/CatalogueOfLife/data/issues/1482
