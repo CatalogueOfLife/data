@@ -4,6 +4,9 @@ We document here all major editorial changes for each weekly [COL XRelease](http
 Each entry is headed by the dataset version date (`YYYY-MM-DD`), followed when known by links to the ChecklistBank dataset, the release attempt log, and the DOI.
 
 For an automatically generated changelog that offers change metrics please see https://www.catalogueoflife.org/data/changelog
+### 2026-09-25
+- Blocked 125 Plazi/article datasets that place genera under their host, vector or host plant, or under otherwise wrong higher taxa, creating misplaced homonym genera during the merge. List with explanations in [bad-article-datasets.csv](bad-article-datasets.csv) [backend#1608](https://github.com/CatalogueOfLife/backend/issues/1608)
+
 ### 2026-09-17
 [CLB316329](https://www.checklistbank.org/dataset/316329/metadata) 
 - sector for Brazilian Flora was deleted as it was creating duplicates [#1715](https://github.com/CatalogueOfLife/data/issues/1715)

@@ -1057,6 +1057,135 @@ sourceDatasetExclusion:
  - 24617
  - 38809
 
+ # Blocked Plazi/article datasets with wrong classifications, mostly placing a genus under its host, vector or host plant.
+ # Found via cross-group genus homonyms in COL26.8 XR 316165, see xrelease/bad-article-datasets.csv
+ # https://github.com/CatalogueOfLife/backend/issues/1608
+ - 298649 # Bukejs2011: misspelt Cercion (for Cercyon) placed in Hydrophilidae, homonym of the damselfly genus
+ - 32374 # FernandezTriana2017: truncated genus "Micro" (Microplitis sofron) created under Braconidae
+ - 51063 # Hodgson2005: superfamily Coccoidea digitised as a genus
+ - 23368 # Zidek2018: Scarabaeus (Scarabaeolus) species digitised under a genus "Scutellum"
+ - 31522 # Alvani2016: host plant Pistacia placed under Pratylenchidae (Nematoda)
+ - 310153 # AWad2024: plant Ocimum placed under Lepidoptera
+ - 47571 # Barjadze2011: host plant Cephalaria placed under Aphididae
+ - 20727 # Boano2022: plant Adansonia placed under Anatidae
+ - 44991 # Cavalleri2012: host plant Hancornia placed under Thripidae
+ - 9535 # Corrêa2020: host plant Anadenanthera placed under Coleoptera
+ - 178561 # Duerr2022: Poaceae host plants placed under Hesperiidae
+ - 27163 # Ebinghaus2018: rust fungus Ravenelia placed under host Fabaceae
+ - 31448 # Golovatch2016: Picea placed under Polydesmidae (millipedes)
+ - 21131 # HernándezOrtiz2015: host plant Dieffenbachia placed under Richardiidae
+ - 264444 # Isaka2021: fungus Fulvifomes placed under host plant Meliaceae
+ - 285321 # Ivanov2016: oomycete Pythium placed under host Araliaceae
+ - 22653 # Jameson2010: scarab Peltonotus placed under host plant Araceae
+ - 27388 # Kirichenko2019: moth Phyllonorycter placed under host plant Fabaceae
+ - 49847 # Magnacca2008: drosophilid Scaptomyza placed under host plant Lamiaceae
+ - 23786 # Maia2018: host plant Pterandra placed under Diptera
+ - 264238 # Nishidono2021: Apiaceae host plant placed under Papilionidae
+ - 47841 # Pellizzari2010: host plant Leptospermum placed under Hemiptera
+ - 33138 # Praz2017: host plant Epilobium placed under Megachilidae
+ - 311702 # Roell2023: plant Blachia placed under Pentatomidae
+ - 298213 # SanchezFlores2020: host plant Karwinskia placed under Aleyrodidae
+ - 23847 # Schnepp2019: beetle Hesperobaenus placed under host palm Arecaceae
+ - 313385 # Shalva2025: host plant genera placed under Aphididae
+ - 309313 # Sherer2025: bamboo host Guadua placed under Hesperiidae
+ - 7456 # Sousa2021: weevil genus Pygidiapion placed under host plant Fabaceae
+ - 285319 # Stipanovic2016: moth Helicoverpa placed under Malvaceae (cotton)
+ - 28054 # Tang2018: erotylid beetle Ceratophila placed under host cycad family Zamiaceae
+ - 264229 # Toljamo2021: oomycete Phytophthora placed under host Rosaceae
+ - 286842 # Ube2019: fungus Bipolaris placed under host Poaceae
+ - 29531 # Volynkin2018: host plant Lactuca placed under Erebidae
+ - 2724 # Xiong2022: fungus Neodeightonia placed under host plant Arecaceae
+ - 140863 # Xu2022: host plant Rubus placed under Aphididae
+ - 4837 # Zahiri2021: host plant Sinapis placed under Pieridae
+ - 24053 # Zhang2020: fungus Curvularia placed under host Poaceae (backend#1608)
+ - 315189 # Zhong2026: fungus Diaporthe placed under host Fagaceae
+ - 45245 # Özdemir2014: host plant Rhododendron placed under Aphididae
+ - 313887 # Şahin2025: host plant Valeriana placed under Aphididae
+ - 29195 # Abrunhosa2018: myxozoan Myxobolus placed under the fish host
+ - 5467 # Acosta2003: rodent host Peromyscus placed under Ceratophyllidae (fleas)
+ - 21391 # Aini2020: fungus Akanthomyces placed under the moth host (Lepidoptera)
+ - 33128 # Ansari2017: copepod host Laophonte placed under suctorian ciliates
+ - 50461 # Bandyopadhyay2006: gregarine Nematocystis placed under the earthworm host
+ - 51344 # Baquero2003: mite Polydiscia placed under the springtail host
+ - 38855 # Bejarano2016: Leishmania placed under the sand fly vector Psychodidae (backend#1608)
+ - 8017 # BezerraSantos2020: Eimeria placed under the opossum host
+ - 8606 # Bratt2020: sciomyzid Colobaea placed under the snail host Succineidae
+ - 311734 # Cabral2021: Toxoplasma placed under the bat host (Chiroptera)
+ - 37002 # Cairns2013: gastropod Pedicularia (associate of stylasterids) placed under Cnidaria
+ - 23066 # Chatterjee2020: ostracod host Eucypris placed under ciliate family Epistylididae
+ - 25813 # Chuang2019: wasp Philolema placed under the spider host Araneidae
+ - 36079 # Constantinescu2016: feather mite Trouessartia placed under the bird host (backend#1608)
+ - 35847 # Constantinescu2017: feather mite Proterothrix placed under the bird host
+ - 313401 # Cristiano2020: beetle Cis placed under host fungi (Agaricomycetes)
+ - 51335 # Davidson2003: wasp Cerceris (predator of buprestids) placed under Buprestidae
+ - 47409 # Davies2010: nematode Fergusobia placed under host plant Myrtaceae
+ - 39311 # Dronen2015: bird host genera placed under Cyclocoelidae (Trematoda)
+ - 36320 # Dronen2017: trematode Uvitellina placed under the bird host
+ - 28957 # GaryAPGibson2016: lepidopteran host Dendrolimus placed under Eupelmidae
+ - 44557 # Gibson2012: eupelmid egg parasitoids placed under the phasmid host
+ - 30597 # Gupta2018: braconid Acanthormius placed under the lepidopteran host
+ - 26499 # Gustafsson2019: bird host Lonchura placed under Philopteridae
+ - 33716 # Hastriter2013: bat flies (Hippoboscidae) placed under the flea family Stivaliidae
+ - 270715 # Hrycyna2023: bat host Thyroptera placed under Diptera
+ - 43628 # Joharchi2013: mite Promacrolaelaps placed under the beetle host
+ - 7317 # Joharchi2015: laelapid mites placed under the ant host (Hymenoptera)
+ - 27050 # Johnson2006: chewing lice placed under the bird host Pycnonotidae
+ - 300357 # Jorissen2018: cichlid host genera placed under Monogenea
+ - 47020 # Justine2010: lethrinid fish hosts placed under Anisakidae (Nematoda)
+ - 38588 # Khaustov2016: mite Petalomium placed under the ant host
+ - 7151 # Khaustov2021: tarsonemid mite placed under the bark beetle host
+ - 33866 # Korenko2013: hymenopteran parasitoids placed under the spider host Zodariidae
+ - 33240 # Martin2017: fish host Epinephelus placed under Opecoelidae (Trematoda)
+ - 20018 # Martynova2014: beetle Trichodes placed under Hymenoptera
+ - 38540 # MayénEstrada2016: crustacean host genera placed under ciliate family Lagenophryidae
+ - 47705 # Menon2011: mite Hemipteroseius placed under the bug host (Hemiptera)
+ - 49617 # Meyer2008: chewing louse Picicola placed under the bird host
+ - 284677 # Meyer2023: Artemia and Aedes placed under Rotifera
+ - 291175 # MontesRodríguez2024: natural enemies (Coccinellidae, Chamaemyiidae) placed under Pteromalidae
+ - 48186 # Mortazavi2011: mite Trochometridium placed under the beetle host
+ - 311707 # Murphy2023: snail and mussel prey/host genera placed under Sciomyzidae
+ - 44196 # Najer2012: chewing lice placed under their passerine host families
+ - 267791 # Neuhaus2023: kinorhynch host Setaphyes placed under ciliate family Vaginicolidae
+ - 34290 # Ng2016: pea crab Serenotheres placed under the mussel host (Bivalvia)
+ - 27538 # Oliveira2019: Isospora placed under the bird host
+ - 30937 # Orsini2018: nematode Thelastoma placed under the beetle host
+ - 310639 # Pacheco2020: parasitoid wasps placed under their noctuid host
+ - 32904 # Rodriguez2017: chytrid Batrachochytrium placed under the frog host
+ - 22681 # Rodríguez2010: nematode parasites placed under the beetle host (Coleoptera)
+ - 50204 # Seeman2007: mite Paradiplogynium placed under the earwig host
+ - 45933 # Shah2011: insect host Gryllotalpa placed under Thelastomatidae (Nematoda)
+ - 41365 # Shaw2009: myrmecophilous mites placed under the ant host
+ - 7141 # Shaw2021: ichneumonid Gelis placed under the beetle host (Coleoptera)
+ - 30017 # Sinclair2023: bird host Buteo placed under Hippoboscidae
+ - 41572 # Skoracki2004: quill mites placed under the passerine host
+ - 27064 # Valim2006: chewing louse placed under the bird host
+ - 4480 # Wang2021: fungus Ophiocordyceps placed under the beetle host
+ - 5586 # Wen2013: fungus Ophiocordyceps placed under the moth host Hepialidae
+ - 38472 # Winterbottom2016: coral Acropora placed under Gobiidae
+ - 34334 # Yoder2014: parasitoid Scelio placed under the grasshopper host Acrididae
+ - 300086 # Úngari2020: apicomplexan Dactylosoma placed under the frog host
+ - 21860 # Antonietto2016: ostracod Harbinia placed under Curculionidae
+ - 29178 # Appolloni2018: mollusc genera placed in the wrong class (gastropods under Bivalvia, chiton under Thyasiridae)
+ - 294424 # Boudinot2024: ant genera placed under Amphientomidae (Psocodea)
+ - 100335 # BribiescaContreras2022: scalpellid barnacles placed under Aphroditidae (Polychaeta)
+ - 21279 # ElHawagry2015: chironomid Paratrichocladius placed under Nymphalidae
+ - 294071 # Hryniewicz2019: bivalve Cyrtodaria placed under Pollicipedidae (barnacles)
+ - 2798 # Jeanmonod2015: Allium placed under Pinaceae
+ - 20638 # Jeanmonod2018: Lemna and Allium placed under Ophioglossaceae
+ - 40739 # Jordana2009: plant genus Ilex placed under Isotomidae (Collembola) (backend#1608)
+ - 44634 # Júnior2012: hydromedusae placed under Salpidae (Thaliacea)
+ - 299406 # Kakkonen2018: marine non-native species placed under Insecta and Phaeophyceae instead of Bryozoa, Amphipoda, Polychaeta, Gastropoda
+ - 305176 # Lee2024: planthoppers (Delphacidae) placed under the dolphin family Delphinidae
+ - 305165 # Lutaenko2017: gastropod Rapana placed under Myidae (Bivalvia)
+ - 315862 # MinisterioParaLaTransiciónEcológicaYElRetoDemográfico2023: plant Cynomorium placed under Aves; grey literature environmental impact assessment
+ - 23381 # Ortega2019: bivalve Pristigloma placed under Gastropoda
+ - 21211 # Prokop2016: tortricid Age placed under Aeshnidae
+ - 35986 # Robinson2011: plant genus Fleischmannia placed under Colubridae (snakes)
+ - 4394 # T2008: braconid Trachionus placed under Diptera
+ - 51689 # User2015: testate amoeba Porosia placed under Araceae
+ - 33206 # Zeidler2017: amphipod Eusceliotes placed under Insecta
+ - 264537 # Zhang2021: Escherichia placed under Santalaceae
+
 
 ignoredReleases: 
   - 308651 # COL25.3 XR
