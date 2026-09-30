@@ -1187,6 +1187,11 @@ sourceDatasetExclusion:
  - 51689 # User2015: testate amoeba Porosia placed under Araceae
  - 33206 # Zeidler2017: amphipod Eusceliotes placed under Insecta
  - 264537 # Zhang2021: Escherichia placed under Santalaceae
+ # https://github.com/plazi/community/issues/572
+ - 274286 # Atlas of Brazilian Snakes: All snakes sit under Anomalepididae     
+ - 21109 # The marine ichthyofauna of Lebanon: All fishes sit under Atheriniformes            
+ - 118854 # Jurassic bivalves from the Spiti area: All bivalves sit under Nuculida                
+ - 129881 # Jumping plant-lice of the Korean Peninsula: Triozidae genera sit under Liviidae: Psyllinae 
 
 
 ignoredReleases: 
