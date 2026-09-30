@@ -623,6 +623,7 @@ sourceDatasetExclusion:
  - 28754  # Creates a genus that dames the IDs of the XR https://github.com/plazi/community/issues/558
  - 316329 # Adds name with incorrect authorships: https://github.com/plazi/community/issues/568
  - 315600 # Adds names from grey literature we shouldn't be merging.
+ - 300930 # Morpho genus or undescribe genus problem https://github.com/CatalogueOfLife/data/issues/1742
  
  # Blocked datasets due to misspelling detected during the Orthoptera revisión 2025-06
  - 4401 #  Block due to misspellings on the original paper Orthoptera
