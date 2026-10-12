@@ -1,0 +1,70 @@
+name: Auto Check JSON Comments
+
+on:
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: 'Issue number to process (leave empty to process all open issues)'
+        required: false
+        type: string
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight UTC
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  feedback:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+      
+      - name: Checkout automation repository
+        uses: actions/checkout@v5
+        with:
+          repository: gbif/backbone-feedback-automation
+          path: ./automation
+    
+      - name: Check GitHub CLI version
+        run: gh --version
+          
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+      
+      - name: Install pak
+        run: |
+          Rscript -e "install.packages('pak', repos = 'https://r-lib.github.io/p/pak/devel/')"
+
+      - name: Install specific R packages
+        run: |
+          Rscript -e "pak::pak(c('httr', 'dplyr', 'tibble','purrr', 'jsonlite','testthat', 'devtools'))"
+      
+      - name: Install gbifbf package
+        run: |
+          R CMD INSTALL ./automation/gbifbf
+      
+      - name: Run gbifbf package tests
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GBIF_USER: ${{ secrets.GBIF_USER }}
+          GBIF_PWD: ${{ secrets.GBIF_PWD }}
+        run: |
+          Rscript -e "testthat::test_dir('./automation/gbifbf/tests/testthat')"
+
+      - name: Run issue check script
+        env:
+          FOCAL_ISSUE_REPO: "CatalogueOfLife/data"
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GBIF_USER: ${{ secrets.GBIF_USER }}
+          GBIF_PWD: ${{ secrets.GBIF_PWD }}
+        run: |
+          ls 
+          chmod +x ./automation/issue_check.sh
+          chmod +x ./automation/create_github_label.sh
+          chmod +x ./automation/process_json.R
+          ./automation/issue_check.sh ${{ inputs.issue_number }}
