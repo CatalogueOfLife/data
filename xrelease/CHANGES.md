@@ -4,6 +4,10 @@ We document here all major editorial changes for each weekly [COL XRelease](http
 Each entry is headed by the dataset version date (`YYYY-MM-DD`), followed when known by links to the ChecklistBank dataset, the release attempt log, and the DOI.
 
 For an automatically generated changelog that offers change metrics please see https://www.catalogueoflife.org/data/changelog
+### 2026-11-04
+- Blocking of Bacillariophyta wrong names in UKSI and COL China and wrong relationships. Correct names can be provided by Dyntaxa or TAXREF
+- Blocking of Plazi dataset 22777 https://github.com/plazi/community/issues/582](https://github.com/CatalogueOfLife/data/issues/1824)
+  
 ### 2026-10-05
 - Unblocked 4 Plazi datasets (274286, 21109, 118854, 129881) after Plazi fixed their higher classification [plazi/community#572](https://github.com/plazi/community/issues/572)
 
