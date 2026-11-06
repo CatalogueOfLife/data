@@ -7,6 +7,7 @@ For an automatically generated changelog that offers change metrics please see h
 ### 2026-11-04
 - Blocking of Bacillariophyta wrong names in UKSI and COL China and wrong relationships. Correct names can be provided by Dyntaxa or TAXREF
 - Blocking of Plazi dataset 22777 https://github.com/plazi/community/issues/582](https://github.com/CatalogueOfLife/data/issues/1824)
+- Inclusion of Coleoptera type genera and family-group names (dataset 290628) to add names excluded in management classficiation and include it as an explicit source of COL. https://github.com/CatalogueOfLife/data/issues/1831  https://github.com/CatalogueOfLife/testing/issues/342#issuecomment-5955101690 
   
 ### 2026-10-05
 - Unblocked 4 Plazi datasets (274286, 21109, 118854, 129881) after Plazi fixed their higher classification [plazi/community#572](https://github.com/plazi/community/issues/572)
