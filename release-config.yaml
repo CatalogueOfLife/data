@@ -13,36 +13,69 @@ metadata:
     The Catalogue of Life estimates 2.3M extant species on the planet recognised by taxonomists at present time. 
     This means that for many groups it continues to be deficient, and users may notice that many species are still missing from the Catalogue.
 
-    ### What's new in November 2026 edition?  
+    ### What’s new in 2026 Annual Checklist?     
           
-       #### 91 checklists have been updated:
+       #### New global checklists:
           
-     * 3i Auchenorrhyncha
-     * Alucitoidea
-     * Entiminae
-     * FishBase via Aphia at VLIZ 
-     * GLI
-     * ITIS
-     * ScaleNet
-     * Scarabs     
-     * SF Aphid
-     * SF Chrysididae
-     * SF Coreoidea
-     * SF Dermaptera
-     * SF Isoptera
-     * SF Lygaeoidea
-     * SF Mantodea     
-     * SF Miscellaneous Insecta
-     * SF Orthoptera
-     * SF Phasmida
-     * SF Plecoptera
-     * SF Psocodea  
-     * UCD
-     * WCO     
-     * WOL     
-     * World Ferns
-     * World Plants
-     * WoRMS, 66 checklists         
+     * Two beetle families have been added to Háva’s Catalogue of Selected Coleoptera Families: Mycetophagidae (December 2025) and Dermestidae (August 2026).
+     * SF Miscellaneous Insecta replaced SF Grylloblattodea and expanded to include the superorder †Archaeorthoptera along with the orders Archaeognatha, †Cnemidolestida, †Eoblattida, Notoptera, Reculida, and Zygentoma in June 2026.
+     * SF Blattodea replaced SF Isoptera and SF Cockroach in July 2026.
+
+
+          
+       #### 115 checklists have been updated:
+          
+     * 3i Auchenorrhyncha _(17 updates)_      
+     * Alucitoidea _(4 updates)_
+     * AntCat _(3 updates)_
+     * Bryonames _(4 updates)_
+     * Collembola.org _(1 update)_
+     * Entiminae _(17 updates)_
+     * FishBase via Aphia at VLIZ _(17 updates)_
+     * Fossil Ginkgoales _(1 update)_
+     * Gelechiidae _(8 updates)_
+     * Geometridae _(1 update)_
+     * GLI _(14 updates)_
+     * Global Gracillariidae _(5 updates)_
+     * Hepialidae _(2 updates)_
+     * ICTV MSL _(3 updates)_
+     * ITIS _(14 updates)_
+     * LPSN _(4 updates)_
+     * LWS fleas _(2 updates)_
+     * Pterophoroidea _(6 updates)_
+     * ReptileDB was assigned into ITIS & CoL management classification in November 2025 _(3 updates)_
+     * ScaleNet _(4 updates)_
+     * Scarabs _(17 updates)_
+     * Sesiidae _(6 updates)_
+     * SF Aphid _(17 updates)_
+     * SF Blattodea: since July 2026, this has included the previously independent SF Isoptera and SF Cockroach _(5 updates)_
+     * SF Chrysididae _(17 updates)_
+     * SF Coreoidea _(17 updates)_
+     * SF Dermaptera _(17 updates)_
+     * SF Lygaeoidea _(17 updates)_
+     * SF Mantodea _(17 updates)_
+     * SF Miscellaneous Insecta: since July 2026, this has included the previously independent Species Files for Grylloblattodea, Coleorrhyncha, Embioptera, Mantophasmatodea, †Permopsocida, and Zoraptera _(5 updates)_
+     * SF Orthoptera _(17 updates)_
+     * SF Phasmida _(17 updates)_
+     * SF Plecoptera _(17 updates)_
+     * SF Psocodea _(17 updates)_
+     * StaphBase _(1 update)_
+     * Systema Dipterorum _(5 updates)_
+     * The Scorpion Files _(1 update)_
+     * ThripsWiki _(1 update)_
+     * TITAN _(1 update)_
+     * UCD _(5 updates)_
+     * Vespidea (former ZOBODAT Vespoidea) _(1 update)_
+     * WCO _(17 updates)_
+     * WCVP _(2 updates)_
+     * WCVP-Fabaceae _(2 updates)_
+     * WFO Pinopsida _(1 update)_
+     * WOL _(17 updates)_
+     * World Ferns _(10 updates)_
+     * World Plants _(10 updates)_
+     * WoRMS, 66 checklists _(17 updates)_
+     * WSC _(3 updates)_
+  
 
        #### Other changes:
 
