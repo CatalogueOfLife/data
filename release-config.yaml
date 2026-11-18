@@ -20,8 +20,6 @@ metadata:
      * Two beetle families have been added to Háva’s Catalogue of Selected Coleoptera Families: Mycetophagidae (December 2025) and Dermestidae (August 2026).
      * SF Miscellaneous Insecta replaced SF Grylloblattodea and expanded to include the superorder †Archaeorthoptera along with the orders Archaeognatha, †Cnemidolestida, †Eoblattida, Notoptera, Reculida, and Zygentoma in June 2026.
      * SF Blattodea replaced SF Isoptera and SF Cockroach in July 2026.
-
-
           
        #### 115 checklists have been updated:
           
@@ -76,13 +74,20 @@ metadata:
      * WoRMS, 66 checklists _(17 updates)_
      * WSC _(3 updates)_
   
-
        #### Other changes:
 
-     * 
-  
+      * The Catalogue of Life management classification was updated with new versions of the Arthropoda and Coleoptera classifications in August 2025.
+      * The Hymenoptera part of the management classification was updated to align with ITIS in November 2025.
+      * The Protozoa part of the management classification was updated to align with IRMNG of 2025-07-11 in August 2026.
+      * Classification sectors from the Coleoptera Type Genera and IRMNG were incorporated in the CoL Management Classification in October 2026.
+      * 3i Auchenorrhyncha replaced the superfamilies Fulgoroidea from FLOW and Cercopoidea from COOL; FLOW and COOL were retired from the Catalogue of Life in October 2025.
+      * All checklists hosted in TaxonWorks software (SFs, 3i Auchenorrhyncha, Entiminae, GLI, WCO, WOL) have been processed using the new exporter since March 2026.
+      * The Species Files checklists for Coleorrhyncha, Embioptera, Grylloblattodea, Mantophasmatodea, †Permopsocida, Zoraptera, and Isoptera were consolidated into SF Miscellaneous Insecta and SF Blattodea and retired from CoL as independent entries in July 2026.
+      * All CoL sectors were synchronized in a single event in August 2026.
+      * All 66 WoRMS checklists were assessed prior to the 2026 Annual Checklist release in November 2026.
+      * Virtually all cases of homonymy among the accepted names of all ranks under each of the Codes have been resolved throughout the entire Catalogue in July – November 2026.
+ 
      
-
   contact:
     city: Amsterdam
     country: NL
