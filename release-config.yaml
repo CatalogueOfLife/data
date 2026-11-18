@@ -2,9 +2,9 @@
 
 # dataset metadata with project variables to be applied to each release
 metadata:
-  alias: "COL{date,yy.M}"
+  alias: "COL{date,yy}"
   title: Catalogue of Life 
-  version: "{date}"
+  version: Annual Checklist 2026
   completeness: 80
   confidence: 5
   description: |
