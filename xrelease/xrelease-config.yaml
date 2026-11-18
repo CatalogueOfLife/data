@@ -1206,3 +1206,6 @@ publishActions:
   # rebuild portal sitemap
   - method: POST
     url: "https://builds.gbif.org/job/col-portal-sitemap/build?token=1LOImC9AL8e1RH2vdM71&cause=XR+publication+{key}"
+  # publish a bundle
+  - method: POST
+    url: "https://builds.gbif.org/job/col-bundle/buildWithParameters?token=1LOImC9AL8e1RH2vdM71&RELEASE_KEY=${KEY}&cause=XR+publication+{key}"
