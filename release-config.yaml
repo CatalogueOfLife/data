@@ -8,9 +8,9 @@ metadata:
   completeness: 80
   confidence: 5
   description: |
-    The Catalogue of Life is an assembly of expert-based global species checklists with the aim to build a comprehensive catalogue of all known species of organisms on Earth. 
-    Continuous progress is made towards completion, but for now, it probably includes just over 85% of the world’s known species. 
-    The Catalogue of Life estimates 2.4M extant species on the planet recognised by taxonomists at present time. 
+    The Catalogue of Life Base Release is an assembly of expert-based global species checklists with the aim to build a comprehensive catalogue of all known species of organisms on Earth. 
+    Continuous progress is made towards completion, but for now, it probably includes just over 85% of the world’s known extant species. 
+    The Catalogue of Life executive editor estimates 2.4M extant species on the planet recognised by taxonomists at present time. 
     This means that for many groups it continues to be deficient, and users may notice that many species are still missing from the Catalogue.
 
     ### What’s new in 2026 Annual Checklist?     
@@ -20,6 +20,7 @@ metadata:
      * Two beetle families have been added to Háva’s Catalogue of Selected Coleoptera Families: Mycetophagidae (December 2025) and Dermestidae (August 2026).
      * SF Miscellaneous Insecta replaced SF Grylloblattodea and expanded to include the superorder †Archaeorthoptera along with the orders Archaeognatha, †Cnemidolestida, †Eoblattida, Notoptera, Reculida, and Zygentoma in June 2026.
      * SF Blattodea replaced SF Isoptera and SF Cockroach in July 2026.
+
           
        #### 115 checklists have been updated:
           
@@ -73,6 +74,7 @@ metadata:
      * World Plants _(10 updates)_
      * WoRMS, 66 checklists _(17 updates)_
      * WSC _(3 updates)_
+  
   
        #### Other changes:
 
