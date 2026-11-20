@@ -4,7 +4,7 @@
 metadata:
   alias: "COL{date,yy}"
   title: Catalogue of Life 
-  version: Annual Checklist 2026
+  version: 2026 Annual Checklist
   completeness: 80
   confidence: 5
   description: |
@@ -22,7 +22,7 @@ metadata:
           
       #### 115 checklists have been updated:
           
-       * 3i Auchenorrhyncha _(17 updates)_      
+       * 3i Auchenorrhyncha _(17 updates since the 2025 Annual Checklist)_      
        * Alucitoidea _(4 updates)_
        * AntCat _(3 updates)_
        * Bryonames _(4 updates)_
