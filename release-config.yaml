@@ -16,77 +16,75 @@ metadata:
           
       #### New global checklists:
           
-        * Two beetle families have been added to Háva’s Catalogue of Selected Coleoptera Families: Mycetophagidae (December 2025) and Dermestidae (August 2026).
-        * SF Miscellaneous Insecta replaced SF Grylloblattodea and expanded to include the superorder †Archaeorthoptera along with the orders Archaeognatha, †Cnemidolestida, †Eoblattida, Notoptera, Reculida, and Zygentoma in June 2026.
-        * SF Blattodea replaced SF Isoptera and SF Cockroach in July 2026.
-
+       * Two beetle families have been added to Háva’s Catalogue of Selected Coleoptera Families: Mycetophagidae (December 2025) and Dermestidae (August 2026).
+       * SF Miscellaneous Insecta replaced SF Grylloblattodea and expanded to include the superorder †Archaeorthoptera along with the orders Archaeognatha, †Cnemidolestida, †Eoblattida, Notoptera, Reculida, and Zygentoma in June 2026.
+       * SF Blattodea replaced SF Isoptera and SF Cockroach in July 2026.
           
       #### 115 checklists have been updated:
           
-        * 3i Auchenorrhyncha _(17 updates)_      
-        * Alucitoidea _(4 updates)_
-        * AntCat _(3 updates)_
-        * Bryonames _(4 updates)_
-        * Collembola.org _(1 update)_
-        * Entiminae _(17 updates)_
-        * FishBase via Aphia at VLIZ _(17 updates)_
-        * Fossil Ginkgoales _(1 update)_
-        * Gelechiidae _(8 updates)_
-        * Geometridae _(1 update)_
-        * GLI _(14 updates)_
-        * Global Gracillariidae _(5 updates)_
-        * Hepialidae _(2 updates)_
-        * ICTV MSL _(3 updates)_
-        * ITIS _(14 updates)_
-        * LPSN _(4 updates)_
-        * LWS fleas _(2 updates)_
-        * Pterophoroidea _(6 updates)_
-        * ReptileDB was assigned into ITIS & CoL management classification in November 2025 _(3 updates)_
-        * ScaleNet _(4 updates)_
-        * Scarabs _(17 updates)_
-        * Sesiidae _(6 updates)_
-        * SF Aphid _(17 updates)_
-        * SF Blattodea: since July 2026, this has included the previously independent SF Isoptera and SF Cockroach _(5 updates)_
-        * SF Chrysididae _(17 updates)_
-        * SF Coreoidea _(17 updates)_
-        * SF Dermaptera _(17 updates)_
-        * SF Lygaeoidea _(17 updates)_
-        * SF Mantodea _(17 updates)_
-        * SF Miscellaneous Insecta: since July 2026, this has included the previously independent Species Files for Grylloblattodea, Coleorrhyncha, Embioptera, Mantophasmatodea, †Permopsocida, and Zoraptera _(5 updates)_
-        * SF Orthoptera _(17 updates)_
-        * SF Phasmida _(17 updates)_
-        * SF Plecoptera _(17 updates)_
-        * SF Psocodea _(17 updates)_
-        * StaphBase _(1 update)_
-        * Systema Dipterorum _(5 updates)_
-        * The Scorpion Files _(1 update)_
-        * ThripsWiki _(1 update)_
-        * TITAN _(1 update)_
-        * UCD _(5 updates)_
-        * Vespidea (former ZOBODAT Vespoidea) _(1 update)_
-        * WCO _(17 updates)_
-        * WCVP _(2 updates)_
-        * WCVP-Fabaceae _(2 updates)_
-        * WFO Pinopsida _(1 update)_
-        * WOL _(17 updates)_
-        * World Ferns _(10 updates)_
-        * World Plants _(10 updates)_
-        * WoRMS, 66 checklists _(17 updates)_
-        * WSC _(3 updates)_
+       * 3i Auchenorrhyncha _(17 updates)_      
+       * Alucitoidea _(4 updates)_
+       * AntCat _(3 updates)_
+       * Bryonames _(4 updates)_
+       * Collembola.org _(1 update)_
+       * Entiminae _(17 updates)_
+       * FishBase via Aphia at VLIZ _(17 updates)_
+       * Fossil Ginkgoales _(1 update)_
+       * Gelechiidae _(8 updates)_
+       * Geometridae _(1 update)_
+       * GLI _(14 updates)_
+       * Global Gracillariidae _(5 updates)_
+       * Hepialidae _(2 updates)_
+       * ICTV MSL _(3 updates)_
+       * ITIS _(14 updates)_
+       * LPSN _(4 updates)_
+       * LWS fleas _(2 updates)_
+       * Pterophoroidea _(6 updates)_
+       * ReptileDB was assigned into ITIS & CoL management classification in November 2025 _(3 updates)_
+       * ScaleNet _(4 updates)_
+       * Scarabs _(17 updates)_
+       * Sesiidae _(6 updates)_
+       * SF Aphid _(17 updates)_
+       * SF Blattodea: since July 2026, this has included the previously independent SF Isoptera and SF Cockroach _(5 updates)_
+       * SF Chrysididae _(17 updates)_
+       * SF Coreoidea _(17 updates)_
+       * SF Dermaptera _(17 updates)_
+       * SF Lygaeoidea _(17 updates)_
+       * SF Mantodea _(17 updates)_
+       * SF Miscellaneous Insecta: since July 2026, this has included the previously independent Species Files for Grylloblattodea, Coleorrhyncha, Embioptera, Mantophasmatodea, †Permopsocida, and Zoraptera _(5 updates)_
+       * SF Orthoptera _(17 updates)_
+       * SF Phasmida _(17 updates)_
+       * SF Plecoptera _(17 updates)_
+       * SF Psocodea _(17 updates)_
+       * StaphBase _(1 update)_
+       * Systema Dipterorum _(5 updates)_
+       * The Scorpion Files _(1 update)_
+       * ThripsWiki _(1 update)_
+       * TITAN _(1 update)_
+       * UCD _(5 updates)_
+       * Vespidea (former ZOBODAT Vespoidea) _(1 update)_
+       * WCO _(17 updates)_
+       * WCVP _(2 updates)_
+       * WCVP-Fabaceae _(2 updates)_
+       * WFO Pinopsida _(1 update)_
+       * WOL _(17 updates)_
+       * World Ferns _(10 updates)_
+       * World Plants _(10 updates)_
+       * WoRMS, 66 checklists _(17 updates)_
+       * WSC _(3 updates)_
   
-
       #### Other changes:
 
-        * The Catalogue of Life management classification was updated with new versions of the Arthropoda and Coleoptera classifications in August 2025.
-        * The Hymenoptera part of the management classification was updated to align with ITIS in November 2025.
-        * The Protozoa part of the management classification was updated to align with IRMNG of 2025-07-11 in August 2026.
-        * Classification sectors from the Coleoptera Type Genera and IRMNG were incorporated in the CoL Management Classification in October 2026.
-        * 3i Auchenorrhyncha replaced the superfamilies Fulgoroidea from FLOW and Cercopoidea from COOL; FLOW and COOL were retired from the Catalogue of Life in October 2025.
-        * All checklists hosted in TaxonWorks software (SFs, 3i Auchenorrhyncha, Entiminae, GLI, WCO, WOL) have been processed using the new exporter since March 2026.
-        * The Species Files checklists for Coleorrhyncha, Embioptera, Grylloblattodea, Mantophasmatodea, †Permopsocida, Zoraptera, and Isoptera were consolidated into SF Miscellaneous Insecta and SF Blattodea and retired from CoL as independent entries in July 2026.
-        * All CoL sectors were synchronized in a single event in August 2026.
-        * All 66 WoRMS checklists were assessed prior to the 2026 Annual Checklist release in November 2026.
-        * Virtually all cases of homonymy among the accepted names of all ranks under each of the Codes have been resolved throughout the entire Catalogue in July – November 2026.
+       * The Catalogue of Life management classification was updated with new versions of the Arthropoda and Coleoptera classifications in August 2025.
+       * The Hymenoptera part of the management classification was updated to align with ITIS in November 2025.
+       * The Protozoa part of the management classification was updated to align with IRMNG of 2025-07-11 in August 2026.
+       * Classification sectors from the Coleoptera Type Genera and IRMNG were incorporated in the CoL Management Classification in October 2026.
+       * 3i Auchenorrhyncha replaced the superfamilies Fulgoroidea from FLOW and Cercopoidea from COOL; FLOW and COOL were retired from the Catalogue of Life in October 2025.
+       * All checklists hosted in TaxonWorks software (SFs, 3i Auchenorrhyncha, Entiminae, GLI, WCO, WOL) have been processed using the new exporter since March 2026.
+       * The Species Files checklists for Coleorrhyncha, Embioptera, Grylloblattodea, Mantophasmatodea, †Permopsocida, Zoraptera, and Isoptera were consolidated into SF Miscellaneous Insecta and SF Blattodea and retired from CoL as independent entries in July 2026.
+       * All CoL sectors were synchronized in a single event in August 2026.
+       * All 66 WoRMS checklists were assessed prior to the 2026 Annual Checklist release in November 2026.
+       * Virtually all cases of homonymy among the accepted names of all ranks under each of the Codes have been resolved throughout the entire Catalogue in July – November 2026.
 
      
   contact:
