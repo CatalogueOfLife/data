@@ -5,7 +5,7 @@ metadata:
   alias: "COL{date,yy}"
   title: Catalogue of Life 
   version: 2026 Annual Checklist
-  completeness: 80
+  completeness: 85
   confidence: 5
   description: |
     The Catalogue of Life Base Release is an assembly of expert-based global species checklists with the aim to build a comprehensive catalogue of all known species of organisms on Earth. 
