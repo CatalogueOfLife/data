@@ -4,7 +4,7 @@
 metadata:
   alias: "COL{date,yy}"
   title: Catalogue of Life 
-  version: 2026 Annual Checklist
+  version: Annual Checklist 2026
   completeness: 85
   confidence: 5
   description: |
@@ -36,7 +36,7 @@ metadata:
        * Global Gracillariidae _(5 updates)_
        * Hepialidae _(2 updates)_
        * ICTV MSL _(3 updates)_
-       * ITIS _(14 updates)_
+       * ITIS _(15 updates)_
        * LPSN _(4 updates)_
        * LWS fleas _(2 updates)_
        * Pterophoroidea _(6 updates)_
